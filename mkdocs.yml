@@ -3,6 +3,12 @@ nav:
     - Home: index.md
     - About: about.md
     - Inctroduction: introduction.md
-    
+    - Overview of the World Model: overview.md
+    - Functions of the World Model: functions.md
+    - Key Techniques and Notable Challenges: key.md
+    - Towards Defining Core Components and Capabilities of World Models: CoreComponents.md    
+    - Dataset: dataset.md
+    - Conclusion and Future research directions: conclusion.md
+
 theme:
   name: material

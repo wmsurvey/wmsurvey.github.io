@@ -75,7 +75,20 @@
 
 &emsp;&emsp;4) More strategies.  
 &emsp;&emsp;Driess et al. [@driess2023palm] provide a goal image in addition to language instructions. Du et al. [@du2023video] propose to take advantage of long-horizon inference of VLMs and the low-level visual dynamic modelling ability of text-to-video models to handle long-horizon visual planning. A tree search over the space of possible video sequences to find proper long-horizon plans. Ren et al. [@ren2025videoworld] lean compact representations for the visual world that preserve the detailed temporal dynamics by means of causal encoder-decoder and quantization with a discrete codebook [@mentzer2024finite]. 
-## V-D Spatiotemporal Consistency
+
+## D. Spatiotemporal Consistency  
+Spatiotemporal consistency plays a vital role in ensuring coherent and physically plausible predictions of future states. It guarantees that the model preserves object continuity, motion smoothness, and causal relationships across time, enabling stable video simulation and reliable dynamics forecasting.
+
+&emsp;&emsp;1) Data perspective  
+&emsp;&emsp;In conditional video synthesis, Du et al. [@du2023learning] incorporates the observed image as additional context when denoising each frame. Specifically, it adapts a temporal super-resolution diffusion architecture by tiling the conditioned visual observation across all timesteps. Each intermediate noisy frame is concatenated with the observed image throughout sampling, providing a strong spatial anchor that enforces consistent environmental states across time. Ko et al. [@ko2024learning] concatenates the initial condition frame with all subsequent frames, providing a stable reference that preserves both the spatial layout and temporal evolution of the environment throughout the sequence. Zhen et al. [@zhen2025tesseract] refine depth maps using normal integration to enhance spatial consistency. Optical flow is then calculated to ensure depth coherence across frames, maintaining consistent scene geometry over time. 
+
+&emsp;&emsp;2) Model perspective  
+&emsp;&emsp;Yang et al. [@yang2025roboenvision] noted that in autoregressive predictions, standard spatiotemporal attention in video diffusion models degrades frame consistency due to limited long-range context. To address this, the temporal attention layers are replaced with 3D full attention layers, enabling computation of attention across all spatiotemporal tokens and better modeling of large motions. Additionally, the spatial attention layers are modified by reinjecting the VAE features of the first frame and computing cross-attention with the spatial tokens of the query features, further enhancing frame coherence.
+
+&emsp;&emsp;3) Memory mechanism  
+&emsp;&emsp;is often used to enhance the spatiotemporal consistency. For example, Liao et al. [@liao2025genie] design a sparse memory mechanism to provide long-term historical context, improving spatiotemporal consistency and task relevance. More information can refer to Section V-G.
+
+
 ## V-E Generalization
 ## V-F Physics-informed Learning
 ## V-G Memory

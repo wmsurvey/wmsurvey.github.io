@@ -9,12 +9,22 @@ theme:
 
 # 让 Markdown 生成可点击的锚点，并控制 TOC 显示层级
 markdown_extensions:
+  - pymdownx.arithmatex 
   - toc:
       permalink: true      # 标题右侧出现🔗锚点
       toc_depth: "2-3"     # 在侧边栏显示 h2~h3（可按需改成 "2-4"）
   - attr_list     # 允许 {...} 属性
   - md_in_html    # 允许在 Markdown 里写少量 HTML
+  - footnotes
 
+plugins:
+  - search
+  - bibtex:
+      bib_file: docs/refs.bib        # 你的 BibTeX 文件
+      csl_file: docs/ieee.csl   
+
+extra_javascript:
+  - js/strip-nocase.js
 
 nav:
   - home: index.md

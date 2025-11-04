@@ -1,4 +1,52 @@
-name: wordlmodel
+# name: wordlmodel
+
+# on:
+#   push:
+#     branches: [ main, master ]
+#   workflow_dispatch:
+
+# permissions:
+#   contents: write
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+
+#       - name: Configure Git Credentials
+#         run: |
+#           git config user.name "github-actions[bot]"
+#           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+#       - uses: actions/setup-python@v5
+#         with:
+#           python-version: "3.x"
+
+#       - name: Restore pip cache (optional)
+#         run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+#       - uses: actions/cache@v4
+#         with:
+#           key: mkdocs-${{ env.cache_id }}
+#           path: ~/.cache
+#           restore-keys: |
+#             mkdocs-
+
+#       # 你的依赖：最少安装 mkdocs；若用 material 主题或插件，按需添加
+#       - name: Install deps
+#         run: |
+#           python -m pip install --upgrade pip
+#           pip install mkdocs mkdocs-material mkdocs-bibtex pymdown-extensions pypandoc
+
+#       # 如果你的 docs 不在默认目录，记得在 mkdocs.yml 里设置 docs_dir
+#       - name: Deploy with gh-deploy
+#         run: mkdocs gh-deploy --force
+
+#       - name: Install Pandoc (for CSL numeric styles)
+#         run: |
+#           conda install Pandoc
+
+name: worldmodel
 
 on:
   push:
@@ -14,34 +62,35 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Configure Git Credentials
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.11"
 
-      - name: Restore pip cache (optional)
-        run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - uses: actions/cache@v4
+      - name: Cache pip
+        uses: actions/cache@v4
         with:
-          key: mkdocs-${{ env.cache_id }}
-          path: ~/.cache
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
-            mkdocs-
+            ${{ runner.os }}-pip-
 
-      # 你的依赖：最少安装 mkdocs；若用 material 主题或插件，按需添加
-      - name: Install deps
+      - name: Install system deps (Pandoc for CSL)
         run: |
-          python -m pip install --upgrade pip
-          pip install mkdocs mkdocs-material mkdocs-bibtex pymdown-extensions pypandoc
+          sudo apt-get update
+          sudo apt-get install -y pandoc
 
-      # 如果你的 docs 不在默认目录，记得在 mkdocs.yml 里设置 docs_dir
-      - name: Deploy with gh-deploy
+      - name: Install Python deps
+        run: |
+          python -m pip install -U pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install mkdocs mkdocs-material mkdocs-bibtex pymdown-extensions
+          fi
+
+      - name: Build (strict to surface errors)
+        run: mkdocs build --strict --verbose
+
+      - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force
-
-      - name: Install Pandoc (for CSL numeric styles)
-        run: |
-          conda install Pandoc

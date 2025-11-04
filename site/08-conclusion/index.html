@@ -1,0 +1,643 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../07-dataset/">
+      
+      
+        <link rel="next" href="../99-references/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>VIII Conclusion & Future directions - World Model</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#viii-a-conclusion" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="World Model" class="md-header__button md-logo" aria-label="World Model" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            World Model
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              VIII Conclusion & Future directions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="World Model" class="md-nav__button md-logo" aria-label="World Model" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    World Model
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    I Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-preliminaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    II Preliminaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    III Overview of the World Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IV Functions of the World Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-key-tech-challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V Key Techniques and Notable Challenges
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-core-components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VI Core Components & Capabilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-dataset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VII Dataset
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    VIII Conclusion & Future directions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    VIII Conclusion & Future directions
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#viii-a-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      VIII-A Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viii-b-future-research-directions" class="md-nav__link">
+    <span class="md-ellipsis">
+      VIII-B Future research directions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../99-references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="viii-conclusion-and-future-directions">VIII Conclusion and Future directions<a class="headerlink" href="#viii-conclusion-and-future-directions" title="Permanent link">&para;</a></h1>
+<h2 id="viii-a-conclusion">VIII-A Conclusion<a class="headerlink" href="#viii-a-conclusion" title="Permanent link">&para;</a></h2>
+<p>This survey provides a comprehensive evaluation of current approaches to world modeling, examining their relevance for robotic manipulation, underlying architectures, functionalities, key challenges, and proposed solutions. By synthesizing these findings, we offer insights into the nature of real world models and outline the efforts required to advance the field. Our goal is to provide readers with a solid foundation and guide future research directions in world modeling.</p>
+<h2 id="viii-b-future-research-directions">VIII-B Future research directions<a class="headerlink" href="#viii-b-future-research-directions" title="Permanent link">&para;</a></h2>
+<p>&emsp;&emsp;From our survey of current approaches and analysis of the core components and capabilities of world models, it is evident that present models fall short of accurately representing real-world phenomena. The limitations and the set of expected capabilities define promising directions for future research. To provide additional context, we also discuss several significant research directions.</p>
+<p><strong>More Diverse Modalities</strong>
+The real world contains diverse forms of information, and no single sensory modality can capture its full complexity. This motivates world models capable of perceiving and integrating multiple modalities, including vision, language, action, touch, force, and proprioception, along with their interactions. Early progress has been made in this direction. For example, Hong et al. <sup id="fnref:hong2024multiply"><a class="footnote-ref" href="#fn:hong2024multiply">1</a></sup> introduce the Multisensory-Universe dataset, which features interactive scenes enriched with tactile, audio, and temperature signals, generated with the assistance of ChatGPT <sup id="fnref:achiam2023gpt"><a class="footnote-ref" href="#fn:achiam2023gpt">2</a></sup>.</p>
+<p><strong>Hierarchical World Models</strong>
+Hierarchical systems play a critical role in building effective world models, as they allow agents to reason across multiple layers of abstraction. However, designing hierarchical models is inherently challenging: separating low-level and high-level dynamics is difficult, and coordinating interactions across layers adds further complexity. While existing studies primarily emphasize model design <sup id="fnref:gumbsch2023learning"><a class="footnote-ref" href="#fn:gumbsch2023learning">3</a></sup> <sup id="fnref:lecun2022path"><a class="footnote-ref" href="#fn:lecun2022path">4</a></sup> <sup id="fnref:wang2025dmwm"><a class="footnote-ref" href="#fn:wang2025dmwm">5</a></sup> <sup id="fnref:xing2025critiques"><a class="footnote-ref" href="#fn:xing2025critiques">6</a></sup>, their validation in complex real-world environments remains limited.</p>
+<p><strong>Causality</strong> is a fundamental principle for understanding and modeling the world, describing how events or factors influence outcomes and enabling reasoning about future consequences. Causality is the key to world model as it allows agents to interact with the world, which is inline with the human cognition. Richens et al. <sup id="fnref:richens2024robust"><a class="footnote-ref" href="#fn:richens2024robust">7</a></sup> indicate that learning a causal model is the key to ensure the generalization ability to new domains. Wang et al. <sup id="fnref:wang2022causal"><a class="footnote-ref" href="#fn:wang2022causal">8</a></sup> <sup id="fnref:tomar2021model"><a class="footnote-ref" href="#fn:tomar2021model">9</a></sup> learn a causal dynamics model by removing unnecessary dependencies for tasks, which however are constrained to specific tasks. Gupta et al. <sup id="fnref:gupta2024essential"><a class="footnote-ref" href="#fn:gupta2024essential">10</a></sup> argue that conventional theory-driven approaches to causal modeling, such as those in <sup id="fnref:stuart2010matching"><a class="footnote-ref" href="#fn:stuart2010matching">11</a></sup>, are insufficient for world models that aim for generalizable understanding. These methods rely on predefined variables and case-specific theoretical properties. In the real world, sensory inputs are complex, often unstructured, and key theoretical properties,such as identifiability, may not hold.</p>
+<p><strong>Resource-Constrained Deployment</strong>
+Current world models, particularly those based on video generation, are computationally intensive and contain hundreds of millions of parameters, which limits their feasibility for real-world robotic deployment and on-device inference. To enable practical applications, designing lightweight and efficient world models has become increasingly important. Quantization and model compression techniques offer promising directions for reducing memory and computational costs, and have been extensively explored in related domains <sup id="fnref:polino2018model"><a class="footnote-ref" href="#fn:polino2018model">12</a></sup> <sup id="fnref:gholami2022survey"><a class="footnote-ref" href="#fn:gholami2022survey">13</a></sup> <sup id="fnref:shang2023post"><a class="footnote-ref" href="#fn:shang2023post">14</a></sup> <sup id="fnref:li2021lightweight"><a class="footnote-ref" href="#fn:li2021lightweight">15</a></sup>, providing both direct solutions and inspiration for future lightweight world model architectures.</p>
+<p><strong>Fairness and Security</strong>
+As world models become integral to embodied agents and decision-making systems, ensuring their ethical alignment and fairness is critical. Unlike conventional vision or language models, world models directly influence how autonomous agents perceive, reason, and act within real environments, which amplifies the consequences of biased or unsafe representations. To handle this, emerging research explores bias auditing, fairness-aware training, and safety-constrained learning objectives to prevent harmful behaviors and unintended policy generalization.</p>
+<p>Furthermore, deep models are known to be vulnerable to adversarial attacks, which can compromise performance by introducing imperceptible perturbations to inputs <sup id="fnref:szegedy2013intriguing"><a class="footnote-ref" href="#fn:szegedy2013intriguing">16</a></sup> <sup id="fnref:zhang2024universal"><a class="footnote-ref" href="#fn:zhang2024universal">17</a></sup>, modifying model parameters <sup id="fnref:ren2023dimension"><a class="footnote-ref" href="#fn:ren2023dimension">18</a></sup> <sup id="fnref:park2022blurs"><a class="footnote-ref" href="#fn:park2022blurs">19</a></sup>, or even exploiting hardware-level weaknesses <sup id="fnref:cojocar2020we"><a class="footnote-ref" href="#fn:cojocar2020we">20</a></sup> <sup id="fnref:jattke2024zenhammer"><a class="footnote-ref" href="#fn:jattke2024zenhammer">21</a></sup>.
+These vulnerabilities raise serious concerns regarding the security and reliability of world models, especially when deployed in safety-critical domains.
+To date, systematic studies on the robustness and security of world models remain limited, underscoring an urgent need for dedicated research into adversarial resilience, trustworthy deployment, and secure model adaptation.</p>
+<p><strong>Evaluation Protocols</strong>
+Current evaluation practices for world models are fragmented and only loosely aligned with their intended capabilities, often relying on task-specific or proxy metrics and partial human validation <sup id="fnref:liao2025genie"><a class="footnote-ref" href="#fn:liao2025genie">22</a></sup>. There is a pressing need for standardized benchmarks and unified evaluation frameworks that can comprehensively assess world model competence across multiple dimensions, including visual fidelity, policy success, causal consistency, physical plausibility, generalization, and long-horizon reasoning.</p>
+<p><strong>Beyond Human Intelligence</strong>
+Insights from human cognition have profoundly influenced the design of robotic and world modeling systems. However, the completeness of the world extends beyond human cognition, which is bounded by partial observation, finite memory, limited attention, and inherent heuristic biases. World models are therefore expected to transcend human cognitive bounds, providing a deeper and more systematic understanding of complex environments.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:hong2024multiply">
+<p>Y. Hong, Z. Zheng, P. Chen, Y. Wang, J. Li, and C. Gan, "Multiply: A multisensory object-centric embodied large language model in 3d world," in <em>Proceedings of the IEEE/CVF conference on computer vision and pattern recognition</em>, 2024, pp. 26406--26416.&#160;<a class="footnote-backref" href="#fnref:hong2024multiply" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:achiam2023gpt">
+<p>J. Achiam <em>et al.</em>, "Gpt-4 technical report," <em>arXiv preprint arXiv:2303.08774</em>, 2023.&#160;<a class="footnote-backref" href="#fnref:achiam2023gpt" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:gumbsch2023learning">
+<p>C. Gumbsch, N. Sajid, G. Martius, and M. V. Butz, "Learning hierarchical world models with adaptive temporal abstractions from discrete latent dynamics," in <em>The twelfth international conference on learning representations</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:gumbsch2023learning" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:lecun2022path">
+<p>Y. LeCun, "A path towards autonomous machine intelligence," <em>Open Review</em>, vol. 62, no. 1, pp. 1--62, 2022.&#160;<a class="footnote-backref" href="#fnref:lecun2022path" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wang2025dmwm">
+<p>L. Wang, R. Shelim, W. Saad, and N. Ramakrishnan, "DMWM: Dual-mind world model with long-term imagination," <em>arXiv preprint arXiv:2502.07591</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:wang2025dmwm" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:xing2025critiques">
+<p>E. Xing, M. Deng, J. Hou, and Z. Hu, "Critiques of world models," <em>arXiv preprint arXiv:2507.05169</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:xing2025critiques" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:richens2024robust">
+<p>J. Richens and T. Everitt, "Robust agents learn causal world models," <em>arXiv preprint arXiv:2402.10877</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:richens2024robust" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wang2022causal">
+<p>Z. Wang, X. Xiao, Z. Xu, Y. Zhu, and P. Stone, "Causal dynamics learning for task-independent state abstraction," in <em>International conference on machine learning</em>, 2022, pp. 23151--23180.&#160;<a class="footnote-backref" href="#fnref:wang2022causal" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:tomar2021model">
+<p>M. Tomar, A. Zhang, R. Calandra, M. E. Taylor, and J. Pineau, "Model-invariant state abstractions for model-based reinforcement learning," <em>arXiv preprint arXiv:2102.09850</em>, 2021.&#160;<a class="footnote-backref" href="#fnref:tomar2021model" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:gupta2024essential">
+<p>T. Gupta <em>et al.</em>, "The essential role of causality in foundation world models for embodied AI," <em>arXiv preprint arXiv:2402.06665</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:gupta2024essential" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:stuart2010matching">
+<p>E. A. Stuart, "Matching methods for causal inference: A review and a look forward," <em>Statistical science: a review journal of the Institute of Mathematical Statistics</em>, vol. 25, no. 1, p. 1, 2010.&#160;<a class="footnote-backref" href="#fnref:stuart2010matching" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:polino2018model">
+<p>A. Polino, R. Pascanu, and D. Alistarh, "Model compression via distillation and quantization," in <em>International conference on learning representations</em>, 2018.&#160;<a class="footnote-backref" href="#fnref:polino2018model" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:gholami2022survey">
+<p>A. Gholami, S. Kim, Z. Dong, Z. Yao, M. W. Mahoney, and K. Keutzer, "A survey of quantization methods for efficient neural network inference," in <em>Low-power computer vision</em>, Chapman; Hall/CRC, 2022, pp. 291--326.&#160;<a class="footnote-backref" href="#fnref:gholami2022survey" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:shang2023post">
+<p>Y. Shang, Z. Yuan, B. Xie, B. Wu, and Y. Yan, "Post-training quantization on diffusion models," in <em>Proceedings of the IEEE/CVF conference on computer vision and pattern recognition</em>, 2023, pp. 1972--1981.&#160;<a class="footnote-backref" href="#fnref:shang2023post" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:li2021lightweight">
+<p>Y. Li, T. Chen, P.-F. Zhang, and H. Yin, "Lightweight self-attentive sequential recommendation," in <em>Proceedings of the 30th ACM international conference on information\ &amp; knowledge management</em>, 2021, pp. 967--977.&#160;<a class="footnote-backref" href="#fnref:li2021lightweight" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:szegedy2013intriguing">
+<p>C. Szegedy <em>et al.</em>, "Intriguing properties of neural networks," <em>arXiv preprint arXiv:1312.6199</em>, 2013.&#160;<a class="footnote-backref" href="#fnref:szegedy2013intriguing" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zhang2024universal">
+<p>P.-F. Zhang, Z. Huang, and G. Bai, "Universal adversarial perturbations for vision-language pre-trained models," in <em>Proceedings of the 47th international ACM SIGIR conference on research and development in information retrieval</em>, 2024, pp. 862--871.&#160;<a class="footnote-backref" href="#fnref:zhang2024universal" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ren2023dimension">
+<p>J. Ren, Y. Zhou, J. Jin, L. Lyu, and D. Yan, "Dimension-independent certified neural network watermarks via mollifier smoothing," in <em>ICML</em>, PMLR, 2023, pp. 28976--29008.&#160;<a class="footnote-backref" href="#fnref:ren2023dimension" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:park2022blurs">
+<p>N. Park and S. Kim, "Blurs behave like ensembles: Spatial smoothings to improve accuracy, uncertainty, and robustness," in <em>ICML</em>, 2022, pp. 17390--17419.&#160;<a class="footnote-backref" href="#fnref:park2022blurs" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:cojocar2020we">
+<p>L. Cojocar <em>et al.</em>, "Are we susceptible to rowhammer? An end-to-end methodology for cloud providers," in <em>SP</em>, 2020, pp. 712--728.&#160;<a class="footnote-backref" href="#fnref:cojocar2020we" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:jattke2024zenhammer">
+<p>P. Jattke, M. Wipfli, F. Solt, M. Marazzi, M. Bölcskei, and K. Razavi, "<span class="arithmatex"><span class="MathJax_Preview">\{</span><script type="math/tex">\{</script></span>ZenHammer<span class="arithmatex"><span class="MathJax_Preview">\}</span><script type="math/tex">\}</script></span>: Rowhammer attacks on <span class="arithmatex"><span class="MathJax_Preview">\{</span><script type="math/tex">\{</script></span>AMD<span class="arithmatex"><span class="MathJax_Preview">\}</span><script type="math/tex">\}</script></span> zen-based platforms," in <em>USENIX security</em>, 2024, pp. 1615--1633.&#160;<a class="footnote-backref" href="#fnref:jattke2024zenhammer" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:liao2025genie">
+<p>Y. Liao <em>et al.</em>, "Genie envisioner: A unified world foundation platform for robotic manipulation," <em>arXiv preprint arXiv:2508.05635</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:liao2025genie" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.expand", "navigation.sections", "header.autohide"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../js/strip-nocase.js"></script>
+      
+    
+  </body>
+</html>

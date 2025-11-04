@@ -1,0 +1,613 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../06-core-components/">
+      
+      
+        <link rel="next" href="../08-conclusion/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>VII Dataset - World Model</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="World Model" class="md-header__button md-logo" aria-label="World Model" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            World Model
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              VII Dataset
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="World Model" class="md-nav__button md-logo" aria-label="World Model" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    World Model
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    I Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-preliminaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    II Preliminaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    III Overview of the World Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IV Functions of the World Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-key-tech-challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V Key Techniques and Notable Challenges
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-core-components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VI Core Components & Capabilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    VII Dataset
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VIII Conclusion & Future directions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../99-references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="vii-dataset">VII Dataset<a class="headerlink" href="#vii-dataset" title="Permanent link">&para;</a></h1>
+<p>There are abundant datasets that facilitate robot learning, including general robotic manipulation datasets <sup id="fnref:khazatsky2024droid"><a class="footnote-ref" href="#fn:khazatsky2024droid">1</a></sup> <sup id="fnref:walke2023bridgedata"><a class="footnote-ref" href="#fn:walke2023bridgedata">2</a></sup> <sup id="fnref:ebert2021bridge"><a class="footnote-ref" href="#fn:ebert2021bridge">3</a></sup> <sup id="fnref:mandlekar2019scaling"><a class="footnote-ref" href="#fn:mandlekar2019scaling">4</a></sup> <sup id="fnref:deng2025graspvla"><a class="footnote-ref" href="#fn:deng2025graspvla">5</a></sup> <sup id="fnref:chen2024rh20t"><a class="footnote-ref" href="#fn:chen2024rh20t">6</a></sup>, Dual-arm robotic manipulation datasets <sup id="fnref:bu2025agibot"><a class="footnote-ref" href="#fn:bu2025agibot">7</a></sup>,  human manipulation datasets <sup id="fnref:miech2019howto100m"><a class="footnote-ref" href="#fn:miech2019howto100m">8</a></sup> <sup id="fnref:goyal2017something"><a class="footnote-ref" href="#fn:goyal2017something">9</a></sup> <sup id="fnref:souvcek2024genhowto"><a class="footnote-ref" href="#fn:souvcek2024genhowto">10</a></sup> <sup id="fnref:carreira2019short"><a class="footnote-ref" href="#fn:carreira2019short">11</a></sup> <sup id="fnref:cheang2024gr"><a class="footnote-ref" href="#fn:cheang2024gr">12</a></sup> <sup id="fnref:zhen20243d"><a class="footnote-ref" href="#fn:zhen20243d">13</a></sup>, combinations of robotic &amp; human manipulation <sup id="fnref2:zhen20243d"><a class="footnote-ref" href="#fn:zhen20243d">13</a></sup>, egocentric datasets <sup id="fnref:grauman2022ego4d"><a class="footnote-ref" href="#fn:grauman2022ego4d">14</a></sup> <sup id="fnref:grauman2024ego"><a class="footnote-ref" href="#fn:grauman2024ego">15</a></sup> <sup id="fnref:damen2018scaling"><a class="footnote-ref" href="#fn:damen2018scaling">16</a></sup>, 3D &amp; 4D datasets <sup id="fnref:zhen2025tesseract"><a class="footnote-ref" href="#fn:zhen2025tesseract">17</a></sup> <sup id="fnref3:zhen20243d"><a class="footnote-ref" href="#fn:zhen20243d">13</a></sup> <sup id="fnref2:mandlekar2019scaling"><a class="footnote-ref" href="#fn:mandlekar2019scaling">4</a></sup> <sup id="fnref:zhi20253dflowaction"><a class="footnote-ref" href="#fn:zhi20253dflowaction">18</a></sup> <sup id="fnref2:grauman2022ego4d"><a class="footnote-ref" href="#fn:grauman2022ego4d">14</a></sup> <sup id="fnref2:grauman2024ego"><a class="footnote-ref" href="#fn:grauman2024ego">15</a></sup> <sup id="fnref:ramakrishnan22021habitat"><a class="footnote-ref" href="#fn:ramakrishnan22021habitat">19</a></sup> <sup id="fnref:chang2017matterport3d"><a class="footnote-ref" href="#fn:chang2017matterport3d">20</a></sup> <sup id="fnref:hong2024multiply"><a class="footnote-ref" href="#fn:hong2024multiply">21</a></sup> <sup id="fnref:o2024open"><a class="footnote-ref" href="#fn:o2024open">22</a></sup> <sup id="fnref:gu2023maniskill2"><a class="footnote-ref" href="#fn:gu2023maniskill2">23</a></sup>,  multi-view datasets <sup id="fnref2:hong2024multiply"><a class="footnote-ref" href="#fn:hong2024multiply">21</a></sup> <sup id="fnref3:grauman2024ego"><a class="footnote-ref" href="#fn:grauman2024ego">15</a></sup> <sup id="fnref2:chen2024rh20t"><a class="footnote-ref" href="#fn:chen2024rh20t">6</a></sup> and panoramic-view datasets <sup id="fnref2:chang2017matterport3d"><a class="footnote-ref" href="#fn:chang2017matterport3d">20</a></sup>. A detailed information of them can be found in Fig.Ⅱ.</p>
+<p>Recent efforts in world models for robotic manipulation often have leveraged a large and diverse datasets, e.g., a combinations of different dataset, to be capable of generalizing across tasks and environments. For example, Yang et al. <sup id="fnref:yang2023learning"><a class="footnote-ref" href="#fn:yang2023learning">24</a></sup> constructed a large-scale natural dataset combining simulated executions and renderings <sup id="fnref2:ramakrishnan22021habitat"><a class="footnote-ref" href="#fn:ramakrishnan22021habitat">19</a></sup>, real robot data <sup id="fnref2:ebert2021bridge"><a class="footnote-ref" href="#fn:ebert2021bridge">3</a></sup>, human activity videos <sup id="fnref3:grauman2022ego4d"><a class="footnote-ref" href="#fn:grauman2022ego4d">14</a></sup>, 3D panorama scans <sup id="fnref3:chang2017matterport3d"><a class="footnote-ref" href="#fn:chang2017matterport3d">20</a></sup>, and internet text-image data LAION-400M <sup id="fnref:schuhmann2021laion"><a class="footnote-ref" href="#fn:schuhmann2021laion">25</a></sup>. Bruce et al. <sup id="fnref:bruce2024genie"><a class="footnote-ref" href="#fn:bruce2024genie">26</a></sup> combine the RT-1 dataset <sup id="fnref:brohan2023rt"><a class="footnote-ref" href="#fn:brohan2023rt">27</a></sup> with real robot grasping data <sup id="fnref:kalashnikov2018scalable"><a class="footnote-ref" href="#fn:kalashnikov2018scalable">28</a></sup>. Wu et al. <sup id="fnref:wu2024ivideogpt"><a class="footnote-ref" href="#fn:wu2024ivideogpt">29</a></sup> train the world model based on the combination of the Open X-Embodiment (OXE) dataset <sup id="fnref2:o2024open"><a class="footnote-ref" href="#fn:o2024open">22</a></sup> and the Something-Something v2 (SSv2) trajectory dataset <sup id="fnref2:goyal2017something"><a class="footnote-ref" href="#fn:goyal2017something">9</a></sup>. Bruce et al. <sup id="fnref2:cheang2024gr"><a class="footnote-ref" href="#fn:cheang2024gr">12</a></sup> employ a pretraining and fine-tuning strategy. In the pretraining stage, a combination of human demonstration datasets such as Howto100M <sup id="fnref2:miech2019howto100m"><a class="footnote-ref" href="#fn:miech2019howto100m">8</a></sup>, Ego4D <sup id="fnref4:grauman2022ego4d"><a class="footnote-ref" href="#fn:grauman2022ego4d">14</a></sup>, Something-Something V2 <sup id="fnref3:goyal2017something"><a class="footnote-ref" href="#fn:goyal2017something">9</a></sup>, EPIC-KITCHENS <sup id="fnref2:damen2018scaling"><a class="footnote-ref" href="#fn:damen2018scaling">16</a></sup>, Kinetics-700 <sup id="fnref2:carreira2019short"><a class="footnote-ref" href="#fn:carreira2019short">11</a></sup>, and robot datasets <sup id="fnref2:brohan2023rt"><a class="footnote-ref" href="#fn:brohan2023rt">27</a></sup>. Fine-tuning data includes 105 table-top tasks via teleoperation covering eight skills (e.g., pick, place). Data augmentation are performed to add new objects or change backgrounds by means of a diffusion model <sup id="fnref:ho2020denoising"><a class="footnote-ref" href="#fn:ho2020denoising">30</a></sup> and the Segment Anything Model (SAM) <sup id="fnref:kirillov2023segment"><a class="footnote-ref" href="#fn:kirillov2023segment">31</a></sup>, as well as a video generation model <sup id="fnref:ma2025latte"><a class="footnote-ref" href="#fn:ma2025latte">32</a></sup> to sytheize new videos. Du et al. <sup id="fnref:du2023learning"><a class="footnote-ref" href="#fn:du2023learning">33</a></sup> curated an internet-scale pretraining dataset consisting of 14 million video-text pairs, 60 million image-text pairs <sup id="fnref:ho2022imagen"><a class="footnote-ref" href="#fn:ho2022imagen">34</a></sup>, LAION-400M <sup id="fnref2:schuhmann2021laion"><a class="footnote-ref" href="#fn:schuhmann2021laion">25</a></sup>, and a smaller real-world robotic dataset <sup id="fnref3:ebert2021bridge"><a class="footnote-ref" href="#fn:ebert2021bridge">3</a></sup>. Huang et al. <sup id="fnref:huang2025enerverse"><a class="footnote-ref" href="#fn:huang2025enerverse">35</a></sup> constructed multi-anchor view video datasets using public sources including RT-1 <sup id="fnref3:brohan2023rt"><a class="footnote-ref" href="#fn:brohan2023rt">27</a></sup>, Taco-Play <sup id="fnref:rosete2023latent"><a class="footnote-ref" href="#fn:rosete2023latent">36</a></sup>, ManiSkill <sup id="fnref2:gu2023maniskill2"><a class="footnote-ref" href="#fn:gu2023maniskill2">23</a></sup>, BridgeData V2 <sup id="fnref2:walke2023bridgedata"><a class="footnote-ref" href="#fn:walke2023bridgedata">2</a></sup>, LanguageTable <sup id="fnref:lynch2023interactive"><a class="footnote-ref" href="#fn:lynch2023interactive">37</a></sup>, and RoboTurk <sup id="fnref3:mandlekar2019scaling"><a class="footnote-ref" href="#fn:mandlekar2019scaling">4</a></sup>, augmented with Isaac Sim simulations <sup id="fnref:mittal2023orbit"><a class="footnote-ref" href="#fn:mittal2023orbit">38</a></sup>.  <sup id="fnref2:zhen2025tesseract"><a class="footnote-ref" href="#fn:zhen2025tesseract">17</a></sup> construct a 4D embodied video dataset based on previous datasets <sup id="fnref:james2020rlbench"><a class="footnote-ref" href="#fn:james2020rlbench">39</a></sup> <sup id="fnref4:brohan2023rt"><a class="footnote-ref" href="#fn:brohan2023rt">27</a></sup> <sup id="fnref3:walke2023bridgedata"><a class="footnote-ref" href="#fn:walke2023bridgedata">2</a></sup> <sup id="fnref4:goyal2017something"><a class="footnote-ref" href="#fn:goyal2017something">9</a></sup> by measuring depth and normal information.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:khazatsky2024droid">
+<p>A. Khazatsky <em>et al.</em>, "Droid: A large-scale in-the-wild robot manipulation dataset," <em>arXiv preprint arXiv:2403.12945</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:khazatsky2024droid" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:walke2023bridgedata">
+<p>H. R. Walke <em>et al.</em>, "Bridgedata v2: A dataset for robot learning at scale," in <em>Conference on robot learning</em>, 2023, pp. 1723--1736.&#160;<a class="footnote-backref" href="#fnref:walke2023bridgedata" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:walke2023bridgedata" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:walke2023bridgedata" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ebert2021bridge">
+<p>F. Ebert <em>et al.</em>, "Bridge data: Boosting generalization of robotic skills with cross-domain datasets," <em>arXiv preprint arXiv:2109.13396</em>, 2021.&#160;<a class="footnote-backref" href="#fnref:ebert2021bridge" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:ebert2021bridge" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:ebert2021bridge" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:mandlekar2019scaling">
+<p>A. Mandlekar <em>et al.</em>, "Scaling robot supervision to hundreds of hours with roboturk: Robotic manipulation dataset through human reasoning and dexterity," in <em>2019 IEEE/RSJ international conference on intelligent robots and systems (IROS)</em>, IEEE, 2019, pp. 1048--1055.&#160;<a class="footnote-backref" href="#fnref:mandlekar2019scaling" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:mandlekar2019scaling" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:mandlekar2019scaling" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:deng2025graspvla">
+<p>S. Deng <em>et al.</em>, "Graspvla: A grasping foundation model pre-trained on billion-scale synthetic action data," <em>arXiv preprint arXiv:2505.03233</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:deng2025graspvla" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:chen2024rh20t">
+<p>Z. Chen <em>et al.</em>, "RH20T-p: A primitive-level robotic manipulation dataset towards composable generalization agents in real-world scenarios," in <em>NeurIPS 2024 workshop on open-world agents</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:chen2024rh20t" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:chen2024rh20t" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:bu2025agibot">
+<p>Q. Bu <em>et al.</em>, "Agibot world colosseo: A large-scale manipulation platform for scalable and intelligent embodied systems," <em>arXiv preprint arXiv:2503.06669</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:bu2025agibot" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:miech2019howto100m">
+<p>A. Miech, D. Zhukov, J.-B. Alayrac, M. Tapaswi, I. Laptev, and J. Sivic, "Howto100m: Learning a text-video embedding by watching hundred million narrated video clips," in <em>Proceedings of the IEEE/CVF international conference on computer vision</em>, 2019, pp. 2630--2640.&#160;<a class="footnote-backref" href="#fnref:miech2019howto100m" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:miech2019howto100m" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:goyal2017something">
+<p>R. Goyal <em>et al.</em>, "The\" something something\" video database for learning and evaluating visual common sense," in <em>Proceedings of the IEEE international conference on computer vision</em>, 2017, pp. 5842--5850.&#160;<a class="footnote-backref" href="#fnref:goyal2017something" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:goyal2017something" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:goyal2017something" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:goyal2017something" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:souvcek2024genhowto">
+<p>T. Souček, D. Damen, M. Wray, I. Laptev, and J. Sivic, "Genhowto: Learning to generate actions and state transformations from instructional videos," in <em>Proceedings of the IEEE/CVF conference on computer vision and pattern recognition</em>, 2024, pp. 6561--6571.&#160;<a class="footnote-backref" href="#fnref:souvcek2024genhowto" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:carreira2019short">
+<p>J. Carreira, E. Noland, C. Hillier, and A. Zisserman, "A short note on the kinetics-700 human action dataset," <em>arXiv preprint arXiv:1907.06987</em>, 2019.&#160;<a class="footnote-backref" href="#fnref:carreira2019short" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:carreira2019short" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:cheang2024gr">
+<p>C.-L. Cheang <em>et al.</em>, "Gr-2: A generative video-language-action model with web-scale knowledge for robot manipulation," <em>arXiv preprint arXiv:2410.06158</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:cheang2024gr" title="Jump back to footnote 12 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:cheang2024gr" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zhen20243d">
+<p>H. Zhen <em>et al.</em>, "3D-VLA: A 3D vision-language-action generative world model," in <em>Proceedings of the 41st international conference on machine learning</em>, 2024, pp. 61229--61245.&#160;<a class="footnote-backref" href="#fnref:zhen20243d" title="Jump back to footnote 13 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:zhen20243d" title="Jump back to footnote 13 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:zhen20243d" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:grauman2022ego4d">
+<p>K. Grauman <em>et al.</em>, "Ego4d: Around the world in 3,000 hours of egocentric video," in <em>Proceedings of the IEEE/CVF conference on computer vision and pattern recognition</em>, 2022, pp. 18995--19012.&#160;<a class="footnote-backref" href="#fnref:grauman2022ego4d" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:grauman2022ego4d" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:grauman2022ego4d" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:grauman2022ego4d" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:grauman2024ego">
+<p>K. Grauman <em>et al.</em>, "Ego-exo4d: Understanding skilled human activity from first-and third-person perspectives," in <em>Proceedings of the IEEE/CVF conference on computer vision and pattern recognition</em>, 2024, pp. 19383--19400.&#160;<a class="footnote-backref" href="#fnref:grauman2024ego" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:grauman2024ego" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:grauman2024ego" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:damen2018scaling">
+<p>D. Damen <em>et al.</em>, "Scaling egocentric vision: The epic-kitchens dataset," in <em>Proceedings of the european conference on computer vision (ECCV)</em>, 2018, pp. 720--736.&#160;<a class="footnote-backref" href="#fnref:damen2018scaling" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:damen2018scaling" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zhen2025tesseract">
+<p>H. Zhen <em>et al.</em>, "TesserAct: Learning 4D embodied world models," <em>arXiv preprint arXiv:2504.20995</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:zhen2025tesseract" title="Jump back to footnote 17 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:zhen2025tesseract" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zhi20253dflowaction">
+<p>H. Zhi <em>et al.</em>, "3DFlowAction: Learning cross-embodiment manipulation from 3D flow world model," <em>arXiv preprint arXiv:2506.06199</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:zhi20253dflowaction" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ramakrishnan22021habitat">
+<p>S. K. Ramakrishnan <em>et al.</em>, "Habitat-matterport 3D dataset (HM3D): 1000 large-scale 3D environments for embodied AI," in <em>Thirty-fifth conference on neural information processing systems datasets and benchmarks track (round 2)</em>, 2021.&#160;<a class="footnote-backref" href="#fnref:ramakrishnan22021habitat" title="Jump back to footnote 19 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:ramakrishnan22021habitat" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:chang2017matterport3d">
+<p>A. Chang <em>et al.</em>, "Matterport3D: Learning from RGB-d data in indoor environments," in <em>2017 international conference on 3D vision (3DV)</em>, IEEE Computer Society, 2017, pp. 667--676.&#160;<a class="footnote-backref" href="#fnref:chang2017matterport3d" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:chang2017matterport3d" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:chang2017matterport3d" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:hong2024multiply">
+<p>Y. Hong, Z. Zheng, P. Chen, Y. Wang, J. Li, and C. Gan, "Multiply: A multisensory object-centric embodied large language model in 3d world," in <em>Proceedings of the IEEE/CVF conference on computer vision and pattern recognition</em>, 2024, pp. 26406--26416.&#160;<a class="footnote-backref" href="#fnref:hong2024multiply" title="Jump back to footnote 21 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:hong2024multiply" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:o2024open">
+<p>A. O'Neill <em>et al.</em>, "Open x-embodiment: Robotic learning datasets and rt-x models: Open x-embodiment collaboration 0," in <em>2024 IEEE international conference on robotics and automation (ICRA)</em>, IEEE, 2024, pp. 6892--6903.&#160;<a class="footnote-backref" href="#fnref:o2024open" title="Jump back to footnote 22 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:o2024open" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+<li id="fn:gu2023maniskill2">
+<p>J. Gu <em>et al.</em>, "ManiSkill2: A unified benchmark for generalizable manipulation skills," in <em>The eleventh international conference on learning representations</em>, 2023.&#160;<a class="footnote-backref" href="#fnref:gu2023maniskill2" title="Jump back to footnote 23 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:gu2023maniskill2" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+</li>
+<li id="fn:yang2023learning">
+<p>M. Yang, Y. Du, K. Ghasemipour, J. Tompson, D. Schuurmans, and P. Abbeel, "Learning interactive real-world simulators," <em>arXiv preprint arXiv:2310.06114</em>, vol. 1, no. 2, p. 6, 2023.&#160;<a class="footnote-backref" href="#fnref:yang2023learning" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+</li>
+<li id="fn:schuhmann2021laion">
+<p>C. Schuhmann <em>et al.</em>, "Laion-400m: Open dataset of clip-filtered 400 million image-text pairs," <em>arXiv preprint arXiv:2111.02114</em>, 2021.&#160;<a class="footnote-backref" href="#fnref:schuhmann2021laion" title="Jump back to footnote 25 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:schuhmann2021laion" title="Jump back to footnote 25 in the text">&#8617;</a></p>
+</li>
+<li id="fn:bruce2024genie">
+<p>J. Bruce <em>et al.</em>, "Genie: Generative interactive environments," in <em>Proceedings of the 41st international conference on machine learning</em>, 2024, pp. 4603--4623.&#160;<a class="footnote-backref" href="#fnref:bruce2024genie" title="Jump back to footnote 26 in the text">&#8617;</a></p>
+</li>
+<li id="fn:brohan2023rt">
+<p>A. Brohan <em>et al.</em>, "RT-1: Robotics transformer for real-world control at scale," <em>Robotics: Science and Systems</em>, 2023.&#160;<a class="footnote-backref" href="#fnref:brohan2023rt" title="Jump back to footnote 27 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:brohan2023rt" title="Jump back to footnote 27 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:brohan2023rt" title="Jump back to footnote 27 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:brohan2023rt" title="Jump back to footnote 27 in the text">&#8617;</a></p>
+</li>
+<li id="fn:kalashnikov2018scalable">
+<p>D. Kalashnikov <em>et al.</em>, "Scalable deep reinforcement learning for vision-based robotic manipulation," in <em>Conference on robot learning</em>, 2018, pp. 651--673.&#160;<a class="footnote-backref" href="#fnref:kalashnikov2018scalable" title="Jump back to footnote 28 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wu2024ivideogpt">
+<p>J. Wu <em>et al.</em>, "Ivideogpt: Interactive videogpts are scalable world models," <em>Advances in Neural Information Processing Systems</em>, vol. 37, pp. 68082--68119, 2024.&#160;<a class="footnote-backref" href="#fnref:wu2024ivideogpt" title="Jump back to footnote 29 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ho2020denoising">
+<p>J. Ho, A. Jain, and P. Abbeel, "Denoising diffusion probabilistic models," <em>Advances in neural information processing systems</em>, vol. 33, pp. 6840--6851, 2020.&#160;<a class="footnote-backref" href="#fnref:ho2020denoising" title="Jump back to footnote 30 in the text">&#8617;</a></p>
+</li>
+<li id="fn:kirillov2023segment">
+<p>A. Kirillov <em>et al.</em>, "Segment anything," in <em>Proceedings of the IEEE/CVF international conference on computer vision</em>, 2023, pp. 4015--4026.&#160;<a class="footnote-backref" href="#fnref:kirillov2023segment" title="Jump back to footnote 31 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ma2025latte">
+<p>X. Ma <em>et al.</em>, "Latte: Latent diffusion transformer for video generation," <em>Transactions on Machine Learning Research</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:ma2025latte" title="Jump back to footnote 32 in the text">&#8617;</a></p>
+</li>
+<li id="fn:du2023learning">
+<p>Y. Du <em>et al.</em>, "Learning universal policies via text-guided video generation," <em>Advances in neural information processing systems</em>, vol. 36, pp. 9156--9172, 2023.&#160;<a class="footnote-backref" href="#fnref:du2023learning" title="Jump back to footnote 33 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ho2022imagen">
+<p>J. Ho <em>et al.</em>, "Imagen video: High definition video generation with diffusion models," <em>arXiv preprint arXiv:2210.02303</em>, 2022.&#160;<a class="footnote-backref" href="#fnref:ho2022imagen" title="Jump back to footnote 34 in the text">&#8617;</a></p>
+</li>
+<li id="fn:huang2025enerverse">
+<p>S. Huang <em>et al.</em>, "Enerverse: Envisioning embodied future space for robotics manipulation," <em>arXiv preprint arXiv:2501.01895</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:huang2025enerverse" title="Jump back to footnote 35 in the text">&#8617;</a></p>
+</li>
+<li id="fn:rosete2023latent">
+<p>E. Rosete-Beas, O. Mees, G. Kalweit, J. Boedecker, and W. Burgard, "Latent plans for task-agnostic offline reinforcement learning," in <em>Conference on robot learning</em>, 2023, pp. 1838--1849.&#160;<a class="footnote-backref" href="#fnref:rosete2023latent" title="Jump back to footnote 36 in the text">&#8617;</a></p>
+</li>
+<li id="fn:lynch2023interactive">
+<p>C. Lynch <em>et al.</em>, "Interactive language: Talking to robots in real time," <em>IEEE Robotics and Automation Letters</em>, 2023.&#160;<a class="footnote-backref" href="#fnref:lynch2023interactive" title="Jump back to footnote 37 in the text">&#8617;</a></p>
+</li>
+<li id="fn:mittal2023orbit">
+<p>M. Mittal <em>et al.</em>, "Orbit: A unified simulation framework for interactive robot learning environments," <em>IEEE Robotics and Automation Letters</em>, vol. 8, no. 6, pp. 3740--3747, 2023.&#160;<a class="footnote-backref" href="#fnref:mittal2023orbit" title="Jump back to footnote 38 in the text">&#8617;</a></p>
+</li>
+<li id="fn:james2020rlbench">
+<p>S. James, Z. Ma, D. R. Arrojo, and A. J. Davison, "Rlbench: The robot learning benchmark\ &amp; learning environment," <em>IEEE Robotics and Automation Letters</em>, vol. 5, no. 2, pp. 3019--3026, 2020.&#160;<a class="footnote-backref" href="#fnref:james2020rlbench" title="Jump back to footnote 39 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.expand", "navigation.sections", "header.autohide"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../js/strip-nocase.js"></script>
+      
+    
+  </body>
+</html>

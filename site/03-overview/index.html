@@ -1,0 +1,860 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../02-preliminaries/">
+      
+      
+        <link rel="next" href="../04-functions/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>III Overview of the World Model - World Model</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-paradigms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="World Model" class="md-header__button md-logo" aria-label="World Model" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            World Model
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              III Overview of the World Model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="World Model" class="md-nav__button md-logo" aria-label="World Model" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    World Model
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    I Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-preliminaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    II Preliminaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    III Overview of the World Model
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    III Overview of the World Model
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-paradigms" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Paradigms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-architectural-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Architectural Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-world-observation-and-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. World Observation and Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-task-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      D. Task Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IV Functions of the World Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-key-tech-challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V Key Techniques and Notable Challenges
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-core-components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VI Core Components & Capabilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-dataset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VII Dataset
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VIII Conclusion & Future directions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../99-references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="iii-overview-of-the-world-model">III Overview of the World Model<a class="headerlink" href="#iii-overview-of-the-world-model" title="Permanent link">&para;</a></h1>
+<p>“What we observe is not nature itself, but nature exposed to our method of questioning.” </p>
+<p style="text-align:right">— Werner Heisenberg</p>
+
+<h2 id="a-paradigms">A. Paradigms<a class="headerlink" href="#a-paradigms" title="Permanent link">&para;</a></h2>
+<p>&emsp;&emsp;Building on the previous review of current models, contemporary architectures for capturing world dynamics can be broadly stratified along a methodological spectrum: implicit world modeling (e.g., LLMs, VLMs, and VLAs) <sup id="fnref:chen2025egoagent"><a class="footnote-ref" href="#fn:chen2025egoagent">1</a></sup> <sup id="fnref:team2023internlm"><a class="footnote-ref" href="#fn:team2023internlm">2</a></sup> <sup id="fnref:zhen20243d"><a class="footnote-ref" href="#fn:zhen20243d">3</a></sup> <sup id="fnref:hong20233d"><a class="footnote-ref" href="#fn:hong20233d">4</a></sup>, latent dynamics modeling <sup id="fnref:wu2023daydreamer"><a class="footnote-ref" href="#fn:wu2023daydreamer">5</a></sup> <sup id="fnref:hafnerdream"><a class="footnote-ref" href="#fn:hafnerdream">6</a></sup> <sup id="fnref:hafner2021mastering"><a class="footnote-ref" href="#fn:hafner2021mastering">7</a></sup> <sup id="fnref:hafner2023mastering"><a class="footnote-ref" href="#fn:hafner2023mastering">8</a></sup>, and video generation paradigms <sup id="fnref:wu2024ivideogpt"><a class="footnote-ref" href="#fn:wu2024ivideogpt">9</a></sup> <sup id="fnref:du2023video"><a class="footnote-ref" href="#fn:du2023video">10</a></sup> <sup id="fnref:zhang2025combo"><a class="footnote-ref" href="#fn:zhang2025combo">11</a></sup> <sup id="fnref:rigter2025avid"><a class="footnote-ref" href="#fn:rigter2025avid">12</a></sup>, each targeting distinct representational granularities and predictive mechanisms.</p>
+<figure>
+<p><img alt="Perspectives on world models" src="../assets/img/03-01.png" width="100%" />
+  </p>
+<figcaption>Fig. 2. A visualization of LLM-based world models [54].</figcaption>
+</figure>
+<p>&emsp;&emsp;1) Implicit World Modeling<br />
+&emsp;&emsp;Representative models include LLMs, VLMs, and VLAs, which offer distinct advantages in semantic grounding, generalization, and interpretability <sup id="fnref:ahn2022can"><a class="footnote-ref" href="#fn:ahn2022can">13</a></sup> <sup id="fnref:xiang2024pandora"><a class="footnote-ref" href="#fn:xiang2024pandora">14</a></sup> <sup id="fnref:driess2023palm"><a class="footnote-ref" href="#fn:driess2023palm">15</a></sup> <sup id="fnref:zhang2025dreamvla"><a class="footnote-ref" href="#fn:zhang2025dreamvla">16</a></sup> <sup id="fnref:zhao2024vlmpc"><a class="footnote-ref" href="#fn:zhao2024vlmpc">17</a></sup>. An illustration of these models is shown in Figure&nbsp;1 At the same time, these models can be integrated into broader world-modeling architectures to capture temporal dependencies and enable long-horizon prediction <sup id="fnref:zitkovich2023rt"><a class="footnote-ref" href="#fn:zitkovich2023rt">18</a></sup> <sup id="fnref2:hong20233d"><a class="footnote-ref" href="#fn:hong20233d">4</a></sup> <sup id="fnref:bjorck2025gr00t"><a class="footnote-ref" href="#fn:bjorck2025gr00t">19</a></sup>. Detailed discussions of these models are provided in Sections II-D1 and IV-A1.</p>
+<p>&emsp;&emsp;2) Latent Dynamics Modeling<br />
+&emsp;&emsp;Latent dynamics models typically encode high-dimensional observations into compact latent states through a variational autoencoder (VAE) or encoder network, and employ recurrent or transformer modules (e.g., RNNs or Transformers) to predict the temporal evolution of these latent representations <sup id="fnref2:hafnerdream"><a class="footnote-ref" href="#fn:hafnerdream">6</a></sup> <sup id="fnref2:hafner2021mastering"><a class="footnote-ref" href="#fn:hafner2021mastering">7</a></sup> <sup id="fnref2:wu2023daydreamer"><a class="footnote-ref" href="#fn:wu2023daydreamer">5</a></sup> <sup id="fnref2:hafner2023mastering"><a class="footnote-ref" href="#fn:hafner2023mastering">8</a></sup>. This architecture is characterized by latent-space imagination and task-oriented optimization over visual granularity, facilitating long-horizon learning by forecasting future states without the need for pixel-level reconstruction.</p>
+<p>Recurrent State-Space Model (RSSM) <sup id="fnref:hafner2019learning"><a class="footnote-ref" href="#fn:hafner2019learning">20</a></sup> resembles the structure of a partially observable Markov decision process.  Its learning framework consists of three main components: an encoder, a decoder, and a dynamics model. The encoder network fuses sensory inputs (observations) o together into the stochastic representations z. The dynamics model learns to predict the sequence of stochastic representations by using its recurrent state s. The decoder reconstructs sensory inputs to provide a rich signal for learning representations and enables human inspection of model predictions, but is not needed while learning behaviors from latent rollouts. Specifically, at time step t, let the image observation be ot, the action vectors at and the reward rt. RSSM can be formulated as the generative process of the images and rewards conditioned a hidden state sequence st:  </p>
+<p>&emsp;&emsp;Encoder/representation model:&emsp;&emsp;&emsp;<img alt="img" src="../assets/img/clip_image001.gif" /></p>
+<p>&emsp;&emsp;Decoder/observation model:&emsp;&emsp;&emsp;&emsp;<img alt="img" src="../assets/img/clip_image002.gif" /></p>
+<p>&emsp;&emsp;Dynamics/Transition model:&emsp;&emsp;&emsp;&emsp;<img alt="img" src="../assets/img/clip_image003.gif" /></p>
+<p>&emsp;&emsp;Reward model:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img alt="img" src="../assets/img/clip_image004.gif" /></p>
+<p style="text-align:right">(1)</p>
+
+<figure>
+<p><img alt="Perspectives on world models" src="../assets/img/03-02.png" width="80%" />
+  </p>
+<figcaption>Fig. 3. A visualization of Dreamer architecture [12], which encodes visual representations into latent states through recurrent estimation.</figcaption>
+</figure>
+<p>&emsp;&emsp;PlaNet <sup id="fnref2:hafner2019learning"><a class="footnote-ref" href="#fn:hafner2019learning">20</a></sup> first demonstrates the effectiveness of learning dynamics in a latent space. The Dreamer family of models (a visualization is shown in Fig. 3) <sup id="fnref3:hafnerdream"><a class="footnote-ref" href="#fn:hafnerdream">6</a></sup> <sup id="fnref3:hafner2021mastering"><a class="footnote-ref" href="#fn:hafner2021mastering">7</a></sup> <sup id="fnref3:wu2023daydreamer"><a class="footnote-ref" href="#fn:wu2023daydreamer">5</a></sup> <sup id="fnref3:hafner2023mastering"><a class="footnote-ref" href="#fn:hafner2023mastering">8</a></sup> further verify this paradigm and establish a representative framework that reduces reliance on real-world data by performing imagination directly in latent space. Dreamer enables policy learning through imagined trajectories without continuous interaction with the environment, allowing agents to simulate multi-step consequences of actions and generalize to new states, objects, and environments.</p>
+<figure>
+<p><img alt="Perspectives on world models" src="../assets/img/03-03.png" width="60%" />
+  </p>
+<figcaption>Fig. 4. A visualization of Joint Embedding-Action-Prediction (JEPA) Archi-
+tecture [11], where self-supervised learning is used to learn the future world
+state representations.</figcaption>
+</figure>
+<p>&emsp;&emsp;While sharing the objective of learning predictive worldstate representations, Joint-Embedding Predictive Architecture (JEPA) <sup id="fnref:lecun2022path"><a class="footnote-ref" href="#fn:lecun2022path">21</a></sup> <sup id="fnref2:chen2025egoagent"><a class="footnote-ref" href="#fn:chen2025egoagent">1</a></sup> and RSSM diverge fundamentally in their learning mechanisms. RSSM relies on generative reconstruction of observations to model latent dynamics, whereas JEPA (a visualization is shown in Fig. 4) employs selfsupervised predictive coding in embedding spaces—directly forecasting future state representations without decoding to raw sensory inputs. This paradigm eliminates the computational cost of pixel-level reconstruction but necessitates powerful hierarchical encoders to compress sufficient environmentalinformation into abstract embeddings, creating an implicit information bottleneck that demands careful architectural balancing to preserve task-relevant features. Under the JEPA framework, Assran et al. <sup id="fnref:assran2025v"><a class="footnote-ref" href="#fn:assran2025v">22</a></sup> combine pre-trained video models with an action-conditioned predictor to autoregressively predict future states and actions. </p>
+<figure>
+<p><img alt="Perspectives on world models" src="../assets/img/Genie_envisioner.png" width="100%" />
+  </p>
+<figcaption>Fig. 5. An illustration of video-geneation based world models [^liao2025genie]. World
+model serve as the core component, modelling the world dynamics and
+enabling action planning and generation.</figcaption>
+</figure>
+<p>The <strong>MuZero</strong> series <sup id="fnref:schrittwieser2020mastering"><a class="footnote-ref" href="#fn:schrittwieser2020mastering">24</a></sup> <sup id="fnref:ye2021mastering"><a class="footnote-ref" href="#fn:ye2021mastering">25</a></sup> <sup id="fnref:wang2024efficientzero"><a class="footnote-ref" href="#fn:wang2024efficientzero">26</a></sup> represent another form of latent-dynamics-based world modeling. Instead of modeling the complete environment dynamics, MuZero predicts only future quantities directly relevant to planning, such as rewards, values, and policies, given the complexity of real-world environments, and employs a tree-based search algorithm <sup id="fnref:silver2018general"><a class="footnote-ref" href="#fn:silver2018general">27</a></sup> to select optimal actions.</p>
+<p>&emsp;&emsp;3) Video Generation.<br />
+&emsp;&emsp;Video-based generative models are powerful tools for capturing environmental dynamics and predicting future scenes. These models operate directly on high-dimensional raw observations, such as RGB images, depth maps, or force fields <sup id="fnref2:wu2024ivideogpt"><a class="footnote-ref" href="#fn:wu2024ivideogpt">9</a></sup> <sup id="fnref:team2025aether"><a class="footnote-ref" href="#fn:team2025aether">28</a></sup> <sup id="fnref:yang2023learning"><a class="footnote-ref" href="#fn:yang2023learning">29</a></sup> <sup id="fnref:bruce2024genie"><a class="footnote-ref" href="#fn:bruce2024genie">30</a></sup> <sup id="fnref:brooks2024video"><a class="footnote-ref" href="#fn:brooks2024video">31</a></sup> <sup id="fnref2:xiang2024pandora"><a class="footnote-ref" href="#fn:xiang2024pandora">14</a></sup> <sup id="fnref:zheng2024open"><a class="footnote-ref" href="#fn:zheng2024open">32</a></sup> <sup id="fnref:zhou2024robodreamer"><a class="footnote-ref" href="#fn:zhou2024robodreamer">33</a></sup> <sup id="fnref:ali2025humanoid"><a class="footnote-ref" href="#fn:ali2025humanoid">34</a></sup>, treating the environment as a sequence of frames. By generating future scenes, they can support a wide range of applications, including visual planning, simulation, and action generation <sup id="fnref:finn2017deep"><a class="footnote-ref" href="#fn:finn2017deep">35</a></sup> <sup id="fnref:ebert2018visual"><a class="footnote-ref" href="#fn:ebert2018visual">36</a></sup> <sup id="fnref3:wu2024ivideogpt"><a class="footnote-ref" href="#fn:wu2024ivideogpt">9</a></sup> <sup id="fnref2:zhang2025combo"><a class="footnote-ref" href="#fn:zhang2025combo">11</a></sup> <sup id="fnref2:rigter2025avid"><a class="footnote-ref" href="#fn:rigter2025avid">12</a></sup>. Moreover, they can leverage large-scale pre-training to enhance generalization and improve sample efficiency <sup id="fnref3:rigter2025avid"><a class="footnote-ref" href="#fn:rigter2025avid">12</a></sup> <sup id="fnref2:team2025aether"><a class="footnote-ref" href="#fn:team2025aether">28</a></sup> <sup id="fnref:wang2025language"><a class="footnote-ref" href="#fn:wang2025language">37</a></sup> <sup id="fnref:jang2025dreamgen"><a class="footnote-ref" href="#fn:jang2025dreamgen">38</a></sup>. Depending on the input modality, world models can be constructed using action-conditioned video prediction models <sup id="fnref4:wu2024ivideogpt"><a class="footnote-ref" href="#fn:wu2024ivideogpt">9</a></sup>, text-to-video models <sup id="fnref2:du2023video"><a class="footnote-ref" href="#fn:du2023video">10</a></sup> <sup id="fnref2:yang2023learning"><a class="footnote-ref" href="#fn:yang2023learning">29</a></sup> <sup id="fnref2:jang2025dreamgen"><a class="footnote-ref" href="#fn:jang2025dreamgen">38</a></sup> <sup id="fnref2:zhou2024robodreamer"><a class="footnote-ref" href="#fn:zhou2024robodreamer">33</a></sup>, or trajectory-to-video models <sup id="fnref:zhu2025irasim"><a class="footnote-ref" href="#fn:zhu2025irasim">39</a></sup> <sup id="fnref:cheang2024gr"><a class="footnote-ref" href="#fn:cheang2024gr">40</a></sup>.</p>
+<p>&emsp;&emsp;There are several architectural families of video-based world models. Diffusion-based world models generate videos by progressively denoising random noise through multiple iterative steps. Representative examples include U-Net-based models <sup id="fnref:ho2022video"><a class="footnote-ref" href="#fn:ho2022video">41</a></sup> <sup id="fnref:ko2024learning"><a class="footnote-ref" href="#fn:ko2024learning">42</a></sup> and diffusion transformer (DiT)-based architectures <sup id="fnref:ferraro2025focus"><a class="footnote-ref" href="#fn:ferraro2025focus">43</a></sup> <sup id="fnref:agarwal2025cosmos"><a class="footnote-ref" href="#fn:agarwal2025cosmos">44</a></sup> <sup id="fnref2:zhu2025irasim"><a class="footnote-ref" href="#fn:zhu2025irasim">39</a></sup> <sup id="fnref:wan2025wan"><a class="footnote-ref" href="#fn:wan2025wan">45</a></sup> <sup id="fnref:yang2025roboenvision"><a class="footnote-ref" href="#fn:yang2025roboenvision">46</a></sup>. Autoregressive world models, in contrast, predict the next token or frame conditioned on previously generated ones, effectively modeling temporal dependencies in the sequence <sup id="fnref:liao2025genie"><a class="footnote-ref" href="#fn:liao2025genie">23</a></sup> <sup id="fnref5:wu2024ivideogpt"><a class="footnote-ref" href="#fn:wu2024ivideogpt">9</a></sup> <sup id="fnref3:xiang2024pandora"><a class="footnote-ref" href="#fn:xiang2024pandora">14</a></sup> <sup id="fnref:huang2025enerverse"><a class="footnote-ref" href="#fn:huang2025enerverse">47</a></sup> <sup id="fnref:villar2025playslot"><a class="footnote-ref" href="#fn:villar2025playslot">48</a></sup> <sup id="fnref2:bruce2024genie"><a class="footnote-ref" href="#fn:bruce2024genie">30</a></sup> <sup id="fnref2:cheang2024gr"><a class="footnote-ref" href="#fn:cheang2024gr">40</a></sup>. Other architectures include variational autoencoder (VAE)-based models <sup id="fnref3:bruce2024genie"><a class="footnote-ref" href="#fn:bruce2024genie">30</a></sup> and convolutional LSTMs <sup id="fnref2:finn2017deep"><a class="footnote-ref" href="#fn:finn2017deep">35</a></sup> <sup id="fnref2:ebert2018visual"><a class="footnote-ref" href="#fn:ebert2018visual">36</a></sup>. </p>
+<p>&emsp;&emsp;Autoregressive-based world models generate each step conditioned on previous outputs, allowing them to predict sequences of arbitrary length and making them well-suited for long-horizon predictions. However, they often suffer from error accumulation over extended sequences <sup id="fnref2:yang2025roboenvision"><a class="footnote-ref" href="#fn:yang2025roboenvision">46</a></sup> and may struggle to represent highly multi-modal distributions. In contrast, diffusion-based models generate samples through an iterative denoising process, enabling them to model complex, multi-modal distributions and produce globally coherent sequences. This iterative refinement also makes diffusion models more robust to individual prediction errors, resulting in better performance on tasks requiring long-horizon consistency or high-quality generative outputs. On the downside, diffusion models are computationally intensive and slower during inference, and adapting them to sequential prediction requires careful conditioning. Overall, autoregressive world models tend to excel in scenarios demanding speed and accurate short-term predictions, whereas diffusion models are more suitable for tasks involving long-horizon, multi-modal, or high-dimensional outputs where maintaining global coherence is crucial. </p>
+<p>&emsp;&emsp;Compared with implicit world models and latent-space world models, video generation models provide more detailed visual predictions but at a higher computational cost, lower generation speed and sample efficiency. In addition, action predictions are only proved to be align with visual future generation [wang2025learning], as visual data contain relevant information to actions.</p>
+<h2 id="b-architectural-design">B. Architectural Design<a class="headerlink" href="#b-architectural-design" title="Permanent link">&para;</a></h2>
+<p>&emsp;&emsp;1) Flat architecture<br />
+&emsp;&emsp;Most current methods adopt flat architectures <sup id="fnref:guo2025flowdreamer"><a class="footnote-ref" href="#fn:guo2025flowdreamer">49</a></sup> <sup id="fnref2:ferraro2025focus"><a class="footnote-ref" href="#fn:ferraro2025focus">43</a></sup> <sup id="fnref2:villar2025playslot"><a class="footnote-ref" href="#fn:villar2025playslot">48</a></sup> <sup id="fnref4:bruce2024genie"><a class="footnote-ref" href="#fn:bruce2024genie">30</a></sup> <sup id="fnref2:brooks2024video"><a class="footnote-ref" href="#fn:brooks2024video">31</a></sup> <sup id="fnref4:xiang2024pandora"><a class="footnote-ref" href="#fn:xiang2024pandora">14</a></sup> <sup id="fnref2:zheng2024open"><a class="footnote-ref" href="#fn:zheng2024open">32</a></sup> <sup id="fnref3:zhou2024robodreamer"><a class="footnote-ref" href="#fn:zhou2024robodreamer">33</a></sup>, which face critical limitations. They lack structured representations of the environment, resulting in poor handling of multi-scale dynamics, limited longhorizon prediction, error accumulation, and reduced generalization. Specifically, in robotic manipulation, placing fragile objects requires the robot to react instantly to unexpected slips while simultaneously planning the sequence of pickand-place actions to achieve the overall goal. Many tasks further involve long-term objectives that must be completed through sequential subgoals and temporally extended actions. For example, assembling a piece of furniture requires picking up components, aligning and attaching them correctly, and tightening screws for each part. Moreover, operating at a single level of abstraction causes small prediction errors to compound over time, degrading performance in long-horizon tasks. Finally, flat architectures fail to extract high-level abstractions, limiting transferability across tasks and environments. </p>
+<p>&emsp;&emsp;2) Hierarchical architecture.<br />
+&emsp;&emsp;Several studies have begun to explore and design hierarchical world models, in which lower-level modules handle intermediate reactions and short-term predictions, while higherlevel components are responsible for long-term planning and abstraction. Lecun et al. <sup id="fnref2:lecun2022path"><a class="footnote-ref" href="#fn:lecun2022path">21</a></sup> hypothesize a hierarchical JEPA architecture, where low-level and high-level representations are learned for short- and long-term predictions, respectively.Gumbsch et al. <sup id="fnref:gumbsch2023learning"><a class="footnote-ref" href="#fn:gumbsch2023learning">50</a></sup> propose an RSSM-based hierarchical world model, where the low-level module captures immediate dynamics for reactive control, and the high-level module models abstract temporal patterns for strategic planning. Bjo ̈rck et al. <sup id="fnref2:bjorck2025gr00t"><a class="footnote-ref" href="#fn:bjorck2025gr00t">19</a></sup> introduce a dual-system architecture in which System 2 interprets the environment and task goals, while System 1 generates continuous motor commands in real time. Similarly, Wang et al. <sup id="fnref:wang2025dmwm"><a class="footnote-ref" href="#fn:wang2025dmwm">51</a></sup> design a dual-level world model consisting of an RSSM-based System 1 (RSSM-S1) and a logic-integrated neural network System 2 (LINN-S2). The inter-system feedback mechanism ensures that predicted sequences comply with domain-specific logical rules: LINN-S2 constrains RSSM-S1’s predictions, while RSSM-S1 updates LINN-S2 based on new observations, enabling dynamic adaptation. Wang et al. <sup id="fnref:song2025hume"><a class="footnote-ref" href="#fn:song2025hume">52</a></sup> further employ System 2 for value-guided high-level planning by estimating state-action values and selecting optimal actions, while System 1 executes real-time motions via cascaded action denoising. </p>
+<p>&emsp;&emsp;Despite their advantages, hierarchical architectures introduce greater model complexity, higher computational cost, and increased training difficulty. Determining which goals or subtasks should be handled by high-level versus low-level modules remains challenging, as does designing appropriate architectures and preparing suitable training datasets. Moreover, maintaining effective information flow and coordination between layers is essential for stable and coherent performance. Consequently, developing hierarchical world models requires substantial effort in architecture design, goal decomposition, dataset construction, and inter-layer coordination.</p>
+<figure>
+<p><img alt="Perspectives on world models" src="../assets/img/03-04.png" width="60%" /></p>
+</figure>
+<h2 id="c-world-observation-and-representation">C. World Observation and Representation<a class="headerlink" href="#c-world-observation-and-representation" title="Permanent link">&para;</a></h2>
+<p>&emsp;&emsp;1) Dimensionality of the World<br />
+&emsp;&emsp;In designing world models, the dimensionality of the environment plays a critical role, shaping how effectively a model captures spatial structures, temporal evolution, and causal dynamics. </p>
+<p>&emsp;&emsp;Some works operate purely in 2D pixel space <sup id="fnref3:yang2023learning"><a class="footnote-ref" href="#fn:yang2023learning">29</a></sup> <sup id="fnref5:bruce2024genie"><a class="footnote-ref" href="#fn:bruce2024genie">30</a></sup> <sup id="fnref3:brooks2024video"><a class="footnote-ref" href="#fn:brooks2024video">31</a></sup> <sup id="fnref5:xiang2024pandora"><a class="footnote-ref" href="#fn:xiang2024pandora">14</a></sup> <sup id="fnref3:zheng2024open"><a class="footnote-ref" href="#fn:zheng2024open">32</a></sup> <sup id="fnref4:zhou2024robodreamer"><a class="footnote-ref" href="#fn:zhou2024robodreamer">33</a></sup>, capturing visual appearance and short-term dynamics but ignoring the real-world geometry. While 2D pixel-space models <sup id="fnref4:yang2023learning"><a class="footnote-ref" href="#fn:yang2023learning">29</a></sup> can model appearance and short-term dynamics, they lack geometric awareness of real-world structure. This limitation motivates the development of 3D-aware architectures.<br />
+To incorporate geometric understanding of the 3D world, Bu <em>et al.</em> <sup id="fnref:bu2024closed"><a class="footnote-ref" href="#fn:bu2024closed">53</a></sup> <sup id="fnref2:ko2024learning"><a class="footnote-ref" href="#fn:ko2024learning">42</a></sup> <sup id="fnref3:zhang2025combo"><a class="footnote-ref" href="#fn:zhang2025combo">11</a></sup> construct world models based on RGB-D data, while others extract richer 3D cues such as scene flow <sup id="fnref2:guo2025flowdreamer"><a class="footnote-ref" href="#fn:guo2025flowdreamer">49</a></sup>, motion fields <sup id="fnref:zhi20253dflowaction"><a class="footnote-ref" href="#fn:zhi20253dflowaction">54</a></sup>, and 3D point clouds with associated language descriptions <sup id="fnref2:zhen20243d"><a class="footnote-ref" href="#fn:zhen20243d">3</a></sup>, enabling more comprehensive modeling of 3D world dynamics. Additionally, Lu <em>et al.</em> <sup id="fnref:lu2025gwm"><a class="footnote-ref" href="#fn:lu2025gwm">55</a></sup> leverage 3D Gaussian Splatting, Diffusion Transformers, and a 3D Gaussian Variational Autoencoder to extract 3D representations from RGB observations. Zhang <em>et al.</em> <sup id="fnref2:zhang2025dreamvla"><a class="footnote-ref" href="#fn:zhang2025dreamvla">16</a></sup> incorporate depth estimation to enhance understanding of 3D worlds.<br />
+In addition to geometric structure, temporal dynamics are incorporated to construct 4D world models that jointly capture spatial and temporal evolution. For example, Zhu <em>et al.</em> <sup id="fnref3:team2025aether"><a class="footnote-ref" href="#fn:team2025aether">28</a></sup> synthesize 4D data from RGB-D videos by estimating depth and camera pose. Zhen <em>et al.</em> <sup id="fnref:zhen2025tesseract"><a class="footnote-ref" href="#fn:zhen2025tesseract">56</a></sup> leverage a pre-trained 3D VAE <sup id="fnref:kingma2013auto"><a class="footnote-ref" href="#fn:kingma2013auto">57</a></sup> to encode RGB, depth, and normal videos and combine them, while Huang <em>et al.</em> <sup id="fnref2:huang2025enerverse"><a class="footnote-ref" href="#fn:huang2025enerverse">47</a></sup> employ 4D Gaussian splatting to model spatiotemporal dynamics in robotic environments.</p>
+<p>&emsp;&emsp;2) Observation Viewpoint of the World<br />
+&emsp;&emsp;Robots acquire skills by observing and imitating humans or other robots in their environment. Depending on the observation viewpoint, world models for robot learning can be categorized into <strong>third-person (exocentric)</strong> <sup id="fnref3:guo2025flowdreamer"><a class="footnote-ref" href="#fn:guo2025flowdreamer">49</a></sup> <sup id="fnref3:ferraro2025focus"><a class="footnote-ref" href="#fn:ferraro2025focus">43</a></sup> <sup id="fnref3:villar2025playslot"><a class="footnote-ref" href="#fn:villar2025playslot">48</a></sup> and <strong>first-person (egocentric)</strong> <sup id="fnref3:chen2025egoagent"><a class="footnote-ref" href="#fn:chen2025egoagent">1</a></sup> <sup id="fnref:grauman2024ego"><a class="footnote-ref" href="#fn:grauman2024ego">58</a></sup> perspectives. Many existing methods learn from exocentric perspectives, capturing skills from an external viewpoint <sup id="fnref4:guo2025flowdreamer"><a class="footnote-ref" href="#fn:guo2025flowdreamer">49</a></sup> <sup id="fnref4:ferraro2025focus"><a class="footnote-ref" href="#fn:ferraro2025focus">43</a></sup> <sup id="fnref4:villar2025playslot"><a class="footnote-ref" href="#fn:villar2025playslot">48</a></sup>. However, exocentric observations do not fully align with how humans perceive the world, motivating the development of <strong>egocentric world models</strong>. For example, Chen <em>et al.</em> <sup id="fnref4:chen2025egoagent"><a class="footnote-ref" href="#fn:chen2025egoagent">1</a></sup> observe a continuous loop of human interactions, in which humans perceive egocentric observations and take 3D actions repeatedly. They model these interactions as sequences of “state-action-state-action” tokens processed using a causal attention mechanism. Zhang <em>et al.</em> <sup id="fnref4:zhang2025combo"><a class="footnote-ref" href="#fn:zhang2025combo">11</a></sup> focus on multi-agent planning, inferring other agents’ actions from world states estimated via partial egocentric observations.</p>
+<p>&emsp;&emsp;Grauman <em>et al.</em> <sup id="fnref2:grauman2024ego"><a class="footnote-ref" href="#fn:grauman2024ego">58</a></sup> argue that egocentric and exocentric viewpoints are complementary: egocentric viewpoints provide fine-grained cues about hand-object interactions and the camera wearer’s attention, while exocentric viewpoints supply broader context about the surrounding environment and whole-body poses.</p>
+<p>&emsp;&emsp;3) Representation of the World
+&emsp;&emsp;A central aspect of world models lies in how the environment is represented, which directly influences their ability to reason about dynamics, predict future states, and generalize across tasks. World representations can be broadly categorized into scene-centric, object-centric, and flow-centric approaches. In scene-centric representations, the environment is encoded as a single holistic latent, typically learned directly from pixels or raw sensory inputs <sup id="fnref3:hafner2019learning"><a class="footnote-ref" href="#fn:hafner2019learning">20</a></sup> <sup id="fnref4:hafnerdream"><a class="footnote-ref" href="#fn:hafnerdream">6</a></sup> <sup id="fnref4:hafner2021mastering"><a class="footnote-ref" href="#fn:hafner2021mastering">7</a></sup> <sup id="fnref4:hafner2023mastering"><a class="footnote-ref" href="#fn:hafner2023mastering">8</a></sup> <sup id="fnref:hafner2025mastering"><a class="footnote-ref" href="#fn:hafner2025mastering">59</a></sup>. While video generation tasks aim to maximize the visual fidelity of predicted sequences, robotic manipulation often does not require the full visual detail. Irrelevant elements such as the background or parts of the robot arm can be ignored. This motivates the use of object-centric representations, which focus on task-relevant entities and their interactions <sup id="fnref5:ferraro2025focus"><a class="footnote-ref" href="#fn:ferraro2025focus">43</a></sup> <sup id="fnref:barcellona2025dream"><a class="footnote-ref" href="#fn:barcellona2025dream">60</a></sup> <sup id="fnref5:villar2025playslot"><a class="footnote-ref" href="#fn:villar2025playslot">48</a></sup> <sup id="fnref2:zhi20253dflowaction"><a class="footnote-ref" href="#fn:zhi20253dflowaction">54</a></sup> <sup id="fnref:hong2024multiply"><a class="footnote-ref" href="#fn:hong2024multiply">61</a></sup>. Flow-centric representations, in contrast, are designed to capture the motion dynamics of the environment, emphasizing temporal change and spatial displacement <sup id="fnref:gao2024flip"><a class="footnote-ref" href="#fn:gao2024flip">62</a></sup>.</p>
+<figure>
+<p><img alt="Perspectives on world models" src="../assets/img/03-05.png" width="60%" /></p>
+</figure>
+<h2 id="d-task-scope">D. Task Scope<a class="headerlink" href="#d-task-scope" title="Permanent link">&para;</a></h2>
+<p>&emsp;&emsp;World models can also be categorized based on their task coverage. Some studies focus on single-task objectives, such as future-scene prediction <sup id="fnref:sudhakar2024controlling"><a class="footnote-ref" href="#fn:sudhakar2024controlling">63</a></sup> <sup id="fnref:finn2016unsupervised"><a class="footnote-ref" href="#fn:finn2016unsupervised">64</a></sup> <sup id="fnref2:barcellona2025dream"><a class="footnote-ref" href="#fn:barcellona2025dream">60</a></sup> <sup id="fnref3:jang2025dreamgen"><a class="footnote-ref" href="#fn:jang2025dreamgen">38</a></sup> <sup id="fnref:ebert2018robustness"><a class="footnote-ref" href="#fn:ebert2018robustness">65</a></sup>, or planning and action prediction <sup id="fnref:sekar2020planning"><a class="footnote-ref" href="#fn:sekar2020planning">66</a></sup>.</p>
+<p>&emsp;&emsp;In contrast, an increasing number of studies aim to support multiple tasks simultaneously, thereby enhancing the generality and applicability of world models.For instance, Cheang <em>et al.</em> <sup id="fnref3:cheang2024gr"><a class="footnote-ref" href="#fn:cheang2024gr">40</a></sup> <sup id="fnref5:zhou2024robodreamer"><a class="footnote-ref" href="#fn:zhou2024robodreamer">33</a></sup> <sup id="fnref3:du2023video"><a class="footnote-ref" href="#fn:du2023video">10</a></sup> <sup id="fnref2:gao2024flip"><a class="footnote-ref" href="#fn:gao2024flip">62</a></sup> generate videos for future-scene prediction and accordingly infer corresponding actions. Other works pursue simultaneous action prediction and world-scene forecasting <sup id="fnref:cen2025worldvla"><a class="footnote-ref" href="#fn:cen2025worldvla">67</a></sup> <sup id="fnref5:chen2025egoagent"><a class="footnote-ref" href="#fn:chen2025egoagent">1</a></sup> <sup id="fnref3:zhen20243d"><a class="footnote-ref" href="#fn:zhen20243d">3</a></sup> <sup id="fnref:song2025physical"><a class="footnote-ref" href="#fn:song2025physical">68</a></sup>. Beyond dual-task integration, several approaches extend world models to even broader capabilities. For instance, Bruce <em>et al.</em> <sup id="fnref6:bruce2024genie"><a class="footnote-ref" href="#fn:bruce2024genie">30</a></sup> propose interactive video generation that supports environment prediction and imitation learning, and utilize a latent action model to infer policies from unseen, action-free videos. Liao <em>et al.</em> <sup id="fnref2:liao2025genie"><a class="footnote-ref" href="#fn:liao2025genie">23</a></sup> introduce a unified framework for embodied video generation, policy learning, and simulation. Lu <em>et al.</em> <sup id="fnref2:lu2025gwm"><a class="footnote-ref" href="#fn:lu2025gwm">55</a></sup> learn 3D world representations for future-state prediction, imitation learning, and simulator through video generation. Zhu <em>et al.</em> <sup id="fnref3:zhu2025irasim"><a class="footnote-ref" href="#fn:zhu2025irasim">39</a></sup> develop an action-conditioned world model supporting trajectory-conditioned video generation, policy evaluation, and planning. Similarly, Huang <em>et al.</em> <sup id="fnref3:huang2025enerverse"><a class="footnote-ref" href="#fn:huang2025enerverse">47</a></sup> achieve multi-view video generation, robotic action prediction, and a data flywheel mechanism for sim-to-real adaptation.</p>
+<p><strong>Would foundation models.</strong> When discussing task scope, the notion of “foundation world models” becomes essential. These approaches aim to generalize across diverse tasks through large-scale training, paving the way for world models that act as universal backbones for robotics. One line of research achieves this through large-scale pretraining followed by taskspecific fine-tuning <sup id="fnref3:lu2025gwm"><a class="footnote-ref" href="#fn:lu2025gwm">55</a></sup> <sup id="fnref6:wu2024ivideogpt"><a class="footnote-ref" href="#fn:wu2024ivideogpt">9</a></sup> <sup id="fnref2:agarwal2025cosmos"><a class="footnote-ref" href="#fn:agarwal2025cosmos">44</a></sup> <sup id="fnref4:cheang2024gr"><a class="footnote-ref" href="#fn:cheang2024gr">40</a></sup> <sup id="fnref:mazzaglia2024genrl"><a class="footnote-ref" href="#fn:mazzaglia2024genrl">69</a></sup>. In particular, Mazzaglia et al. <sup id="fnref2:mazzaglia2024genrl"><a class="footnote-ref" href="#fn:mazzaglia2024genrl">69</a></sup> integrate a foundation VLM with a generative world model to enhance multimodal generalization. Other works directly pursue large-scale end-to-end training to build general-purpose world models <sup id="fnref7:bruce2024genie"><a class="footnote-ref" href="#fn:bruce2024genie">30</a></sup> <sup id="fnref2:cen2025worldvla"><a class="footnote-ref" href="#fn:cen2025worldvla">67</a></sup>.</p>
+<figure>
+<p><img alt="Perspectives on world models" src="../assets/img/03-06.png" width="60%" /></p>
+</figure>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:chen2025egoagent">
+<p>L. Chen <em>et al.</em>, "EgoAgent: A joint predictive agent model in egocentric worlds," <em>arXiv preprint arXiv:2502.05857</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:chen2025egoagent" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:chen2025egoagent" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:chen2025egoagent" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:chen2025egoagent" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:chen2025egoagent" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:team2023internlm">
+<p>I. Team, "Internlm: A multilingual language model with progressively enhanced capabilities." 2023.&#160;<a class="footnote-backref" href="#fnref:team2023internlm" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zhen20243d">
+<p>H. Zhen <em>et al.</em>, "3D-VLA: A 3D vision-language-action generative world model," in <em>Proceedings of the 41st international conference on machine learning</em>, 2024, pp. 61229--61245.&#160;<a class="footnote-backref" href="#fnref:zhen20243d" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:zhen20243d" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:zhen20243d" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:hong20233d">
+<p>Y. Hong <em>et al.</em>, "3d-llm: Injecting the 3d world into large language models," <em>Advances in Neural Information Processing Systems</em>, vol. 36, pp. 20482--20494, 2023.&#160;<a class="footnote-backref" href="#fnref:hong20233d" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:hong20233d" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wu2023daydreamer">
+<p>P. Wu, A. Escontrela, D. Hafner, P. Abbeel, and K. Goldberg, "Daydreamer: World models for physical robot learning," in <em>Conference on robot learning</em>, PMLR, 2023, pp. 2226--2240.&#160;<a class="footnote-backref" href="#fnref:wu2023daydreamer" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wu2023daydreamer" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wu2023daydreamer" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:hafnerdream">
+<p>D. Hafner, T. Lillicrap, J. Ba, and M. Norouzi, "Dream to control: Learning behaviors by latent imagination," in <em>International conference on learning representations</em>, 2019.&#160;<a class="footnote-backref" href="#fnref:hafnerdream" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:hafnerdream" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:hafnerdream" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:hafnerdream" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:hafner2021mastering">
+<p>D. Hafner, T. P. Lillicrap, M. Norouzi, and J. Ba, "Mastering atari with discrete world models," in <em>International conference on learning representations</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:hafner2021mastering" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:hafner2021mastering" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:hafner2021mastering" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:hafner2021mastering" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:hafner2023mastering">
+<p>D. Hafner, J. Pasukonis, J. Ba, and T. Lillicrap, "Mastering diverse domains through world models," <em>arXiv preprint arXiv:2301.04104</em>, 2023.&#160;<a class="footnote-backref" href="#fnref:hafner2023mastering" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:hafner2023mastering" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:hafner2023mastering" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:hafner2023mastering" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wu2024ivideogpt">
+<p>J. Wu <em>et al.</em>, "Ivideogpt: Interactive videogpts are scalable world models," <em>Advances in Neural Information Processing Systems</em>, vol. 37, pp. 68082--68119, 2024.&#160;<a class="footnote-backref" href="#fnref:wu2024ivideogpt" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wu2024ivideogpt" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wu2024ivideogpt" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:wu2024ivideogpt" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:wu2024ivideogpt" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:wu2024ivideogpt" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:du2023video">
+<p>Y. Du <em>et al.</em>, "Video language planning," <em>arXiv preprint arXiv:2310.10625</em>, 2023.&#160;<a class="footnote-backref" href="#fnref:du2023video" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:du2023video" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:du2023video" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zhang2025combo">
+<p>H. Zhang <em>et al.</em>, "COMBO: Compositional world models for embodied multi-agent cooperation," in <em>The thirteenth international conference on learning representations</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:zhang2025combo" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:zhang2025combo" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:zhang2025combo" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:zhang2025combo" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:rigter2025avid">
+<p>M. Rigter, T. Gupta, A. Hilmkil, and C. Ma, "AVID: Adapting video diffusion models to world models," in <em>Reinforcement learning conference</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:rigter2025avid" title="Jump back to footnote 12 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:rigter2025avid" title="Jump back to footnote 12 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:rigter2025avid" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ahn2022can">
+<p>M. Ahn <em>et al.</em>, "Do as i can, not as i say: Grounding language in robotic affordances," <em>arXiv preprint arXiv:2204.01691</em>, 2022.&#160;<a class="footnote-backref" href="#fnref:ahn2022can" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:xiang2024pandora">
+<p>J. Xiang <em>et al.</em>, "Pandora: Towards general world model with natural language actions and video states," <em>arXiv preprint arXiv:2406.09455</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:xiang2024pandora" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:xiang2024pandora" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:xiang2024pandora" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:xiang2024pandora" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:xiang2024pandora" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:driess2023palm">
+<p>D. Driess <em>et al.</em>, "PaLM-e: An embodied multimodal language model," in <em>Proceedings of the 40th international conference on machine learning</em>, 2023, pp. 8469--8488.&#160;<a class="footnote-backref" href="#fnref:driess2023palm" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zhang2025dreamvla">
+<p>W. Zhang <em>et al.</em>, "DreamVLA: A vision-language-action model dreamed with comprehensive world knowledge," <em>arXiv preprint arXiv:2507.04447</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:zhang2025dreamvla" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:zhang2025dreamvla" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zhao2024vlmpc">
+<p>W. Zhao, J. Chen, Z. Meng, D. Mao, R. Song, and W. Zhang, "Vlmpc: Vision-language model predictive control for robotic manipulation," <em>arXiv preprint arXiv:2407.09829</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:zhao2024vlmpc" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zitkovich2023rt">
+<p>B. Zitkovich <em>et al.</em>, "Rt-2: Vision-language-action models transfer web knowledge to robotic control," in <em>Conference on robot learning</em>, PMLR, 2023, pp. 2165--2183.&#160;<a class="footnote-backref" href="#fnref:zitkovich2023rt" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:bjorck2025gr00t">
+<p>J. Bjorck <em>et al.</em>, "Gr00t n1: An open foundation model for generalist humanoid robots," <em>arXiv preprint arXiv:2503.14734</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:bjorck2025gr00t" title="Jump back to footnote 19 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:bjorck2025gr00t" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:hafner2019learning">
+<p>D. Hafner <em>et al.</em>, "Learning latent dynamics for planning from pixels," in <em>International conference on machine learning</em>, 2019, pp. 2555--2565.&#160;<a class="footnote-backref" href="#fnref:hafner2019learning" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:hafner2019learning" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:hafner2019learning" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:lecun2022path">
+<p>Y. LeCun, "A path towards autonomous machine intelligence," <em>Open Review</em>, vol. 62, no. 1, pp. 1--62, 2022.&#160;<a class="footnote-backref" href="#fnref:lecun2022path" title="Jump back to footnote 21 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:lecun2022path" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:assran2025v">
+<p>M. Assran <em>et al.</em>, "V-jepa 2: Self-supervised video models enable understanding, prediction and planning," <em>arXiv preprint arXiv:2506.09985</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:assran2025v" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+<li id="fn:liao2025genie">
+<p>Y. Liao <em>et al.</em>, "Genie envisioner: A unified world foundation platform for robotic manipulation," <em>arXiv preprint arXiv:2508.05635</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:liao2025genie" title="Jump back to footnote 23 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:liao2025genie" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+</li>
+<li id="fn:schrittwieser2020mastering">
+<p>J. Schrittwieser <em>et al.</em>, "Mastering atari, go, chess and shogi by planning with a learned model," <em>Nature</em>, vol. 588, no. 7839, pp. 604--609, 2020.&#160;<a class="footnote-backref" href="#fnref:schrittwieser2020mastering" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ye2021mastering">
+<p>W. Ye, S. Liu, T. Kurutach, P. Abbeel, and Y. Gao, "Mastering atari games with limited data," <em>Advances in neural information processing systems</em>, vol. 34, pp. 25476--25488, 2021.&#160;<a class="footnote-backref" href="#fnref:ye2021mastering" title="Jump back to footnote 25 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wang2024efficientzero">
+<p>S. Wang, S. Liu, W. Ye, J. You, and Y. Gao, "Efficientzero v2: Mastering discrete and continuous control with limited data," <em>arXiv preprint arXiv:2403.00564</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:wang2024efficientzero" title="Jump back to footnote 26 in the text">&#8617;</a></p>
+</li>
+<li id="fn:silver2018general">
+<p>D. Silver <em>et al.</em>, "A general reinforcement learning algorithm that masters chess, shogi, and go through self-play," <em>Science</em>, vol. 362, no. 6419, pp. 1140--1144, 2018.&#160;<a class="footnote-backref" href="#fnref:silver2018general" title="Jump back to footnote 27 in the text">&#8617;</a></p>
+</li>
+<li id="fn:team2025aether">
+<p>H. Zhu <em>et al.</em>, "Aether: Geometric-aware unified world modeling," in <em>ICCV</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:team2025aether" title="Jump back to footnote 28 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:team2025aether" title="Jump back to footnote 28 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:team2025aether" title="Jump back to footnote 28 in the text">&#8617;</a></p>
+</li>
+<li id="fn:yang2023learning">
+<p>M. Yang, Y. Du, K. Ghasemipour, J. Tompson, D. Schuurmans, and P. Abbeel, "Learning interactive real-world simulators," <em>arXiv preprint arXiv:2310.06114</em>, vol. 1, no. 2, p. 6, 2023.&#160;<a class="footnote-backref" href="#fnref:yang2023learning" title="Jump back to footnote 29 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:yang2023learning" title="Jump back to footnote 29 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:yang2023learning" title="Jump back to footnote 29 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:yang2023learning" title="Jump back to footnote 29 in the text">&#8617;</a></p>
+</li>
+<li id="fn:bruce2024genie">
+<p>J. Bruce <em>et al.</em>, "Genie: Generative interactive environments," in <em>Proceedings of the 41st international conference on machine learning</em>, 2024, pp. 4603--4623.&#160;<a class="footnote-backref" href="#fnref:bruce2024genie" title="Jump back to footnote 30 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:bruce2024genie" title="Jump back to footnote 30 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:bruce2024genie" title="Jump back to footnote 30 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:bruce2024genie" title="Jump back to footnote 30 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:bruce2024genie" title="Jump back to footnote 30 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:bruce2024genie" title="Jump back to footnote 30 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:bruce2024genie" title="Jump back to footnote 30 in the text">&#8617;</a></p>
+</li>
+<li id="fn:brooks2024video">
+<p>T. Brooks <em>et al.</em>, "Video generation models as world simulators," <em>OpenAI Blog</em>, vol. 1, no. 8, p. 1, 2024.&#160;<a class="footnote-backref" href="#fnref:brooks2024video" title="Jump back to footnote 31 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:brooks2024video" title="Jump back to footnote 31 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:brooks2024video" title="Jump back to footnote 31 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zheng2024open">
+<p>Z. Zheng <em>et al.</em>, "Open-sora: Democratizing efficient video production for all," <em>arXiv preprint arXiv:2412.20404</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:zheng2024open" title="Jump back to footnote 32 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:zheng2024open" title="Jump back to footnote 32 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:zheng2024open" title="Jump back to footnote 32 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zhou2024robodreamer">
+<p>S. Zhou, Y. Du, J. Chen, Y. Li, D.-Y. Yeung, and C. Gan, "RoboDreamer: Learning compositional world models for robot imagination," in <em>International conference on machine learning</em>, PMLR, 2024, pp. 61885--61896.&#160;<a class="footnote-backref" href="#fnref:zhou2024robodreamer" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:zhou2024robodreamer" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:zhou2024robodreamer" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:zhou2024robodreamer" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:zhou2024robodreamer" title="Jump back to footnote 33 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ali2025humanoid">
+<p>M. Q. Ali, A. Sridhar, S. Matiana, A. Wong, and M. Al-Sharman, "Humanoid world models: Open world foundation models for humanoid robotics," <em>arXiv preprint arXiv:2506.01182</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:ali2025humanoid" title="Jump back to footnote 34 in the text">&#8617;</a></p>
+</li>
+<li id="fn:finn2017deep">
+<p>C. Finn and S. Levine, "Deep visual foresight for planning robotic motion," in <em>2017 IEEE international conference on robotics and automation</em>, IEEE, 2017, pp. 2786--2793.&#160;<a class="footnote-backref" href="#fnref:finn2017deep" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:finn2017deep" title="Jump back to footnote 35 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ebert2018visual">
+<p>F. Ebert, C. Finn, S. Dasari, A. Xie, A. Lee, and S. Levine, "Visual foresight: Model-based deep reinforcement learning for vision-based robotic control," <em>arXiv preprint arXiv:1812.00568</em>, 2018.&#160;<a class="footnote-backref" href="#fnref:ebert2018visual" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:ebert2018visual" title="Jump back to footnote 36 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wang2025language">
+<p>B. Wang <em>et al.</em>, "This\ &amp;that: Language-gesture controlled video generation for robot planning," in <em>2025 IEEE international conference on robotics and automation (ICRA)</em>, IEEE, 2025, pp. 12842--12849.&#160;<a class="footnote-backref" href="#fnref:wang2025language" title="Jump back to footnote 37 in the text">&#8617;</a></p>
+</li>
+<li id="fn:jang2025dreamgen">
+<p>J. Jang <em>et al.</em>, "DreamGen: Unlocking generalization in robot learning through video world models," <em>arXiv preprint arXiv:2505.12705</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:jang2025dreamgen" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:jang2025dreamgen" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:jang2025dreamgen" title="Jump back to footnote 38 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zhu2025irasim">
+<p>F. Zhu, H. Wu, S. Guo, Y. Liu, C. Cheang, and T. Kong, "Irasim: Learning interactive real-robot action simulators," in <em>ICCV</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:zhu2025irasim" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:zhu2025irasim" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:zhu2025irasim" title="Jump back to footnote 39 in the text">&#8617;</a></p>
+</li>
+<li id="fn:cheang2024gr">
+<p>C.-L. Cheang <em>et al.</em>, "Gr-2: A generative video-language-action model with web-scale knowledge for robot manipulation," <em>arXiv preprint arXiv:2410.06158</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:cheang2024gr" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:cheang2024gr" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:cheang2024gr" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:cheang2024gr" title="Jump back to footnote 40 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ho2022video">
+<p>J. Ho, T. Salimans, A. Gritsenko, W. Chan, M. Norouzi, and D. J. Fleet, "Video diffusion models," <em>Advances in neural information processing systems</em>, vol. 35, pp. 8633--8646, 2022.&#160;<a class="footnote-backref" href="#fnref:ho2022video" title="Jump back to footnote 41 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ko2024learning">
+<p>P.-C. Ko, J. Mao, Y. Du, S.-H. Sun, and J. B. Tenenbaum, "Learning to act from actionless videos through dense correspondences," in <em>The twelfth international conference on learning representations</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:ko2024learning" title="Jump back to footnote 42 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:ko2024learning" title="Jump back to footnote 42 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ferraro2025focus">
+<p>S. Ferraro, P. Mazzaglia, T. Verbelen, and B. Dhoedt, "FOCUS: Object-centric world models for robotic manipulation," <em>Frontiers in Neurorobotics</em>, vol. 19, p. 1585386, 2025.&#160;<a class="footnote-backref" href="#fnref:ferraro2025focus" title="Jump back to footnote 43 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:ferraro2025focus" title="Jump back to footnote 43 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:ferraro2025focus" title="Jump back to footnote 43 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:ferraro2025focus" title="Jump back to footnote 43 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:ferraro2025focus" title="Jump back to footnote 43 in the text">&#8617;</a></p>
+</li>
+<li id="fn:agarwal2025cosmos">
+<p>N. Agarwal <em>et al.</em>, "Cosmos world foundation model platform for physical ai," <em>arXiv preprint arXiv:2501.03575</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:agarwal2025cosmos" title="Jump back to footnote 44 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:agarwal2025cosmos" title="Jump back to footnote 44 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wan2025wan">
+<p>T. Wan <em>et al.</em>, "Wan: Open and advanced large-scale video generative models," <em>arXiv preprint arXiv:2503.20314</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:wan2025wan" title="Jump back to footnote 45 in the text">&#8617;</a></p>
+</li>
+<li id="fn:yang2025roboenvision">
+<p>L. Yang <em>et al.</em>, "RoboEnvision: A long-horizon video generation model for multi-task robot manipulation," <em>arXiv preprint arXiv:2506.22007</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:yang2025roboenvision" title="Jump back to footnote 46 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:yang2025roboenvision" title="Jump back to footnote 46 in the text">&#8617;</a></p>
+</li>
+<li id="fn:huang2025enerverse">
+<p>S. Huang <em>et al.</em>, "Enerverse: Envisioning embodied future space for robotics manipulation," <em>arXiv preprint arXiv:2501.01895</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:huang2025enerverse" title="Jump back to footnote 47 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:huang2025enerverse" title="Jump back to footnote 47 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:huang2025enerverse" title="Jump back to footnote 47 in the text">&#8617;</a></p>
+</li>
+<li id="fn:villar2025playslot">
+<p>A. Villar-Corrales and S. Behnke, "PlaySlot: Learning inverse latent dynamics for controllable object-centric video prediction and planning," in <em>Forty-second international conference on machine learning</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:villar2025playslot" title="Jump back to footnote 48 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:villar2025playslot" title="Jump back to footnote 48 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:villar2025playslot" title="Jump back to footnote 48 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:villar2025playslot" title="Jump back to footnote 48 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:villar2025playslot" title="Jump back to footnote 48 in the text">&#8617;</a></p>
+</li>
+<li id="fn:guo2025flowdreamer">
+<p>J. Guo, X. Ma, Y. Wang, M. Yang, H. Liu, and Q. Li, "FlowDreamer: A RGB-d world model with flow-based motion representations for robot manipulation," <em>arXiv preprint arXiv:2505.10075</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:guo2025flowdreamer" title="Jump back to footnote 49 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:guo2025flowdreamer" title="Jump back to footnote 49 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:guo2025flowdreamer" title="Jump back to footnote 49 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:guo2025flowdreamer" title="Jump back to footnote 49 in the text">&#8617;</a></p>
+</li>
+<li id="fn:gumbsch2023learning">
+<p>C. Gumbsch, N. Sajid, G. Martius, and M. V. Butz, "Learning hierarchical world models with adaptive temporal abstractions from discrete latent dynamics," in <em>The twelfth international conference on learning representations</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:gumbsch2023learning" title="Jump back to footnote 50 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wang2025dmwm">
+<p>L. Wang, R. Shelim, W. Saad, and N. Ramakrishnan, "DMWM: Dual-mind world model with long-term imagination," <em>arXiv preprint arXiv:2502.07591</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:wang2025dmwm" title="Jump back to footnote 51 in the text">&#8617;</a></p>
+</li>
+<li id="fn:song2025hume">
+<p>H. Song <em>et al.</em>, "Hume: Introducing system-2 thinking in visual-language-action model," <em>arXiv preprint arXiv:2505.21432</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:song2025hume" title="Jump back to footnote 52 in the text">&#8617;</a></p>
+</li>
+<li id="fn:bu2024closed">
+<p>Q. Bu <em>et al.</em>, "Closed-loop visuomotor control with generative expectation for robotic manipulation," <em>Advances in Neural Information Processing Systems</em>, vol. 37, pp. 139002--139029, 2024.&#160;<a class="footnote-backref" href="#fnref:bu2024closed" title="Jump back to footnote 53 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zhi20253dflowaction">
+<p>H. Zhi <em>et al.</em>, "3DFlowAction: Learning cross-embodiment manipulation from 3D flow world model," <em>arXiv preprint arXiv:2506.06199</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:zhi20253dflowaction" title="Jump back to footnote 54 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:zhi20253dflowaction" title="Jump back to footnote 54 in the text">&#8617;</a></p>
+</li>
+<li id="fn:lu2025gwm">
+<p>G. Lu <em>et al.</em>, "GWM: Towards scalable gaussian world models for robotic manipulation," <em>arXiv preprint arXiv:2508.17600</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:lu2025gwm" title="Jump back to footnote 55 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:lu2025gwm" title="Jump back to footnote 55 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:lu2025gwm" title="Jump back to footnote 55 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zhen2025tesseract">
+<p>H. Zhen <em>et al.</em>, "TesserAct: Learning 4D embodied world models," <em>arXiv preprint arXiv:2504.20995</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:zhen2025tesseract" title="Jump back to footnote 56 in the text">&#8617;</a></p>
+</li>
+<li id="fn:kingma2013auto">
+<p>D. P. Kingma and M. Welling, "Auto-encoding variational bayes," <em>arXiv preprint arXiv:1312.6114</em>, 2013.&#160;<a class="footnote-backref" href="#fnref:kingma2013auto" title="Jump back to footnote 57 in the text">&#8617;</a></p>
+</li>
+<li id="fn:grauman2024ego">
+<p>K. Grauman <em>et al.</em>, "Ego-exo4d: Understanding skilled human activity from first-and third-person perspectives," in <em>Proceedings of the IEEE/CVF conference on computer vision and pattern recognition</em>, 2024, pp. 19383--19400.&#160;<a class="footnote-backref" href="#fnref:grauman2024ego" title="Jump back to footnote 58 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:grauman2024ego" title="Jump back to footnote 58 in the text">&#8617;</a></p>
+</li>
+<li id="fn:hafner2025mastering">
+<p>D. Hafner, J. Pasukonis, J. Ba, and T. Lillicrap, "Mastering diverse control tasks through world models," <em>Nature</em>, pp. 1--7, 2025.&#160;<a class="footnote-backref" href="#fnref:hafner2025mastering" title="Jump back to footnote 59 in the text">&#8617;</a></p>
+</li>
+<li id="fn:barcellona2025dream">
+<p>L. Barcellona, A. Zadaianchuk, D. Allegro, S. Papa, S. Ghidoni, and E. Gavves, "Dream to manipulate: Compositional world models empowering robot imitation learning with imagination," in <em>The thirteenth international conference on learning representations</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:barcellona2025dream" title="Jump back to footnote 60 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:barcellona2025dream" title="Jump back to footnote 60 in the text">&#8617;</a></p>
+</li>
+<li id="fn:hong2024multiply">
+<p>Y. Hong, Z. Zheng, P. Chen, Y. Wang, J. Li, and C. Gan, "Multiply: A multisensory object-centric embodied large language model in 3d world," in <em>Proceedings of the IEEE/CVF conference on computer vision and pattern recognition</em>, 2024, pp. 26406--26416.&#160;<a class="footnote-backref" href="#fnref:hong2024multiply" title="Jump back to footnote 61 in the text">&#8617;</a></p>
+</li>
+<li id="fn:gao2024flip">
+<p>C. Gao, H. Zhang, Z. Xu, C. Zhehao, and L. Shao, "FLIP: Flow-centric generative planning as general-purpose manipulation world model," in <em>The thirteenth international conference on learning representations</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:gao2024flip" title="Jump back to footnote 62 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:gao2024flip" title="Jump back to footnote 62 in the text">&#8617;</a></p>
+</li>
+<li id="fn:sudhakar2024controlling">
+<p>S. Sudhakar, R. Liu, B. V. Hoorick, C. Vondrick, and R. Zemel, "Controlling the world by sleight of hand," in <em>European conference on computer vision</em>, Springer, 2024, pp. 414--430.&#160;<a class="footnote-backref" href="#fnref:sudhakar2024controlling" title="Jump back to footnote 63 in the text">&#8617;</a></p>
+</li>
+<li id="fn:finn2016unsupervised">
+<p>C. Finn, I. Goodfellow, and S. Levine, "Unsupervised learning for physical interaction through video prediction," in <em>Proceedings of the 30th international conference on neural information processing systems</em>, 2016, pp. 64--72.&#160;<a class="footnote-backref" href="#fnref:finn2016unsupervised" title="Jump back to footnote 64 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ebert2018robustness">
+<p>F. Ebert, S. Dasari, A. X. Lee, S. Levine, and C. Finn, "Robustness via retrying: Closed-loop robotic manipulation with self-supervised learning," in <em>Conference on robot learning</em>, PMLR, 2018, pp. 983--993.&#160;<a class="footnote-backref" href="#fnref:ebert2018robustness" title="Jump back to footnote 65 in the text">&#8617;</a></p>
+</li>
+<li id="fn:sekar2020planning">
+<p>R. Sekar, O. Rybkin, K. Daniilidis, P. Abbeel, D. Hafner, and D. Pathak, "Planning to explore via self-supervised world models," in <em>International conference on machine learning</em>, 2020, pp. 8583--8592.&#160;<a class="footnote-backref" href="#fnref:sekar2020planning" title="Jump back to footnote 66 in the text">&#8617;</a></p>
+</li>
+<li id="fn:cen2025worldvla">
+<p>J. Cen <em>et al.</em>, "WorldVLA: Towards autoregressive action world model," <em>arXiv preprint arXiv:2506.21539</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:cen2025worldvla" title="Jump back to footnote 67 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:cen2025worldvla" title="Jump back to footnote 67 in the text">&#8617;</a></p>
+</li>
+<li id="fn:song2025physical">
+<p>Z. Song, S. Qin, T. Chen, L. Lin, and G. Wang, "Physical autoregressive model for robotic manipulation without action pretraining," <em>arXiv preprint arXiv:2508.09822</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:song2025physical" title="Jump back to footnote 68 in the text">&#8617;</a></p>
+</li>
+<li id="fn:mazzaglia2024genrl">
+<p>P. Mazzaglia, T. Verbelen, B. Dhoedt, A. Courville, and S. Rajeswar, "GenRL: Multimodal-foundation world models for generalization in embodied agents," <em>Advances in neural information processing systems</em>, vol. 37, pp. 27529--27555, 2024.&#160;<a class="footnote-backref" href="#fnref:mazzaglia2024genrl" title="Jump back to footnote 69 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:mazzaglia2024genrl" title="Jump back to footnote 69 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.expand", "navigation.sections", "header.autohide"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../js/strip-nocase.js"></script>
+      
+    
+  </body>
+</html>

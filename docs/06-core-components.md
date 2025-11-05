@@ -28,5 +28,3 @@
 
 **13) Collaboration Ability.** World models should support both inter-agent and intra-agent coordination by reasoning about the behaviors, goals, and intentions of others and managing cooperation among multiple effectors (e.g., multi-arm systems).
 
-## References
-\bibliography

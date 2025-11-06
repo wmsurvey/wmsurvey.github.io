@@ -1,4 +1,4 @@
-site_name: A Step Toward World Models
+site_name: A Step Toward World Models： A Survey on Robotic Manipulation
 theme:
   name: material
   features:
@@ -23,11 +23,12 @@ plugins:
       bib_file: docs/refs.bib        # 你的 BibTeX 文件
       csl_file: docs/ieee.csl   
 
+
 extra_javascript:
   - js/strip-nocase.js
 
 nav:
-  - Abstract: index.md
+  - Abstract: abstract.md
   - I Introduction: 01-introduction.md
   - II Preliminaries: 02-preliminaries.md
   - III Overview of the World Model: 03-overview.md
@@ -36,4 +37,4 @@ nav:
   - VI Core Components & Capabilities: 06-core-components.md
   - VII Dataset: 07-dataset.md
   - VIII Conclusion & Future directions: 08-conclusion.md
-  - References: 99-references.md
+  # - References: 99-references.md

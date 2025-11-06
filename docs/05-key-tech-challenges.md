@@ -1,8 +1,8 @@
-# V Key Techniques and Notable Challenges
+# **V Key Techniques and Notable Challenges**
 
  &emsp;&emsp;This section summarizes the key techniques that drive the development of world models and discusses the major challenges that remain in achieving general, scalable, and robust modeling. Some techniques and concepts are revisited across subsections to emphasize their central importance.
 
-## A. Data Limitations
+## **A. Data Limitations**
 
 &emsp;&emsp;World models require large amounts of data and supervision to learn generalizable representations of world dynamics and support diverse tasks. However, collecting real-world robotic data is labor-intensive and costly, and the available data are often heterogeneous in format and modality. To overcome these limitations, a variety of strategies have been proposed.
 
@@ -32,7 +32,7 @@
 &emsp;&emsp;Some works aim to leverage **pre-trained video models**. For instance, Rigter et al. [@rigter2025avid] adapt a pre-trained video diffusion model for action-conditioned world modeling by training a lightweight adapter, which is then fine-tuned on a small set of domain-specific, action-labeled videos. Black et al. [@black2024zero] similarly employ a pre-trained image-editing diffusion model to support video-based world modeling. In addition, Zhu et al. [@zhu2025unified] design a **unified world model** that integrates the action and video diffusion processes within a unified transformer architecture using separate diffusion timesteps. This can enable learning from action-free video data. Ko et al. [@ko2024learning] utilize **optical flow** extracted from videos, thereby circumventing the need for explicit action labels. 
 
 
-## B. Perception and Representation
+## **B. Perception and Representation**
 
 &emsp;&emsp;Perception lies at the heart of robotic world models, enabling systems to interpret task instructions and transform raw sensory inputs into meaningful representations. These representations allow robots to understand structured environments and, in turn, predict, react, and plan effectively.
 
@@ -61,7 +61,7 @@
   ![Perspectives on world models](assets/img/05-01.png){ width="60%" }
 </figure>
 
-## C. Long-horizon Reasoning  
+## **C. Long-horizon Reasoning  **
 &emsp;&emsp;Many robotic tasks require coherent long-horizon reasoning, where achieving the final objective depends on executing a temporally consistent sequence of actions over extended time scales. Existing methods are limited in long-horizon predictions  [@nair2022learning;@ha2018world;@hafner2019learning;@hafner2021mastering;@hafner2023mastering]. For example, Ha et al. [@ha2018world;@hafner2019learning;@hafner2021mastering;@hafner2023mastering] predefine temporal horizons to guide planning in their world models. In terms of video generation, existing methods still suffer from limited length (short-horizon future video) [@gao2024flip]. For example, Ko et al. [@ko2024learning] predicts a fixed number (eight) of future frames with U-Net based diffusion model  [@dhariwal2021diffusion]. Bruce et al. [@bruce2024genie] can only memorize 16 frames and cannot produce consistent predictions. For autoregressive models, small prediction errors compound sequentially, leading to substantial inaccuracies in long-horizon forecasts.
 
 &emsp;&emsp;1) Closed-loop learning scheme  
@@ -76,7 +76,7 @@
 &emsp;&emsp;4) More strategies.  
 &emsp;&emsp;Driess et al. [@driess2023palm] provide a goal image in addition to language instructions. Du et al. [@du2023video] propose to take advantage of long-horizon inference of VLMs and the low-level visual dynamic modelling ability of text-to-video models to handle long-horizon visual planning. A tree search over the space of possible video sequences to find proper long-horizon plans. Ren et al. [@ren2025videoworld] lean compact representations for the visual world that preserve the detailed temporal dynamics by means of causal encoder-decoder and quantization with a discrete codebook [@mentzer2024finite]. 
 
-## D. Spatiotemporal Consistency  
+## **D. Spatiotemporal Consistency  **
 &emsp;&emsp;Spatiotemporal consistency plays a vital role in ensuring coherent and physically plausible predictions of future states. It guarantees that the model preserves object continuity, motion smoothness, and causal relationships across time, enabling stable video simulation and reliable dynamics forecasting.
 
 &emsp;&emsp;1) Data perspective  
@@ -88,7 +88,7 @@
 &emsp;&emsp;3) Memory mechanism  
 &emsp;&emsp;is often used to enhance the spatiotemporal consistency. For example, Liao et al. [@liao2025genie] design a sparse memory mechanism to provide long-term historical context, improving spatiotemporal consistency and task relevance. More information can refer to Section V-G.
 
-## E. Generalization  
+## **E. Generalization ** 
 &emsp;&emsp;Robots are expected to operate robustly in complex and novel environments, interacting with unfamiliar objects and performing tasks beyond their training distribution.  
 
 &emsp;&emsp;1) Data scaling  
@@ -109,18 +109,18 @@
 &emsp;&emsp;6) Other strategies   
 &emsp;&emsp;Black et al. [@black2024zero] use a pretrained image-editing model to generate subgoals from language commands and current observations, enabling low-level controllers to act and generalize to novel objects and scenarios. Self-supervised learning without task-specific rewards that can enhancing generalization abilities into different tasks [@sekar2020planning]. 
 
-## F. Physics-informed Learning  
+## **F. Physics-informed Learning  **
 &emsp;&emsp;Existing world models struggle to generate physically consistent videos because they lack an inherent understanding of physics, often producing unrealistic dynamics and implausible event sequences. Simply scaling up training data or model size is insufficient to capture the underlying physical laws [@kang2025far]. To address this challenge, several approaches have been proposed. For example, Yang et al. [@yang2025vlipp] introduce a two-stage image-to-video generation framework that explicitly incorporates physics through vision- and language-informed physical priors. Team et al. [@team2025aether] estimate depth and camera pose directly from videos, facilitating physics-informed learning and enabling world models to infer and predict physically consistent dynamics. Peper et al. [@peper2025four] argue that advancing from physics-informed to physics-interpretable world models requires rethinking model design, and propose four guiding principles: organizing latent spaces by physical intent, encoding invariant and equivariant environmental representations, integrating multiple supervision signals, and partitioning generative outputs to improve both scalability and verifiability.
 
 <figure markdown>
   ![Perspectives on world models](assets/img/05-02.png){ width="60%" }
 </figure>
 
-## G. Memory
+## **G. Memory**
 &emsp;&emsp;Memory mechanisms enable world models to store and retrieve relevant past information, supporting hidden-state disambiguation and long-horizon reasoning. For example, LeCun et al. [@lecun2022path] incorporate a memory module that maintains past, current, and predicted world states along with intrinsic costs, allowing retrieval of contextual information for reasoning and training. Huang et al. [@huang2025enerverse] propose a sparse contextual memory mechanism that preserves essential prior information throughout the generation process in a non-redundant manner, theoretically enabling the generation of sequences of arbitrary length. Zhou et al. [@zhou2025learning] employ a 3D feature-map memory to maintain temporal consistency during sequence generation.  
 **Memory efficiency** Standard transformer blocks apply Multi-Head Self-Attention (MHA) to all tokens in the input token sequence, resulting in quadratic computation cost. Zhu et al. [@zhu2025irasim] leverage the memory-efficient spatial-temporal attention mechanism to reduce the computation cost. Liao et al. [@liao2025genie] randomly sampled parse memory frames from prior video history to augment temporal diversity to improve representational invariance, and use low-frame-rate video sequence for fine-tuning frames.
 
-## H. Other Challenges
+## **H. Other Challenges**
 &emsp;&emsp;1) Video fidelity  
 &emsp;&emsp;To achieve high-fidelity video generation, several methods leverage powerful generative models. For instance, Ko et al. [@ko2024learning] employ an image diffusion model based on a U-Net with factorized spatiotemporal convolutions as the fundamental building block. Guo et al. [@guo2025flowdreamer] utilize the pre-trained variational autoencoder from Stable Diffusion [@rombach2022high]. Souvcek et al. [@souvcek2024genhowto] propose to make use of a variety of action and final state prompts. 
 
@@ -145,5 +145,5 @@
 &emsp;&emsp;8) Error propagation  
 &emsp;&emsp;Cen et al. [@cen2025worldvla] indicate that generating multiple actions in sequence leads to performance drop in autoregressive models. The primary reason for this is that pretrained multimodal language models have predominantly been exposed to images and text rather than actions, resulting in limited action generalization capabilities. In autoregressive models where subsequent actions are conditioned on preceding ones, error propagation becomes a critical issue, as the earlier incorrect predictions influence subsequent actions over time. To handle this, Cen et al. [@cen2025worldvla] propose an attention mask strategy that selectively masks prior actions during the generation of the current action. It enables both future imagination and action generation. 
 
-## References
+## **References**
 \bibliography

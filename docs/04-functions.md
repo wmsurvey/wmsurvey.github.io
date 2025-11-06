@@ -1,8 +1,8 @@
-# IV Functions of the World Model
+# **IV Functions of the World Model**
 
 &emsp;&emsp;World models play a central role in modern robotics by providing an internal predictive understanding of the environment. They enable robots to reason about future states, anticipate the consequences of actions, and perform counterfactual evaluations, which are particularly valuable in real-world settings where interactions are costly, risky, or time-consuming. By modeling environmental dynamics, world models form the foundation for autonomous, adaptable, and efficient robotic systems. In robotics, world models serve two complementary functions: decision support, by predicting future scenes, actions and planning, and training facilitation, by generating data or acting as learned simulators. These roles are often closely related. For example, a world model used as a simulator can simultaneously generate training data and assist decision making [@lu2025gwm;@liao2025genie]. By combining these functionalities, world models provide a comprehensive framework that enables robots to act intelligently, learn efficiently, and adapt to complex and dynamic environments. Additional details of the world models are provided in Table I, which complements the following discussion.
 
-## A. Decision Support
+## **A. Decision Support**
 
 &emsp;&emsp;1) Implicit World Models for Action Prediction and Planning  
 &emsp;&emsp;This line of work explores world models that enable action prediction and planning without explicitly modeling state transitions or world dynamics. These approaches typically leverage the strong reasoning and next-token prediction capabilities of Large Language Models (LLMs), Vision-Language Models (VLMs), and Vision-Language-Action (VLA) models. Since LLMs lack direct access to environmental or robotic states, auxiliary components are often incorporated to provide grounding. For example, Ahn *et al.* [@ahn2022can] introduce affordance functions to evaluate the feasibility of skills for completing a target task. Xiang *et al.* [@xiang2024pandora;@driess2023palm] employ encoders to process environmental information, while Zhang *et al.* [@zhang2025dreamvla] integrate multimodal tokens including states, images, and text to enhance reasoning and generalization. Zhang *et al.* [@huang2024embodied] further combine 2D and 3D encoders to process RGB images and 3D point clouds, capturing complementary spatial cues for richer world understanding. Hong *et al.* [@hong2024multiply] extend this paradigm by incorporating additional sensory modalities such as vision, audio, tactile, and thermal inputs to achieve a more comprehensive understanding of the environment.
@@ -35,7 +35,7 @@
 
 **Visual Fidelity vs. Action Prediction. **Guo *et al.* [@guo2025flowdreamer] hypothesize that models trained solely with frame-prediction losses tend to emphasize visual appearance fidelity while underestimating accurate dynamics modeling. This highlights the need for approaches that explicitly separate dynamics learning from visual rendering. To address this, FlowDreamer adopts a two-stage framework that first predicts environment dynamics and then renders corresponding visual observations.
 
-## B. Training Facilitation
+## **B. Training Facilitation**
 
 &emsp;&emsp;World models can act both as data engines, generating synthetic trajectories that support imitation learning and reinforcement learning, and as evaluation modules that provide internal reward estimation or predictive feedback. Because many models combine these roles, it is difficult to assign them to a single category. Accordingly, when discussing each role, we introduce their complementary functions in parallel to highlight this overlap.
 
@@ -53,5 +53,6 @@
 <figure markdown>
   ![Perspectives on world models](assets/img/04-01.png){ width="50%" }
 </figure>
-## References
+
+## **References**
 \bibliography

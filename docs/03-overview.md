@@ -1,12 +1,12 @@
-# III Overview of the World Model
+# **III Overview of the World Model**
 “What we observe is not nature itself, but nature exposed to our method of questioning.” 
 <p style="text-align:right">— Werner Heisenberg</p>  
 
-## A. Paradigms
+## **A. Paradigms**
 &emsp;&emsp;Building on the previous review of current models, contemporary architectures for capturing world dynamics can be broadly stratified along a methodological spectrum: implicit world modeling (e.g., LLMs, VLMs, and VLAs) [@chen2025egoagent;@team2023internlm;@zhen20243d;@hong20233d], latent dynamics modeling [@wu2023daydreamer;@hafnerdream;@hafner2021mastering;@hafner2023mastering], and video generation paradigms [@wu2024ivideogpt;@du2023video;@zhang2025combo;@rigter2025avid], each targeting distinct representational granularities and predictive mechanisms.
 <figure markdown>
   ![Perspectives on world models](assets/img/03-01.png){ width="100%" }
-  <figcaption>Fig. 2. A visualization of LLM-based world models [54].</figcaption>
+  <figcaption markdown="span">Fig. 2. A visualization of LLM-based world models [@driess2023palm].</figcaption>
 </figure>
 &emsp;&emsp;1) Implicit World Modeling  
 &emsp;&emsp;Representative models include LLMs, VLMs, and VLAs, which offer distinct advantages in semantic grounding, generalization, and interpretability [@ahn2022can;@xiang2024pandora;@driess2023palm;@zhang2025dreamvla;@zhao2024vlmpc]. An illustration of these models is shown in Figure&nbsp;1 At the same time, these models can be integrated into broader world-modeling architectures to capture temporal dependencies and enable long-horizon prediction [@zitkovich2023rt;@hong20233d;@bjorck2025gr00t]. Detailed discussions of these models are provided in Sections II-D1 and IV-A1.
@@ -28,20 +28,20 @@ Recurrent State-Space Model (RSSM) [@hafner2019learning] resembles the structure
 
 <figure markdown>
   ![Perspectives on world models](assets/img/03-02.png){ width="80%" }
-  <figcaption>Fig. 3. A visualization of Dreamer architecture [12], which encodes visual representations into latent states through recurrent estimation.</figcaption>
+  <figcaption markdown="span">Fig. 3. A visualization of Dreamer architecture [@hafnerdream], which encodes visual representations into latent states through recurrent estimation.</figcaption>
 </figure>
 
 &emsp;&emsp;PlaNet [@hafner2019learning] first demonstrates the effectiveness of learning dynamics in a latent space. The Dreamer family of models (a visualization is shown in Fig. 3) [@hafnerdream;@hafner2021mastering;@wu2023daydreamer;@hafner2023mastering] further verify this paradigm and establish a representative framework that reduces reliance on real-world data by performing imagination directly in latent space. Dreamer enables policy learning through imagined trajectories without continuous interaction with the environment, allowing agents to simulate multi-step consequences of actions and generalize to new states, objects, and environments.
 <figure markdown>
   ![Perspectives on world models](assets/img/03-03.png){ width="60%" }
-  <figcaption>Fig. 4. A visualization of Joint Embedding-Action-Prediction (JEPA) Archi-
-tecture [11], where self-supervised learning is used to learn the future world
+  <figcaption markdown="span">Fig. 4. A visualization of Joint Embedding-Action-Prediction (JEPA) Archi-
+tecture [@lecun2022path], where self-supervised learning is used to learn the future world
 state representations.</figcaption>
 </figure>
 &emsp;&emsp;While sharing the objective of learning predictive worldstate representations, Joint-Embedding Predictive Architecture (JEPA) [@lecun2022path;@chen2025egoagent] and RSSM diverge fundamentally in their learning mechanisms. RSSM relies on generative reconstruction of observations to model latent dynamics, whereas JEPA (a visualization is shown in Fig. 4) employs selfsupervised predictive coding in embedding spaces—directly forecasting future state representations without decoding to raw sensory inputs. This paradigm eliminates the computational cost of pixel-level reconstruction but necessitates powerful hierarchical encoders to compress sufficient environmentalinformation into abstract embeddings, creating an implicit information bottleneck that demands careful architectural balancing to preserve task-relevant features. Under the JEPA framework, Assran *et al.* [@assran2025v] combine pre-trained video models with an action-conditioned predictor to autoregressively predict future states and actions. 
 <figure markdown>
   ![Perspectives on world models](assets/img/Genie_envisioner.png){ width="100%" }
-  <figcaption>Fig. 5. An illustration of video-geneation based world models [@liao2025genie]. World
+  <figcaption markdown="span">Fig. 5. An illustration of video-geneation based world models [@liao2025genie]. World
 model serve as the core component, modelling the world dynamics and
 enabling action planning and generation.</figcaption>
 </figure>
@@ -56,7 +56,7 @@ The **MuZero** series [@schrittwieser2020mastering;@ye2021mastering;@wang2024eff
 
 &emsp;&emsp;Compared with implicit world models and latent-space world models, video generation models provide more detailed visual predictions but at a higher computational cost, lower generation speed and sample efficiency. In addition, action predictions are only proved to be align with visual future generation [wang2025learning], as visual data contain relevant information to actions.
 
-## B. Architectural Design
+## **B. Architectural Design**
 
 &emsp;&emsp;1) Flat architecture  
 &emsp;&emsp;Most current methods adopt flat architectures [@guo2025flowdreamer;@ferraro2025focus;@villar2025playslot;@bruce2024genie;@brooks2024video;@xiang2024pandora;@zheng2024open;@zhou2024robodreamer], which face critical limitations. They lack structured representations of the environment, resulting in poor handling of multi-scale dynamics, limited longhorizon prediction, error accumulation, and reduced generalization. Specifically, in robotic manipulation, placing fragile objects requires the robot to react instantly to unexpected slips while simultaneously planning the sequence of pickand-place actions to achieve the overall goal. Many tasks further involve long-term objectives that must be completed through sequential subgoals and temporally extended actions. For example, assembling a piece of furniture requires picking up components, aligning and attaching them correctly, and tightening screws for each part. Moreover, operating at a single level of abstraction causes small prediction errors to compound over time, degrading performance in long-horizon tasks. Finally, flat architectures fail to extract high-level abstractions, limiting transferability across tasks and environments. 
@@ -70,7 +70,7 @@ The **MuZero** series [@schrittwieser2020mastering;@ye2021mastering;@wang2024eff
   ![Perspectives on world models](assets/img/03-04.png){ width="50%" }
 </figure>
 
-## C. World Observation and Representation
+## **C. World Observation and Representation**
 
 &emsp;&emsp;1) Dimensionality of the World  
 &emsp;&emsp;In designing world models, the dimensionality of the environment plays a critical role, shaping how effectively a model captures spatial structures, temporal evolution, and causal dynamics. 
@@ -94,7 +94,7 @@ In addition to geometric structure, temporal dynamics are incorporated to constr
   ![Perspectives on world models](assets/img/03-05.png){ width="50%" }
 </figure>
 
-## D. Task Scope
+## **D. Task Scope**
 &emsp;&emsp;World models can also be categorized based on their task coverage. Some studies focus on single-task objectives, such as future-scene prediction [@sudhakar2024controlling;@finn2016unsupervised;@barcellona2025dream;@jang2025dreamgen;@ebert2018robustness], or planning and action prediction [@sekar2020planning].
 
 
@@ -106,5 +106,5 @@ In addition to geometric structure, temporal dynamics are incorporated to constr
   ![Perspectives on world models](assets/img/03-06.png){ width="50%" }
 </figure>
 
-## References
+## **References**
 \bibliography

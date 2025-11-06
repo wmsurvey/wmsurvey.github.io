@@ -1,4 +1,4 @@
-# I Introduction
+# **I Introduction**
 “If I have seen further, it is by standing on the shoulders of giants.” 
 
 <p style="text-align:right">— Isaac Newton</p>
@@ -34,5 +34,5 @@
 
 **Paper Organization. **The remainder of this paper is organized as follows. Section II introduces the conceptual foundations of world models. Section III provides an overview of current world models, including their learning paradigms, structural designs, representations of the world, and task scopes. Sections IV and V describe the key functions of existing world models and summarize the principal techniques and challenges, respectively. Section VII reviews the major training resources used in world-model research. Section VI then summarizes the fundamental components and capabilities of world models based on this review, followed by Section VIII, which presents conclusions and outlines future research directions. Although this may occasionally lead to some repetition, certain key ideas are revisited throughout the paper to aid understanding and reinforce their conceptual connections.
 
-## References
+## **References**
 \bibliography

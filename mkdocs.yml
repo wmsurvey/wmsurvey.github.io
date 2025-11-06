@@ -2,9 +2,10 @@ site_name: A Step Toward World Models： A Survey on Robotic Manipulation
 theme:
   name: material
   features:
-    - toc.integrate        # 把当前页面的 TOC 集成到左侧导航
-    - navigation.expand    # 展开当前分区（可选）
-    - navigation.sections  # 分区样式（可选）
+    - navigation.tabs         # ← 新增：顶栏 Tab
+    - navigation.tabs.sticky  # ← 可选：滚动时吸顶
+    - toc.integrate
+    - navigation.sections
     - header.autohide
 
 # 让 Markdown 生成可点击的锚点，并控制 TOC 显示层级
@@ -28,13 +29,16 @@ extra_javascript:
   - js/strip-nocase.js
 
 nav:
-  - Abstract: abstract.md
-  - I Introduction: 01-introduction.md
-  - II Preliminaries: 02-preliminaries.md
-  - III Overview of the World Model: 03-overview.md
-  - IV Functions of the World Model: 04-functions.md
-  - V Key Techniques and Notable Challenges: 05-key-tech-challenges.md
-  - VI Core Components & Capabilities: 06-core-components.md
-  - VII Dataset: 07-dataset.md
-  - VIII Conclusion & Future directions: 08-conclusion.md
-  # - References: 99-references.md
+  - About:
+      - Abstract: index.md
+      - I Introduction: 01-introduction.md
+      - II Preliminaries: 02-preliminaries.md
+      - III Overview of the World Model: 03-overview.md
+      - IV Functions of the World Model: 04-functions.md
+      - V Key Techniques and Notable Challenges: 05-key-tech-challenges.md
+      - VI Core Components & Capabilities: 06-core-components.md
+      - VII Dataset: 07-dataset.md
+      - VIII Conclusion & Future directions: 08-conclusion.md
+  # - Paper and Codes: contact.md
+  # - About: about.md
+  - Reference Collection: 99-references.md

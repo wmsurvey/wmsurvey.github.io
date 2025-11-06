@@ -1,4 +1,4 @@
-# References
+# **References**
 [1] J. Richens, T. Everitt, and D. Abel, “General agents need world models,” in Forty-second International Conference on Machine Learning, 2025.   
 [2] M. MINSKY, “A framework for representing knowledge,” The psychology of computer vision, pp. 211–277, 1975.   
 [3] J. Schmidhuber, “On learning to think: Algorithmic information theory for novel combinations of reinforcement learning controllers and recurrent neural world models,” arXiv preprint arXiv:1511.09249, 2015.   

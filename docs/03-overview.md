@@ -18,13 +18,15 @@
 
 &emsp;&emsp;Recurrent State-Space Model (RSSM) [@hafner2019learning] resembles the structure of a partially observable Markov decision process.  Its learning framework consists of three main components: an encoder, a decoder, and a dynamics model. The encoder network fuses sensory inputs (observations) *o* together into the stochastic representations *z*. The dynamics model learns to predict the sequence of stochastic representations by using its recurrent state *s*. The decoder reconstructs sensory inputs to provide a rich signal for learning representations and enables human inspection of model predictions, but is not needed while learning behaviors from latent rollouts. Specifically, at time step *t*, let the image observation be *oₜ*, the action vectors at and the reward *rₜ*. RSSM can be formulated as the generative process of the images and rewards conditioned a hidden state sequence *sₜ*:  
 
-&emsp;&emsp;Encoder/representation model:&emsp;&emsp;&emsp;![img](assets/img/clip_image001.gif)
+&emsp;&emsp;Encoder/representation model:&emsp;&emsp;&emsp;  $s_t \sim p_\theta\left(s_t \mid s_{t-1}, a_{t-1}, o_t\right)$
 
-&emsp;&emsp;Decoder/observation model:&emsp;&emsp;&emsp;&emsp;![img](assets/img/clip_image002.gif)
+&emsp;&emsp;Decoder/observation model:&emsp;&emsp;&emsp;&emsp; $o_t \sim p_\theta\left(o_t \mid s_t\right)$
 
-&emsp;&emsp;Dynamics/Transition model:&emsp;&emsp;&emsp;&emsp;![img](assets/img/clip_image003.gif)
+&emsp;&emsp;Dynamics/Transition model:&emsp;&emsp;&emsp;&emsp;  $s_t \sim p_\theta\left(s_t \mid s_{t-1}, a_{t-1}\right)$
 
-&emsp;&emsp;Reward model:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;![img](assets/img/clip_image004.gif)
+&emsp;&emsp;Reward model:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  $r_t \sim p_\theta\left(r_t \mid s_t\right)$
+
+
 <p style="text-align:right">(1)</p>
 
 
@@ -42,7 +44,7 @@ state representations.</figcaption>
 </figure>
 &emsp;&emsp;While sharing the objective of learning predictive worldstate representations, Joint-Embedding Predictive Architecture (JEPA) [@lecun2022path;@chen2025egoagent] and RSSM diverge fundamentally in their learning mechanisms. RSSM relies on generative reconstruction of observations to model latent dynamics, whereas JEPA (a visualization is shown in Fig. 4) employs selfsupervised predictive coding in embedding spaces—directly forecasting future state representations without decoding to raw sensory inputs. This paradigm eliminates the computational cost of pixel-level reconstruction but necessitates powerful hierarchical encoders to compress sufficient environmental information into abstract embeddings, creating an implicit information bottleneck that demands careful architectural balancing to preserve task-relevant features. Under the JEPA framework, Assran *et al.* [@assran2025v] combine pre-trained video models with an action-conditioned predictor to autoregressively predict future states and actions. 
 <figure markdown>
-  ![Perspectives on world models](assets/img/Genie_envisioner.png){ width="100%" }
+  ![Perspectives on world models](assets/img/Genie_envisioner.png){ width="120%" }
   <figcaption markdown="span">Fig. 5. An illustration of video-geneation based world models [@liao2025genie]. World
 model serve as the core component, modelling the world dynamics and
 enabling action planning and generation.</figcaption>

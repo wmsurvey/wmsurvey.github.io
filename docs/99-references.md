@@ -1,27 +1,18 @@
 # **References**
-[1] J. Richens, T. Everitt, and D. Abel, “General agents need world models,” in Forty-second International Conference on Machine Learning, 2025.   
-[2] M. MINSKY, “A framework for representing knowledge,” The psychology of computer vision, pp. 211–277, 1975.   
-[3] J. Schmidhuber, “On learning to think: Algorithmic information theory for novel combinations of reinforcement learning controllers and recurrent neural world models,” arXiv preprint arXiv:1511.09249, 2015.   
-[4] D. Ha and J. Schmidhuber, “World models,” arXiv preprint arXiv:1803.10122, 2018.    
-[5] Y. Du, M. Yang, P. Florence, F. Xia, A. Wahid, B. Ichter, P. Sermanet, T. Yu, P. Abbeel, J. B. Tenenbaum et al., “Video language planning,” arXiv preprint arXiv:2310.10625, 2023.   
-[6] J. Wu, S. Yin, N. Feng, X. He, D. Li, J. Hao, and M. Long, “ivideogpt: Interactive videogpts are scalable world models,” Advances in Neural Information Processing Systems, vol. 37, pp. 68 082–68 119, 2024.   
-[7] H. Zhang, Z. Wang, Q. Lyu, Z. Zhang, S. Chen, T. Shu, B. Dariush, K. Lee, Y. Du, and C. Gan, “Combo: Compositional world models for embodied multi-agent cooperation,” in The Thirteenth International Conference on Learning Representations, 2025.  
-[8] S. Huang, L. Chen, P. Zhou, S. Chen, Z. Jiang, Y. Hu, Y. Liao, P. Gao, H. Li, M. Yao et al., “Enerverse: Envisioning embodied future space for robotics manipulation,” arXiv preprint arXiv:2501.01895, 2025.  
-[9] B. Wang, N. Sridhar, C. Feng, M. Van der Merwe, A. Fishman, N. Fazeli, and J. J. Park, “This&that: Language-gesture controlled video generation for robot planning,” in 2025 IEEE International Conference on Robotics and Automation (ICRA). IEEE, 2025, pp. 12 842–12 849.   
-[10] L. Yang, Y. Bai, G. Eskandar, F. Shen, M. Altillawi, D. Chen, S. Majumder, Z. Liu, G. Kutyniok, and A. Valada, “Roboenvision: A longhorizon video generation model for multi-task robot manipulation,” arXiv preprint arXiv:2506.22007, 2025.   
-[11] Y. LeCun, “A path towards autonomous machine intelligence,” Open Review, vol. 62, no. 1, pp. 1–62, 2022.   
-[12] D. Hafner, T. Lillicrap, J. Ba, and M. Norouzi, “Dream to control: Learning behaviors by latent imagination,” in International Conference on Learning Representations, 2019.   
-[13] D. Hafner, T. P. Lillicrap, M. Norouzi, and J. Ba, “Mastering atari with discrete world models,” in International Conference on Learning Representations, 2025.  
-[14] P. Wu, A. Escontrela, D. Hafner, P. Abbeel, and K. Goldberg, “Daydreamer: World models for physical robot learning,” in Conference on robot learning. PMLR, 2023, pp. 2226–2240.  
-[15] D. Hafner, J. Pasukonis, J. Ba, and T. Lillicrap, “Mastering diverse domains through world models,” arXiv preprint arXiv:2301.04104, 2023.   
-[16] B. Zitkovich, T. Yu, S. Xu, P. Xu, T. Xiao, F. Xia, J. Wu, P. Wohlhart, S. Welker, A. Wahid et al., “Rt-2: Vision-language-action models transfer web knowledge to robotic control,” in Conference on Robot Learning. PMLR, 2023, pp. 2165–2183.   
-[17] J. Huang, S. Yong, X. Ma, X. Linghu, P. Li, Y. Wang, Q. Li, S.-C. Zhu, B. Jia, and S. Huang, “An embodied generalist agent in 3d world,” in Proceedings of the 41st International Conference on Machine Learning, 2024, pp. 20 413–20 451.   
-[18] Y. Hong, Z. Zheng, P. Chen, Y. Wang, J. Li, and C. Gan, “Multiply: A multisensory object-centric embodied large language model in 3d world,” in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024, pp. 26 406–26 416.   [19] M. Yang, Y. Du, K. Ghasemipour, J. Tompson, D. Schuurmans, and P. Abbeel, “Learning interactive real-world simulators,” arXiv preprint arXiv:2310.06114, vol. 1, no. 2, p. 6, 2023.   
-[20] J. Bruce, M. Dennis, A. Edwards, J. Parker-Holder, Y. Shi, E. Hughes, M. Lai, A. Mavalankar, R. Steigerwald, C. Apps et al., “Genie: generative interactive environments,” in Proceedings of the 41st International Conference on Machine Learning, 2024, pp. 4603–4623. 
-[21] J. Guo, X. Ma, Y. Wang, M. Yang, H. Liu, and Q. Li, “Flowdreamer: A rgb-d world model with flow-based motion representations for robot manipulation,” arXiv preprint arXiv:2505.10075, 2025.   
-[22] Q. Bu, J. Zeng, L. Chen, Y. Yang, G. Zhou, J. Yan, P. Luo, H. Cui, Y. Ma, and H. Li, “Closed-loop visuomotor control with generative expectation for robotic manipulation,” Advances in Neural Information Processing Systems, vol. 37, pp. 139 002–139 029, 2024.   
-[23] H. Zhu, Y. Wang, J. Zhou, W. Chang, Y. Zhou, Z. Li, J. Chen, C. Shen, J. Pang et al., “Aether: Geometric-aware unified world modeling,” in ICCV, 2025.   
-[24] H. Zhen, Q. Sun, H. Zhang, J. Li, S. Zhou, Y. Du, and C. Gan, “Tesseract: learning 4d embodied world models,” arXiv preprint arXiv:2504.20995, 2025.   
-[25] S. Ferraro, P. Mazzaglia, T. Verbelen, and B. Dhoedt, “Focus: object-centric world models for robotic manipulation,” Frontiers in Neurorobotics, vol. 19, p. 1585386, 2025.   
-[26] A. Villar-Corrales and S. Behnke, “Playslot: Learning inverse latent dynamics for controllable object-centric video prediction and planning,” in Forty-second International Conference on Machine Learning, 2025.   
-[27] L. Chen, Y. Wang, S. Tang, Q. Ma, T. He, W. Ouyang, X. Zhou, H. Bao, and S. Peng, “Egoagent: A joint predictive agent model in egocentric worlds,” arXiv preprint arXiv:2502.05857, 2025.  
+
+## **Decision Support**
+
+&emsp;&emsp;**1) Implicit World Models for Action Prediction and Planning**
+
+&emsp;&emsp;Disentangled World Models: Learning to Transfer Semantic Knowledge from Distracting Videos for Reinforcement Learning [[paper](https://example.com/paper.pdf)] [[code](https://github.com/example/repo)]
+
+&emsp;&emsp;**2) Latent Dynamics Modeling for Action Prediction and Planning**
+
+&emsp;&emsp;**3) Implicit World Models for Action Prediction and Planning**
+
+
+## **Training Facilitation**
+
+&emsp;&emsp;**1) Data Engine**
+
+&emsp;&emsp;**2) Evaluation**

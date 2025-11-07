@@ -1,36 +1,96 @@
-site_name: A Step Toward World Models： A Survey on Robotic Manipulation
+site_name: "A Step Toward World Models: A Survey on Robotic Manipulation"
+site_url: https://your-domain.example  # 可选：用于 SEO/社交卡片
+# repo_url: https://github.com/xueha0/worldmodel # 可选：右上角 GitHub 按钮
+edit_uri: edit/main/docs/              # 可选：页面“编辑此页”按钮
+
 theme:
   name: material
+  language: en
+  logo: assets/img/logo.png         # 放你的 logo（可用占位）
+  favicon: assets/favicon.png   # 站点小图标
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   features:
-    - navigation.tabs         # ← 新增：顶栏 Tab
-    - navigation.tabs.sticky  # ← 可选：滚动时吸顶
+    - navigation.tabs           # 顶部标签
+    - navigation.tabs.sticky    # 顶栏吸顶
+    - navigation.path           # 面包屑
+    - navigation.top            # 返回顶部按钮
     - toc.integrate
-    - navigation.sections
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy         # 代码复制
     - header.autohide
 
-# 让 Markdown 生成可点击的锚点，并控制 TOC 显示层级
-markdown_extensions:
-  - pymdownx.arithmatex 
-  - toc:
-      permalink: true      # 标题右侧出现🔗锚点
-      toc_depth: "2-3"     # 在侧边栏显示 h2~h3（可按需改成 "2-4"）
-  - attr_list     # 允许 {...} 属性
-  - md_in_html    # 允许在 Markdown 里写少量 HTML
-  - footnotes
-
 plugins:
-  - search
+  - search:
+      lang: [en, zh]
   - bibtex:
-      bib_file: docs/refs.bib        # 你的 BibTeX 文件
-      csl_file: docs/ieee.csl   
+      bib_file: docs/refs.bib
+      csl_file: docs/ieee.csl
+      cite_inline: true
+  - glightbox                    # 新增：图片灯箱（需 pip 安装）
 
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: "2-3"
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - footnotes
+  - pymdownx.emoji:                # ← 让 :material-*: 图标短码生效
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg  
+
+extra_css:
+  - stylesheets/extra.css
+  - https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css
 
 extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js
+  - js/katex-init.js
   - js/strip-nocase.js
 
+extra:
+  social:
+    - icon: material/github
+      link: https://github.com/your
+      name: GitHub
+    - icon: material/google
+      link: https://scholar.google.com/citations?user=XXXXX
+      name: Google Scholar
+    - icon: material/email
+      link: mailto:your.name@example.com
+      name: Email
+
 nav:
+  - Home: index.md
   - About:
-      - Abstract: index.md
+      - Abstract: abstract.md
       - I Introduction: 01-introduction.md
       - II Preliminaries: 02-preliminaries.md
       - III Overview of the World Model: 03-overview.md
@@ -39,6 +99,7 @@ nav:
       - VI Core Components & Capabilities: 06-core-components.md
       - VII Dataset: 07-dataset.md
       - VIII Conclusion & Future directions: 08-conclusion.md
+      # - test: out.md
   # - Paper and Codes: contact.md
   # - About: about.md
-  - Reference Collection: 99-references.md
+  - References: 99-references.md

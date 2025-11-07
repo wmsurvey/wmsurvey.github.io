@@ -1,20 +1,32 @@
-# **A Step Toward World Models: A Survey on  Robotic Manipulation**
+---
+hide:
+  - navigation   # 隐藏左侧主导航
+  - toc          # 隐藏目录（如果你启用了 toc.integrate，它本来也在左侧）
+---
 
-Peng-Fei Zhang, Ying Cheng, Xiaofan Sun, Shijie Wang, Fengling Li, Lei Zhu, Heng Tao Shen
+<!-- 首页 Hero -->
+<div class="hero">
+  <h1>A Step Toward World Models: A Survey on Robotic Manipulation</h1>
+  <p class="lead">Peng-Fei Zhang, Ying Cheng, Xiaofan Sun, Shijie Wang, Fengling Li, Lei Zhu, Heng Tao Shen</p>
+  <p style="font-size: 0.9em; color: #666; margin-top: -30px;">School of Computer Science and Technology, Tongji University</p>
+  <div class="actions">
+    <a class="md-button md-button--primary" href="abstract/">Read the Survey</a>
+    <a class="md-button" href="99-references/">References</a>
+    <a class="md-button" href="contact/">Contact</a>
+  </div>
+</div>
 
-## **Abstract**
+!!! tip "Quick links" 
 
-&emsp;&emsp;Autonomous agents are increasingly expected to operate in complex, dynamic, and uncertain environments, performing tasks such as manipulation, navigation, and decisionmaking. Achieving these capabilities requires agents to understand the underlying mechanisms and dynamics of the world, moving beyond purely reactive control or simple replication of observed states. This motivates the development of world models as internal representations that encode environmental states, capture dynamics, and enable prediction, planning, and reasoning. Despite growing interest, the definition, scope, architectures, and essential capabilities of world models remain ambiguous. In this survey, rather than directly imposing a fixed definition and limiting our scope to methods explicitly labeled as world models, we examine approaches that exhibit the core capabilities of world models through a review of methods in robotic manipulation. We analyze their roles across perception, prediction, and control, identify key challenges and solutions, and distill the core components, capabilities, and functions that a real world model should possess. Building on this analysis, we aim to outline a roadmap for developing generalizable and practical world models for robotics. This is an initial version of the survey. The content will be expanded and refined in future updates.  
-Index Terms—World Model; Robotic Manipulation.
-
-## **Citation**
-
-If you find this project useful, please consider citing our paper.
-
-    @article{
-        A Step Toward World Models,
-        title={A Step Toward World Models: A Survey on  Robotic Manipulation},
-        author={Peng-Fei Zhang, Ying Cheng, Xiaofan Sun, Shijie Wang, Fengling Li, Lei Zhu, Heng Tao Shen},
-        journal={},
-        year={2025}
-    }
+    -   :material-book-open-page-variant: **Start reading**  
+        _Overview & roadmap_  
+        [:octicons-arrow-right-24: Go to “I Introduction”](01-introduction.md)
+    -   :material-database-search: **Datasets**  
+        _Benchmarks & curation_  
+        [:octicons-arrow-right-24: Go to “VII Dataset”](07-dataset.md)
+    -   :material-lightbulb-on-outline: **Key challenges**  
+        _Open problems & insights_  
+        [:octicons-arrow-right-24: Read “V Key Techniques”](05-key-tech-challenges.md)
+    -   :material-robot-outline: **Core components**  
+        _Perception → World model → Action_  
+        [:octicons-arrow-right-24: Explore “VI Components”](06-core-components.md)

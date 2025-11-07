@@ -1,6 +1,9 @@
 /* —— 版心与理想行宽 —— */
 :root { --md-content-max-width: 980px; }
-.md-typeset p { max-width: 78ch; }
+/* .md-typeset p { max-width: 100ch; margin-left: auto; margin-right: auto; }
+/* 或更现代写法 */
+/* .md-typeset p { max-width: 78ch; margin-inline: auto; } */ */
+
 
 /* —— 首页 Hero 区 —— */
 .hero {
@@ -36,7 +39,7 @@
 .md-typeset code { font-variant-ligatures: none; }
 
 /* —— 表格与图注不过窄 —— */
-.md-typeset table, .md-typeset figure, .md-typeset .admonition { max-width: none; }
+/* .md-typeset table, .md-typeset figure, .md-typeset .admonition { max-width: none; } */
 
 /* —— 页脚版权行（可选）—— */
 .md-footer-meta { opacity: .9; }

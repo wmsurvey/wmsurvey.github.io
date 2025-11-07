@@ -1,7 +1,14 @@
 # **VIII Conclusion and Future directions**
 ## **A. Conclusion**
 
-&emsp;&emsp;This survey provides a comprehensive evaluation of current approaches to world modeling, examining their relevance for robotic manipulation, underlying architectures, functionalities, key challenges, and proposed solutions. By synthesizing these findings, we offer insights into the nature of real world models and outline the efforts required to advance the field. Our goal is to provide readers with a solid foundation and guide future research directions in world modeling.
+&emsp;&emsp;This survey provides a comprehensive evaluation of current
+approaches to world modeling, examining their relevance for
+robotic manipulation, underlying architectures, functionalities,
+key challenges, and proposed solutions. By synthesizing these
+findings, we offer insights into the nature of fully realized
+world models and outline the efforts required to advance the
+field. Our goal is to provide readers with a solid foundation
+and guide future research directions in world modeling.
 
 ## **B. Future research directions**
 
@@ -31,5 +38,11 @@ Current evaluation practices for world models are fragmented and only loosely al
 &emsp;&emsp;**Beyond Human Intelligence.**
 Insights from human cognition have profoundly influenced the design of robotic and world modeling systems. However, the completeness of the world extends beyond human cognition, which is bounded by partial observation, finite memory, limited attention, and inherent heuristic biases. World models are therefore expected to transcend human cognitive bounds, providing a deeper and more systematic understanding of complex environments.
 
+**Structured and Abstract World Understanding.**
+
+
+&emsp;&emsp;_“Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things.”_ &emsp;&emsp;&emsp;—— Isaac Newton
+
+&emsp;&emsp;The ultimate goal of world models is to capture underlying regularities and structured abstractions, rather than memorizing every detail of a complex environment. This focus on essential structure is key for enabling world models to generalize across diverse environments.
 ## **References**
 \bibliography

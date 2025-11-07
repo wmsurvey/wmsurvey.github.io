@@ -1,9 +1,15 @@
 # **II Preliminaries**
 ## **A. What Is the “World” to Be Modeled?**
 &emsp;&emsp;Despite the debate among philosophers about the ultimate nature of the world, the world can be roughly described as a set of entities, each with its own attributes or properties, along with the relationships and interactions that connect them. These attributes, such as shape, size, material, or state, and the connections, which can be spatial, causal, functional, or temporal, mean that objects, agents, and features are not only statically arranged but also evolve and influence one another over time. In order to interact effect-ively with such a world, an intelligent agent must capture critical information about entities, their properties, and their interactions. Collectively, these entities and interactions form a rich and dynamic environment in which an agent must actively explore, interact, and learn to achieve its goals. This naturally raises the question of what fundamental capabilities underpin an agent’s ability to capture and reason about such complex dynamics, as well as what forms of representation, learning, and interaction are required to model and act within an uncertain and evolving world.
+### Table Ⅰ {style="text-align:center"}
+#### A Summary of Representative World Models {style="text-align:center"}
+
+- **Prediction tasks:** `AP` — Action Prediction; `PL` — Policy Learning; `VP` — Visual Planning; `Static` — Static Visual Prediction; `Action-cond.` — Action-conditioned Visual Prediction.
+- **Input & Output:** `L` — Language; `V` — Video; `A` — Action; `S` — State; `I` — Image; `P` — Point Cloud; `Tr` — Trajectory; `Ar` — Autoregressive.
+- **Core components:** `CLIP` — Contrastive Language-Image Pre-training; `DiT` — Diffusion Transformer; `IDM` — Inverse Dynamics Model; `GPT` — Generative Pre-trained Transformer; `LLM` — Large Language Model; `LSTM` — Long Short-Term Memory; `RSSM` — Recurrent State-Space Model; `U-Net` — U-shaped Convolutional Neural Network; `VAE` — Variational AutoEncoder; `VDM` — Video Diffusion Model; `ViT` — Vision Transformer; `VLM` — Vision-Language Model; `VQ` — Vector Quantization.
 
 <figure markdown>
-  ![Perspectives on world models](assets/img/table1title.png){ width="100%" }
+  <!-- ![Perspectives on world models](assets/img/table1title.png){ width="100%" } -->
   ![Perspectives on world models](assets/img/table1.png){ width="100%" }
 </figure>
 

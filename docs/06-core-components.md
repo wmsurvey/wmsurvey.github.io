@@ -1,6 +1,6 @@
 # **VI Towards Defining Core Components and Capabilities of World Models**
 
-&emsp;&emsp;From our survey of current approaches, we summarize some potential key components and capabilities that a world model should possess.  
+&emsp;&emsp;From our survey of current approaches, we summarize some potential key components and capabilities that a world model should possess. Future research may identify additional dimensions necessary for comprehensive world modeling.  
 
 &emsp;&emsp;**1) Comprehensive Multimodal Perception.**World models should be capable of perceiving and integrating information across all available modalities, such as vision, language, action, touch, force, and proprioception, along with the spatial and temporal structures. By jointly modeling these modalities and dimensions, they can construct a unified and dynamic understanding of the environment that facilitate decision-making and support robot training. 
 

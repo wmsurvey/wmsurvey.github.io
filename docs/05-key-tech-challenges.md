@@ -179,6 +179,11 @@
 
 &emsp;&emsp;Certain tasks necessitate coordinated operation among multiple robots to achieve successful completion. To this end, Zhang *et al.* [@zhang2025combo] factorize the joint actions of different agents as a set of text prompt and leverage composable video diffusion models to learn world dynamics and make predictions. An agent-dependent loss is imposed to let the model focus on the related pixel, where the loss coefficient matrix is based on each agent’s reachable region reachable region.
 
+<figure markdown>
+  ![Perspectives on world models](assets/img/fig7.png){ width="60%" }
+  <figcaption markdown="span">Fig. 7. Potential Core Components and Capabilities of World Models.</figcaption>
+</figure>
+
 &emsp;&emsp;**7) Reasoning**  
 
 &emsp;&emsp;Zhou *et al.* [@zhang2025dreamvla] enhance the reasoning and genrealization ability by incorporating context information and predicting dynamic regions, depth map, semantic knowledge by means of foundation models, e.g., DINOv2 [@oquab2024dinov2] and SAM [@kirillov2023segment]. Ye *et al.* [@Ye2025GigaBrain] introduce an Embodied Chain-of-Thought (CoT) as an intermediate reasoning representation, enabling more structured and interpretable decision-making in embodied tasks. Ye *et al.* [@Ye2025GigaBrain;@zhao2025cot] generates a sub-goal image that represents the robot’s planned state in pixel space, and then conditions its action on both the current observation and the generated subgoal image.

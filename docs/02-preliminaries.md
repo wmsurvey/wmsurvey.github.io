@@ -22,7 +22,7 @@
 
 <figure markdown>
   ![Perspectives on world models](assets/img/02-preliminary-1.png){ width="80%" }
-  <figcaption markdown="span">Fig. 1. A visualization of an agent [@lecun2022path], where the world model predicts possible future world states as a function of imagined actions sequences proposed by the actor.</figcaption>
+  <figcaption markdown="span">Fig. 2. A visualization of an agent [@lecun2022path], where the world model predicts possible future world states as a function of imagined actions sequences proposed by the actor.</figcaption>
 </figure>
 
 ## **D. Revisiting Modern AI Models Through the Lens of World Modeling**

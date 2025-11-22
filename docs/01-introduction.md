@@ -21,7 +21,8 @@
 
 &emsp;&emsp;This survey is organized around a set of guiding questions designed to provoke thought and provide inspiration. Readers can explore the survey with these questions in mind, using them to provoke thought, gain inspiration, and reflect on the challenges and opportunities in developing world models for robotic manipulation.
 
-* What is the world model and its conceptual, architectural, and functional boundaries? • How should the world be sensed and presented? 
+* What is the world model and its conceptual, architectural, and functional boundaries? 
+* How should the world be sensed and presented? 
 * What level of model fidelity and coverage is required to reliably support robotic tasks? 
 * Is it necessary to learn a world model, given the complexity, resource demands, and potential challenges involved? 
 * How far are current world models from fully realized world models? 

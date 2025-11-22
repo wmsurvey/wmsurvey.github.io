@@ -5,13 +5,13 @@
       
       
       
-        <link rel="canonical" href="https://your-domain.example/06-core-components/">
+        <link rel="canonical" href="https://your-domain.example/abstract/">
       
       
-        <link rel="prev" href="../05-key-tech-challenges/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../07-dataset/">
+        <link rel="next" href="../01-introduction/">
       
       
       <link rel="icon" href="../assets/img/badge.png">
@@ -19,7 +19,7 @@
     
     
       
-        <title>VI Core Components &amp; Capabilities - A Step Toward World Models: A Survey on Robotic Manipulation</title>
+        <title>Abstract - A Step Toward World Models: A Survey on Robotic Manipulation</title>
       
     
     
@@ -84,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#abstract" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -115,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VI Core Components &amp; Capabilities
+              Abstract
             
           </span>
         </div>
@@ -233,7 +238,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../abstract/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -376,10 +381,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../abstract/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Abstract
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -390,6 +415,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -514,17 +575,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../06-core-components/" class="md-nav__link">
         
   
   
@@ -535,7 +589,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -632,21 +685,21 @@
 
 
 
-<h1 id="vi-towards-defining-core-components-and-capabilities-of-world-models"><strong>VI Towards Defining Core Components and Capabilities of World Models</strong><a class="headerlink" href="#vi-towards-defining-core-components-and-capabilities-of-world-models" title="Permanent link">¶</a></h1>
-<p>  From our survey of current approaches, we summarize some potential key components and capabilities that a world model should possess. Future research may identify additional dimensions necessary for comprehensive world modeling.  </p>
-<p>  <strong>1) Comprehensive Multimodal Perception.</strong>World models should be capable of perceiving and integrating information across all available modalities, such as vision, language, action, touch, force, and proprioception, along with the spatial and temporal structures. By jointly modeling these modalities and dimensions, they can construct a unified and dynamic understanding of the environment that facilitate decision-making and support robot training. </p>
-<p>  <strong>2) Interactivity.</strong> World models should engage dynamically with their environments, not merely by passively observing or predicting changes, but by modeling how actions influence future states. Such action-conditioned dynamics enable agents to simulate interactions, evaluate potential outcomes, and plan behaviors grounded in causal understanding of the world. </p>
-<p>  <strong>3) Imagination.</strong>Imagination enables world models to simulate and evaluate possible futures, allowing agents to learn, plan, and reason without external interaction. </p>
-<p>  <strong>4) Long-horizon Reasoning.</strong> It enables world models to anticipate distant consequences of actions, plan multi-step behaviors, and optimize long-term outcomes rather than short-term rewards. </p>
-<p>  <strong>5) Spatiotemporal Reasoning.</strong>World models should reason about spatial and temporal relationships among entities to understand and predict dynamic changes in the environment.  </p>
-<p>  <strong>6) Counterfactual Reasoning.</strong>This enables world models to imagine alternative futures under different actions, allowing agents to evaluate possible outcomes and select the most effective course of action. </p>
-<p>  <strong>7) Abstract Reasoning.</strong>The world is immensely complex, and world models cannot capture every detail. Therefore, they must extract and represent the underlying principles and basic mechanisms that govern the world’s dynamics. </p>
-<p>  <strong>8) High-fidelity Prediction.</strong> World models should generate accurate and detailed predictions of future states or observations, maintaining spatial, temporal, and physical consistency to ensure reliable simulation and planning.  </p>
-<p>  <strong>9) Physics Awareness.</strong> World models should maintain consistency with physical principles, enabling them to generate dynamically plausible predictions that support safe and reliable robotic interaction. </p>
-<p>  <strong>10) Generalization Ability.</strong> To operate effectively in complex real-world settings, world models must generalize beyond their training distributions, adapting to new tasks, objects, and domains. </p>
-<p>  <strong>11) Causality.</strong> World models should understand relationship between actions (causes) and their effects (outcomes) in the world. This causal understanding enables agents to predict how interventions will change future states, distinguish correlation from true influence, and generalize their behavior to unseen situations by reasoning about cause–effect mechanisms rather than memorized patterns. </p>
-<p>  <strong>12) Memory.</strong>It enables world models to store and recall past experiences, ensuring temporal consistency and coherent predictions. In addition, world models should be able to access and integrate external information, thereby supporting richer reasoning, long-term planning, and adaptability—analogous to the role of retrieval-augmented generation (RAG) in language models. </p>
-<p>  <strong>13) Collaboration Ability.</strong> World models should support both inter-agent and intra-agent coordination by reasoning about the behaviors, goals, and intentions of others and managing cooperation among multiple effectors (e.g., multi-arm systems).</p>
+<h1 id="a-step-toward-world-models-a-survey-on-robotic-manipulation"><strong>A Step Toward World Models: A Survey on  Robotic Manipulation</strong><a class="headerlink" href="#a-step-toward-world-models-a-survey-on-robotic-manipulation" title="Permanent link">¶</a></h1>
+<p>Peng-Fei Zhang, Ying Cheng, Xiaofan Sun, Shijie Wang, Fengling Li, Lei Zhu, Heng Tao Shen<br>
+<small>School of Computer Science and Technology, Tongji University</small></p>
+<h2 id="abstract"><strong>Abstract</strong><a class="headerlink" href="#abstract" title="Permanent link">¶</a></h2>
+<p>  Autonomous agents are increasingly expected to operate in complex, dynamic, and uncertain environments, performing tasks such as manipulation, navigation, and decision-making. Achieving these capabilities requires agents to understand the underlying mechanisms and dynamics of the world, moving beyond reactive control or simple replication of observed states. This motivates the development of world models as internal representations that encode environmental states, capture dynamics, and support prediction, planning, and reasoning. Despite growing interest, the definition, scope, architectures, and essential capabilities of world models remain ambiguous. In this survey, we go beyond prescribing a fixed definition and limiting our scope to methods explicitly labeled as world models. Instead, we examine approaches that exhibit the core capabilities of world models through a review of methods in robotic manipulation. We analyze their roles across perception, prediction, and control, identify key challenges and solutions, and distill the core components, capabilities, and functions that a fully realized world model should possess. Building on this analysis, we aim to motivate further development toward generalizable and practical world models for robotics. <em>This is an initial version of the survey. The content will be expanded and refined in future updates.</em>  </p>
+<p>Index Terms———<strong>World Model</strong>; <strong>Robotic Manipulation</strong>.</p>
+<h2 id="citation"><strong>Citation</strong><a class="headerlink" href="#citation" title="Permanent link">¶</a></h2>
+<p>If you find this project useful, please consider citing our paper.</p>
+<div class="highlight"><pre><span></span><code>@article{
+    title={A Step Toward World Models: A Survey on Robotic Manipulation},
+    author={Peng-Fei Zhang, Ying Cheng, Xiaofan Sun, Shijie Wang, Fengling Li, Lei Zhu, Heng Tao Shen},
+    journal={},
+    year={2025}
+}
+</code></pre></div>
 
 
 
@@ -682,7 +735,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../05-key-tech-challenges/" class="md-footer__link md-footer__link--prev" aria-label="Previous: V Key Techniques and Notable Challenges">
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -692,20 +745,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                V Key Techniques and Notable Challenges
+                Home
               </div>
             </div>
           </a>
         
         
           
-          <a href="../07-dataset/" class="md-footer__link md-footer__link--next" aria-label="Next: VII Dataset">
+          <a href="../01-introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: I Introduction">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                VII Dataset
+                I Introduction
               </div>
             </div>
             <div class="md-footer__button md-icon">

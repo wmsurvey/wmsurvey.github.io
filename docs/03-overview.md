@@ -5,9 +5,10 @@
 ## **A. Paradigms**
 &emsp;&emsp;Building on the previous review of current models, contemporary architectures for capturing world dynamics can be broadly stratified along a methodological spectrum: implicit world modeling (e.g., LLMs, VLMs, and VLAs) [@chen2025egoagent;@team2023internlm;@zhen20243d;@hong20233d], latent dynamics modeling [@wu2023daydreamer;@hafnerdream;@hafner2021mastering;@hafner2023mastering], and video generation paradigms [@wu2024ivideogpt;@du2023video;@zhang2025combo;@rigter2025avid], each targeting distinct representational granularities and predictive mechanisms.
 <figure markdown>
-  ![Perspectives on world models](assets/img/03-01.png){ width="100%" }
-  <figcaption markdown="span">Fig. 2. A visualization of LLM-based world models [@driess2023palm].</figcaption>
+  ![Perspectives on world models](assets/img/figure5.png){ width="100%" }
+  <figcaption markdown="span">Fig. 3. An overview of world models. Implicit world models map observations and instructions directly to actions without explicitly modeling environmental dynamics. Latent-dynamics world models capture the evolution of environment dynamics within a latent space, while video-generation-based world models predict future visual scenes.</figcaption>
 </figure>
+
 &emsp;&emsp;**1) Implicit World Modeling**  
 
 &emsp;&emsp;Representative models include LLMs, VLMs, and VLAs, which offer distinct advantages in semantic grounding, generalization, and interpretability [@ahn2022can;@xiang2024pandora;@driess2023palm;@zhang2025dreamvla;@zhao2024vlmpc]. An illustration of these models is shown in Figure&nbsp;1 At the same time, these models can be integrated into broader world-modeling architectures to capture temporal dependencies and enable long-horizon prediction [@zitkovich2023rt;@hong20233d;@bjorck2025gr00t]. Detailed discussions of these models are provided in Sections II-D1 and IV-A1.
@@ -30,25 +31,25 @@
 <p style="text-align:right">(1)</p>
 
 
-<figure markdown>
+<!-- <figure markdown>
   ![Perspectives on world models](assets/img/03-02.png){ width="80%" }
   <figcaption markdown="span">Fig. 3. A visualization of Dreamer architecture [@hafnerdream], which encodes visual representations into latent states through recurrent estimation.</figcaption>
-</figure>
+</figure> -->
 
 &emsp;&emsp;PlaNet [@hafner2019learning] first demonstrates the effectiveness of learning dynamics in a latent space. The Dreamer family of models (a visualization is shown in Fig. 3) [@hafnerdream;@hafner2021mastering;@wu2023daydreamer;@hafner2023mastering] further verify this paradigm and establish a representative framework that reduces reliance on real-world data by performing imagination directly in latent space. Dreamer enables policy learning through imagined trajectories without continuous interaction with the environment, allowing agents to simulate multi-step consequences of actions and generalize to new states, objects, and environments.
-<figure markdown>
+<!-- <figure markdown>
   ![Perspectives on world models](assets/img/03-03.png){ width="60%" }
   <figcaption markdown="span">Fig. 4. A visualization of Joint Embedding-Action-Prediction (JEPA) Archi-
 tecture [@lecun2022path], where self-supervised learning is used to learn the future world
 state representations.</figcaption>
-</figure>
+</figure> -->
 &emsp;&emsp;While sharing the objective of learning predictive worldstate representations, Joint-Embedding Predictive Architecture (JEPA) [@lecun2022path;@chen2025egoagent] and RSSM diverge fundamentally in their learning mechanisms. RSSM relies on generative reconstruction of observations to model latent dynamics, whereas JEPA (a visualization is shown in Fig. 4) employs selfsupervised predictive coding in embedding spaces—directly forecasting future state representations without decoding to raw sensory inputs. This paradigm eliminates the computational cost of pixel-level reconstruction but necessitates powerful hierarchical encoders to compress sufficient environmental information into abstract embeddings, creating an implicit information bottleneck that demands careful architectural balancing to preserve task-relevant features. Under the JEPA framework, Assran *et al.* [@assran2025v] combine pre-trained video models with an action-conditioned predictor to autoregressively predict future states and actions. 
-<figure markdown>
+<!-- <figure markdown>
   ![Perspectives on world models](assets/img/Genie_envisioner.png){ width="120%" }
   <figcaption markdown="span">Fig. 5. An illustration of video-geneation based world models [@liao2025genie]. World
 model serve as the core component, modelling the world dynamics and
 enabling action planning and generation.</figcaption>
-</figure>
+</figure> -->
 
 &emsp;&emsp;The **MuZero** series [@schrittwieser2020mastering;@ye2021mastering;@wang2024efficientzero] represent another form of latent-dynamics-based world modeling. Instead of modeling the complete environment dynamics, MuZero predicts only future quantities directly relevant to planning, such as rewards, values, and policies, given the complexity of real-world environments, and employs a tree-based search algorithm [@silver2018general] to select optimal actions.
 

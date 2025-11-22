@@ -1,28 +1,30 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
       
+        <link rel="canonical" href="https://your-domain.example/99-references/">
+      
       
         <link rel="prev" href="../08-conclusion/">
       
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/img/badge.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>References - World Model</title>
+        <title>References - A Step Toward World Models: A Survey on Robotic Manipulation</title>
       
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -36,10 +38,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -48,16 +54,38 @@
     
     
     
-  </head>
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#decision-support" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -69,23 +97,22 @@
 
   
 
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="World Model" class="md-header__button md-logo" aria-label="World Model" data-md-component="logo">
+    <a href=".." title="A Step Toward World Models: A Survey on Robotic Manipulation" class="md-header__button md-logo" aria-label="A Step Toward World Models: A Survey on Robotic Manipulation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            World Model
+            A Step Toward World Models: A Survey on Robotic Manipulation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -98,6 +125,32 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
@@ -107,7 +160,7 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -116,17 +169,19 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -146,13 +201,82 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../abstract/" class="md-tabs__link">
+          
+  
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  References
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -160,24 +284,25 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
 
+  
+
 
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="World Model" class="md-nav__button md-logo" aria-label="World Model" data-md-component="logo">
+    <a href=".." title="A Step Toward World Models: A Survey on Robotic Manipulation" class="md-nav__button md-logo" aria-label="A Step Toward World Models: A Survey on Robotic Manipulation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/img/logo.png" alt="logo">
 
     </a>
-    World Model
+    A Step Toward World Models: A Survey on Robotic Manipulation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -194,7 +319,7 @@
   
   
   <span class="md-ellipsis">
-    home
+    Home
     
   </span>
   
@@ -206,6 +331,70 @@
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../abstract/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Abstract
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
   
@@ -225,9 +414,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -247,9 +437,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -269,9 +460,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -291,9 +483,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -313,9 +506,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -326,7 +520,7 @@
   
   
   <span class="md-ellipsis">
-    VI Core Components & Capabilities
+    VI Core Components &amp; Capabilities
     
   </span>
   
@@ -335,9 +529,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -357,9 +552,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -370,12 +566,20 @@
   
   
   <span class="md-ellipsis">
-    VIII Conclusion & Future directions
+    VIII Conclusion &amp; Future directions
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -394,6 +598,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -405,6 +622,41 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#decision-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-facilitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training Facilitation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -426,8 +678,113 @@
 
 
 
-<h1 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h1>
-<p>(List references here.)</p>
+<!-- ---
+hide:
+  - footer
+--- --><h1 id="references"><strong>References</strong><a class="headerlink" href="#references" title="Permanent link">¶</a></h1>
+<h2 id="decision-support"><strong>Decision Support</strong><a class="headerlink" href="#decision-support" title="Permanent link">¶</a></h2>
+<p>  <strong>1) Implicit World Models for Action Prediction and Planning</strong></p>
+<p>  Do as i can, not as i say: Grounding language in robotic affordances [<a href="https://arxiv.org/abs/2204.01691">paper</a>] [<a href="https://github.com/google-research/google-research/tree/master/saycan">code</a>]</p>
+<p>  Pandora: Towards general world model with natural language actions and video states [<a href="https://arxiv.org/abs/2406.09455">paper</a>] [<a href="https://github.com/maitrix-org/Pandora">code</a>]</p>
+<p>  PaLM-e: An embodied multimodal language model [<a href="https://arxiv.org/abs/2303.03378">paper</a>]</p>
+<p>  DreamVLA: A vision-language-action model dreamed with comprehensive world knowledge [<a href="https://arxiv.org/abs/2507.04447">paper</a>] [<a href="https://github.com/Zhangwenyao1/DreamVLA">code</a>]</p>
+<p>  An embodied generalist agent in 3D world [<a href="https://arxiv.org/abs/2311.12871">paper</a>] [<a href="https://github.com/embodied-generalist/embodied-generalist">code</a>]</p>
+<p>  Multiply: A multisensory object-centric embodied large language model in 3d world [<a href="https://arxiv.org/abs/2401.08577">paper</a>] [<a href="https://github.com/UMass-Embodied-AGI/MultiPLY">code</a>]</p>
+<p>  Look before you leap: Unveiling the power of gpt-4v in robotic vision-language planning [<a href="https://arxiv.org/abs/2311.17842">paper</a>]</p>
+<p>  Vlmpc: Vision-language model predictive control for robotic manipulation [<a href="https://arxiv.org/abs/2407.09829">paper</a>] [<a href="https://github.com/PPjmchen/VLMPC">code</a>]</p>
+<p>  Rt-2: Vision-language-action models transfer web knowledge to robotic control [<a href="https://arxiv.org/abs/2307.15818">paper</a>] [<a href="https://github.com/kyegomez/RT-2">code</a>]</p>
+<p>  3D-VLA: A 3D vision-language-action generative world model [<a href="https://arxiv.org/abs/2403.09631">paper</a>] [<a href="https://github.com/UMass-Embodied-AGI/3D-VLA">code</a>]</p>
+<p>  3d-llm: Injecting the 3d world into large language models [<a href="https://arxiv.org/abs/2307.12981">paper</a>] [<a href="https://github.com/UMass-Embodied-AGI/3D-LLM">code</a>]</p>
+<p>  Thinking, fast and slow [<a href="https://link.springer.com/article/10.1007/s00362-013-0533-y">paper</a>]</p>
+<p>  Gr00t n1: An open foundation model for generalist humanoid robots [<a href="https://arxiv.org/abs/2503.14734">paper</a>] [<a href="https://github.com/NVIDIA/Isaac-GR00T">code</a>]</p>
+<p>  Vision-language-action model with open-world embodied reasoning from pretrained knowledge [<a href="https://arxiv.org/pdf/2505.21906">paper</a>]</p>
+<p>  OpenVLA: An open-source vision-language-action model [<a href="https://arxiv.org/abs/2406.09246">paper</a>] [<a href="https://github.com/openvla/openvla">code</a>]</p>
+<p>  EgoAgent: A joint predictive agent model in egocentric worlds [<a href="https://arxiv.org/abs/2502.05857">paper</a>] [<a href="https://github.com/zju3dv/EgoAgent">code</a>]</p>
+<p>  Internlm: A multilingual language model with progressively enhanced capabilities [<a href="https://github.com/InternLM/InternLM-techreport/blob/main/InternLM.pdf">paper</a>]</p>
+<p>  GenRL: Multimodal-foundation world models for generalization in embodied agents [<a href="https://arxiv.org/abs/2406.18043">paper</a>] [<a href="https://github.com/mazpie/genrl">code</a>]</p>
+<p>  Founder: Grounding foundation models in world models for open-ended embodied decision making [<a href="https://arxiv.org/abs/2507.12496">paper</a>]</p>
+<p>  UP-VLA: A unified understanding and prediction model for embodied agent [<a href="https://arxiv.org/abs/2501.18867">paper</a>] [<a href="https://github.com/CladernyJorn/UP-VLA">code</a>]</p>
+<p>  Cot-vla: Visual chain-of-thought reasoning for vision-language-action models [<a href="https://arxiv.org/abs/2503.22020">paper</a>]</p>
+<p>  <strong>2) Latent Dynamics Modeling for Action Prediction and Planning</strong></p>
+<p>  Learning latent dynamics for planning from pixels [<a href="https://arxiv.org/abs/1811.04551">paper</a>] [<a href="https://github.com/google-research/planet">code</a>]</p>
+<p>  Dream to control: Learning behaviors by latent imagination [<a href="https://arxiv.org/pdf/1912.01603.pdf">paper</a>] [<a href="https://github.com/danijar/dreamer">code</a>]</p>
+<p>  Mastering atari with discrete world models [<a href="https://arxiv.org/abs/2010.02193">paper</a>] [<a href="https://github.com/danijar/dreamerv2">code</a>]</p>
+<p>  Daydreamer: World models for physical robot learning [<a href="https://arxiv.org/abs/2206.14176">paper</a>] [<a href="https://github.com/danijar/daydreamer">code</a>]</p>
+<p>  Mastering diverse domains through world models [<a href="https://arxiv.org/abs/2301.04104">paper</a>] [<a href="https://github.com/danijar/dreamerv3">code</a>]</p>
+<p>  Mastering diverse control tasks through world models [<a href="https://www.nature.com/articles/s41586-025-08744-2">paper</a>] [<a href="https://github.com/danijar/dreamerv3">code</a>]</p>
+<p>  Planning to explore via self-supervised world models [<a href="https://arxiv.org/abs/2005.05960">paper</a>] [<a href="https://github.com/ramanans1/plan2explore">code</a>]</p>
+<p>  Learning hierarchical world models with adaptive temporal abstractions from discrete latent dynamics [<a href="https://openreview.net/pdf?id=TjCDNssXKU">paper</a>] [<a href="https://github.com/CognitiveModeling/THICK">code</a>]</p>
+<p>  FOCUS: Object-centric world models for robotic manipulation [<a href="https://arxiv.org/abs/2307.02427">paper</a>] [<a href="https://github.com/StefanoFerraro/FOCUS">code</a>]</p>
+<p>  EgoAgent: A joint predictive agent model in egocentric worlds [<a href="https://arxiv.org/abs/2502.05857">paper</a>] [<a href="https://github.com/zju3dv/EgoAgent">code</a>]</p>
+<p>  V-jepa 2: Self-supervised video models enable understanding, prediction and planning [<a href="https://arxiv.org/abs/2506.09985">paper</a>] [<a href="https://github.com/facebookresearch/vjepa2">code</a>]</p>
+<p>  Temporal difference learning for model predictive control [<a href="https://arxiv.org/abs/2203.04955">paper</a>]</p>
+<p>  TD-MPC2: Scalable, robust world models for continuous control [<a href="https://arxiv.org/abs/2310.16828">paper</a>] [<a href="https://github.com/wangjs96/tdmpc2-check">code</a>]</p>
+<p>  <strong>3) Implicit World Models for Action Prediction and Planning</strong></p>
+<p>  Unsupervised learning for physical interaction through video prediction [<a href="https://arxiv.org/abs/1605.07157">paper</a>]</p>
+<p>  Robustness via retrying: Closed-loop robotic manipulation with self-supervised learning [<a href="https://arxiv.org/abs/1810.03043">paper</a>] [<a href="https://github.com/febert/robustness_via_retrying">code</a>]</p>
+<p>  Visual foresight: Model-based deep reinforcement learning for vision-based robotic control [<a href="https://arxiv.org/abs/1812.00568">paper</a>] [<a href="https://github.com/SudeepDasari/visual_foresight">code</a>]</p>
+<p>  Closed-loop visuomotor control with generative expectation for robotic manipulation [<a href="https://arxiv.org/abs/2409.09016">paper</a>] [<a href="https://github.com/OpenDriveLab/CLOVER">code</a>]</p>
+<p>  Deep visual foresight for planning robotic motion [<a href="https://arxiv.org/abs/1610.00696">paper</a>]</p>
+<p>  Learning language-conditioned robot behavior from offline data and crowd-sourced annotation [<a href="https://arxiv.org/abs/2109.01115">paper</a>] [<a href="https://github.com/suraj-nair-1/lorel">code</a>]</p>
+<p>  UP-VLA: A unified understanding and prediction model for embodied agent [<a href="https://arxiv.org/abs/2501.18867">paper</a>] [<a href="https://github.com/CladernyJorn/UP-VLA">code</a>]</p>
+<p>  RoboDreamer: Learning compositional world models for robot imagination [<a href="https://arxiv.org/abs/2404.12377">paper</a>] [<a href="https://github.com/UMass-Embodied-AGI/robodreamer">code</a>]</p>
+<p>  DreamVLA: A vision-language-action model dreamed with comprehensive world knowledge [<a href="https://arxiv.org/abs/2507.04447">paper</a>] [<a href="https://github.com/Zhangwenyao1/DreamVLA">code</a>]</p>
+<p>  DINOv2: Learning robust visual features without supervision [<a href="https://arxiv.org/abs/2304.07193">paper</a>] [<a href="https://github.com/facebookresearch/dinov2">code</a>]</p>
+<p>  Segment anything [<a href="https://arxiv.org/abs/2304.02643">paper</a>] [<a href="https://github.com/facebookresearch/segment-anything">code</a>]</p>
+<p>  This&amp;that: Language-gesture controlled video generation for robot planning [<a href="https://arxiv.org/abs/2407.05530">paper</a>] [<a href="https://github.com/Kiteretsu77/This_and_That_VDM">code</a>]</p>
+<p>  Learning universal policies via text-guided video generation [<a href="https://arxiv.org/abs/2302.00111">paper</a>]</p>
+<p>  Cot-vla: Visual chain-of-thought reasoning for vision-language-action models [<a href="https://arxiv.org/abs/2503.22020">paper</a>]</p>
+<p>  Video generators are robot policies [<a href="https://arxiv.org/abs/2508.00795">paper</a>] [<a href="https://github.com/cvlab-columbia/videopolicy">code</a>]</p>
+<p>  COMBO: Compositional world models for embodied multi-agent cooperation [<a href="https://arxiv.org/abs/2404.10775">paper</a>] [<a href="https://github.com/UMass-Embodied-AGI/COMBO">code</a>]</p>
+<p>  3DFlowAction: Learning cross-embodiment manipulation from 3D flow world model [<a href="https://arxiv.org/abs/2506.06199">paper</a>] [<a href="https://github.com/Hoyyyaard/3DFlowAction">code</a>]</p>
+<p>  Cotracker: It is better to track together [<a href="https://arxiv.org/abs/2307.07635">paper</a>] [<a href="https://github.com/facebookresearch/co-tracker">code</a>]</p>
+<p>  Cotracker3: Simpler and better point tracking by pseudo-labelling real videos [<a href="https://arxiv.org/abs/2410.11831">paper</a>] [<a href="https://github.com/facebookresearch/co-tracker">code</a>]</p>
+<p>  Cosmos world foundation model platform for physical ai [<a href="https://arxiv.org/abs/2501.03575">paper</a>] [<a href="https://github.com/nvidia-cosmos/cosmos-predict1">code</a>]</p>
+<p>  Predictive inverse dynamics models are scalable learners for robotic manipulation [<a href="https://arxiv.org/abs/2412.15109">paper</a>] [<a href="https://github.com/InternRobotics/Seer">code</a>]</p>
+<p>  Prediction with action: Visual policy learning via joint denoising process [<a href="https://arxiv.org/abs/2411.18179">paper</a>] [<a href="https://github.com/Robert-gyj/Prediction_with_Action">code</a>]</p>
+<p>  FlowDreamer: A RGB-d world model with flow-based motion representations for robot manipulation [<a href="https://arxiv.org/abs/2505.10075">paper</a>]</p>
+<h2 id="training-facilitation"><strong>Training Facilitation</strong><a class="headerlink" href="#training-facilitation" title="Permanent link">¶</a></h2>
+<p>  <strong>1) Data Engine</strong></p>
+<p>  Rt-2: Vision-language-action models transfer web knowledge to robotic control [<a href="https://arxiv.org/abs/2307.15818">paper</a>] [<a href="https://github.com/kyegomez/RT-2">code</a>]</p>
+<p>  π_0: A vision-language-action flow model for general robot control [<a href="https://arxiv.org/abs/2410.24164">paper</a>] [<a href="https://github.com/Physical-Intelligence/openpi">code</a>]</p>
+<p>  Gemini robotics: Bringing ai into the physical world [<a href="https://arxiv.org/abs/2503.20020">paper</a>]</p>
+<p>  Agibot world colosseo: A large-scale manipulation platform for scalable and intelligent embodied systems [<a href="https://arxiv.org/abs/2503.06669">paper</a>] [<a href="https://github.com/OpenDriveLab/AgiBot-World">code</a>]</p>
+<p>  Gr00t n1: An open foundation model for generalist humanoid robots [<a href="https://arxiv.org/abs/2503.14734">paper</a>] [<a href="https://github.com/NVIDIA/Isaac-GR00T">code</a>]</p>
+<p>  RDT-1B: A diffusion foundation model for bimanual manipulation [<a href="https://arxiv.org/abs/2410.07864">paper</a>] [<a href="https://github.com/thu-ml/RoboticsDiffusionTransformer">code</a>]</p>
+<p>  DreamGen: Unlocking generalization in robot learning through video world models [<a href="https://arxiv.org/abs/2505.12705">paper</a>] [<a href="https://github.com/nvidia/GR00T-dreams">code</a>]</p>
+<p>  Learning universal policies via text-guided video generation [<a href="https://arxiv.org/abs/2302.00111">paper</a>]</p>
+<p>  Ivideogpt: Interactive videogpts are scalable world models [<a href="https://arxiv.org/abs/2405.15223">paper</a>] [<a href="https://github.com/thuml/iVideoGPT">code</a>]</p>
+<p>  Wan: Open and advanced large-scale video generative models [<a href="https://arxiv.org/abs/2503.20314">paper</a>] [<a href="https://github.com/Wan-Video/Wan2.1">code</a>]</p>
+<p>  Latent action pretraining from videos [<a href="https://arxiv.org/abs/2410.11758">paper</a>] [<a href="https://github.com/LatentActionPretraining/LAPA">code</a>]</p>
+<p>  Video pretraining (vpt): Learning to act by watching unlabeled online videos [<a href="https://arxiv.org/abs/2206.11795">paper</a>] [<a href="https://github.com/openai/Video-Pre-Training">code</a>]</p>
+<p>  GWM: Towards scalable gaussian world models for robotic manipulation [<a href="https://arxiv.org/abs/2508.17600">paper</a>] [<a href="https://github.com/Gaussian-World-Model/gaussianwm">code</a>]</p>
+<p>  GigaBrain-0: A world model-powered vision-language-action model [<a href="https://arxiv.org/abs/2510.19430">paper</a>]</p>
+<p>  RoboTransfer: Geometry-consistent video diffusion for robotic visual policy transfer [<a href="https://arxiv.org/abs/2505.23171">paper</a>] [<a href="https://github.com/HorizonRobotics/RoboTransfer">code</a>]</p>
+<p>  Cosmos-reason1: From physical common sense to embodied reasoning [<a href="https://arxiv.org/abs/2503.15558">paper</a>] [<a href="https://github.com/nvidia-cosmos/cosmos-reason1">code</a>]</p>
+<p>  Dream to manipulate: Compositional world models empowering robot imitation learning with imagination [<a href="https://arxiv.org/abs/2412.14957">paper</a>] [<a href="https://github.com/leobarcellona/drema_code">code</a>]</p>
+<p>  3D gaussian splatting for real-time radiance field rendering [<a href="https://arxiv.org/abs/2308.04079">paper</a>] [<a href="https://github.com/graphdeco-inria/gaussian-splatting">code</a>]</p>
+<p>  World-env: Leveraging world model as a virtual environment for VLA post-training [<a href="https://arxiv.org/abs/2509.24948">paper</a>] [<a href="https://github.com/amap-cvlab/world-env">code</a>]</p>
+<p>  <strong>2) Evaluation</strong></p>
+<p>  Mujoco: A physics engine for model-based control [<a href="https://ieeexplore.ieee.org/document/6386109">paper</a>] [<a href="https://github.com/google-deepmind/mujoco">code</a>]</p>
+<p>  Simulation tools for model-based robotics: Comparison of bullet, havok, mujoco, ode and physx [<a href="https://ieeexplore.ieee.org/document/7139807">paper</a>]</p>
+<p>  Drake: Model-based design and verification for robotics [<a href="https://drake.mit.edu/">paper</a>] [<a href="https://github.com/RobotLocomotion/drake">code</a>]</p>
+<p>  The limits and potentials of deep learning for robotics [<a href="https://arxiv.org/abs/1804.06557">paper</a>]</p>
+<p>  A study on the challenges of using robotics simulators for testing [<a href="https://arxiv.org/abs/2004.07368">paper</a>]</p>
+<p>  On the use of simulation in robotics: Opportunities, challenges, and suggestions for moving forward [<a href="https://www.pnas.org/doi/abs/10.1073/pnas.1907856118">paper</a>]</p>
+<p>  Challenges of real-world reinforcement learning [<a href="https://arxiv.org/abs/1904.12901">paper</a>]</p>
+<p>  Sim-to-real transfer in deep reinforcement learning for robotics: A survey [<a href="https://arxiv.org/abs/2009.13303">paper</a>]</p>
+<p>  CARLA: An open urban driving simulator [<a href="https://arxiv.org/abs/1711.03938">paper</a>] [<a href="https://github.com/carla-simulator/carla">code</a>]</p>
+<p>  Robothor: An open simulation-to-real embodied ai platform [<a href="https://arxiv.org/abs/2004.06799">paper</a>] [<a href="https://github.com/allenai/ai2thor">code</a>]</p>
+<p>  WorldEval: World model as real-world robot policies evaluator [<a href="https://arxiv.org/abs/2505.19017">paper</a>] [<a href="https://github.com/liyaxuanliyaxuan/Worldeval">code</a>]</p>
+<p>  Wan: Open and advanced large-scale video generative models [<a href="https://arxiv.org/abs/2503.20314">paper</a>] [<a href="https://github.com/Wan-Video/Wan2.1">code</a>]</p>
+<p>  Gemini: A family of highly capable multimodal models [<a href="https://arxiv.org/abs/2312.11805">paper</a>]</p>
+<p>  Evaluating robot policies in a world model [<a href="https://arxiv.org/abs/2506.00613v1">paper</a>] [<a href="https://github.com/world-model-eval/world-model-eval">code</a>]</p>
+<p>  Gpt-4o system card [<a href="https://arxiv.org/abs/2410.21276">paper</a>]</p>
+<p>  Pre-trained video generative models as world simulators [<a href="https://arxiv.org/abs/2502.07825">paper</a>]</p>
+<p>  Irasim: Learning interactive real-robot action simulators [<a href="https://arxiv.org/abs/2406.14540v1">paper</a>] [<a href="https://github.com/bytedance/IRASim">code</a>]</p>
+<p>  Genie envisioner: A unified world foundation platform for robotic manipulation [<a href="https://arxiv.org/abs/2508.05635">paper</a>] [<a href="https://github.com/AgibotTech/Genie-Envisioner">code</a>]</p>
+<p>  Learning real-world action-video dynamics with heterogeneous masked autoregression [<a href="https://arxiv.org/abs/2502.04296">paper</a>] [<a href="https://github.com/liruiw/HMA">code</a>]</p>
+<p>  Video prediction models as rewards for reinforcement learning [<a href="https://arxiv.org/abs/2305.14343">paper</a>] [<a href="https://github.com/escontra/viper_rl">code</a>]</p>
 
 
 
@@ -448,9 +805,39 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../08-conclusion/" class="md-footer__link md-footer__link--prev" aria-label="Previous: VIII Conclusion &amp; Future directions">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                VIII Conclusion &amp; Future directions
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -476,13 +863,21 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.expand", "navigation.sections", "header.autohide"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "header.autohide", "navigation.footer"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../js/katex-init.js"></script>
+      
         <script src="../js/strip-nocase.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

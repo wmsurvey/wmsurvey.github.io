@@ -1,12 +1,11 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
+      
+        <link rel="canonical" href="https://your-domain.example/02-preliminaries/">
       
       
         <link rel="prev" href="../01-introduction/">
@@ -15,16 +14,19 @@
         <link rel="next" href="../03-overview/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/img/badge.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>II Preliminaries - World Model</title>
+        <title>II Preliminaries - A Step Toward World Models: A Survey on Robotic Manipulation</title>
       
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -38,10 +40,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -50,10 +56,27 @@
     
     
     
-  </head>
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -76,23 +99,22 @@
 
   
 
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="World Model" class="md-header__button md-logo" aria-label="World Model" data-md-component="logo">
+    <a href=".." title="A Step Toward World Models: A Survey on Robotic Manipulation" class="md-header__button md-logo" aria-label="A Step Toward World Models: A Survey on Robotic Manipulation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            World Model
+            A Step Toward World Models: A Survey on Robotic Manipulation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -105,6 +127,32 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
@@ -114,7 +162,7 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -123,17 +171,19 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -153,13 +203,82 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../abstract/" class="md-tabs__link">
+          
+  
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../99-references/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  References
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -167,24 +286,25 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
 
+  
+
 
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="World Model" class="md-nav__button md-logo" aria-label="World Model" data-md-component="logo">
+    <a href=".." title="A Step Toward World Models: A Survey on Robotic Manipulation" class="md-nav__button md-logo" aria-label="A Step Toward World Models: A Survey on Robotic Manipulation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/img/logo.png" alt="logo">
 
     </a>
-    World Model
+    A Step Toward World Models: A Survey on Robotic Manipulation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -201,7 +321,7 @@
   
   
   <span class="md-ellipsis">
-    home
+    Home
     
   </span>
   
@@ -213,6 +333,75 @@
     
       
       
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../abstract/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Abstract
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
   
@@ -232,9 +421,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
     
@@ -292,6 +482,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="A. What Is the “World” to Be Modeled?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Ⅰ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -337,9 +542,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -359,9 +565,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -381,9 +588,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -403,9 +611,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -416,7 +625,7 @@
   
   
   <span class="md-ellipsis">
-    VI Core Components & Capabilities
+    VI Core Components &amp; Capabilities
     
   </span>
   
@@ -425,9 +634,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -447,9 +657,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -460,12 +671,20 @@
   
   
   <span class="md-ellipsis">
-    VIII Conclusion & Future directions
+    VIII Conclusion &amp; Future directions
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -508,98 +727,121 @@
 
 
 
-<h1 id="ii-preliminaries">II Preliminaries<a class="headerlink" href="#ii-preliminaries" title="Permanent link">&para;</a></h1>
-<h2 id="a-what-is-the-world-to-be-modeled">A. What Is the “World” to Be Modeled?<a class="headerlink" href="#a-what-is-the-world-to-be-modeled" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;Despite the debate among philosophers about the ultimate nature of the world, the world can be roughly described as a set of entities, each with its own attributes or properties, along with the relationships and interactions that connect them. These attributes, such as shape, size, material, or state, and the connections, which can be spatial, causal, functional, or temporal, mean that objects, agents, and features are not only statically arranged but also evolve and influence one another over time. In order to interact effectively with such a world, an intelligent agent must capture critical information about entities, their properties, and their interactions. Collectively, these entities and interactions form a rich and dynamic environment in which an agent must actively explore, interact, and learn to achieve its goals. This naturally raises the question of what fundamental capabilities underpin an agent’s ability to capture and reason about such complex dynamics, as well as what forms of representation, learning, and interaction are required to model and act within an uncertain and evolving world.</p>
-<h2 id="b-world-models-empowering-robot-intelligence">B. World Models Empowering Robot Intelligence<a class="headerlink" href="#b-world-models-empowering-robot-intelligence" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;Embodied intelligence refers to a system’s ability to perceive, reason, and learn through direct interaction with its environment. Unlike traditional AI confined to abstract or symbolic domains, embodied intelligence integrates a physical body, sensors, actuators, and computational processes that together enable situated perception, reasoning, and action. Intelligent robotic agents serve as the primary physical instantiation of embodied intelligence. They inherently combine perception (via sensors), cognition (for learning and reasoning), and motor control (via actuators) to operate autonomously and acquire knowledge from real-world experience, much like biological organisms.<br />
-&emsp;&emsp;However, because intelligent agents perceive only a partial and noisy projection of reality through their sensors, many underlying relationships and causal dependencies remain latent. This limitation makes structured internal representations essential for prediction, planning, and multi-step reasoning. To achieve robust and efficient embodied intelligence, recent research introduces the notion of world models, which serve as internal representations that capture environmental dynamics and common-sense regularities of how the world operates. By internally simulating potential outcomes, world models empower embodied agents to understand their context, anticipate the consequences of actions, and plan complex behaviors before execution, thereby reducing reliance on costly or unsafe real-world trial and error.</p>
-<h2 id="c-competing-perspectives-on-world-models">C. Competing Perspectives on World Models<a class="headerlink" href="#c-competing-perspectives-on-world-models" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;Although the concept of a “world model” is prevalent in computer science, its definition remains unsettled, with ongoing debate in the research community regarding its fundamental nature and role in intelligence <sup id="fnref:xing2025critiques"><a class="footnote-ref" href="#fn:xing2025critiques">1</a></sup>. A central point of contention concerns its generative capability, as illustrated by NVIDIA <sup id="fnref:nvidia_wm2025"><a class="footnote-ref" href="#fn:nvidia_wm2025">2</a></sup>, who define world models as systems that learn environmental dynamics from multimodal data and generate videos capturing spatial and physical properties. Emphasizing action dependence, Sudhakar <em>et al.</em> <sup id="fnref:sudhakar2024controlling"><a class="footnote-ref" href="#fn:sudhakar2024controlling">3</a></sup> <sup id="fnref:cen2025worldvla"><a class="footnote-ref" href="#fn:cen2025worldvla">4</a></sup> characterize world models specifically as action-conditioned video generation models, distinguishing them from conventional video prediction. Similarly, Hafner <em>et al.</em> <sup id="fnref:wu2023daydreamer"><a class="footnote-ref" href="#fn:wu2023daydreamer">5</a></sup> <sup id="fnref:hafnerdream"><a class="footnote-ref" href="#fn:hafnerdream">6</a></sup> <sup id="fnref:hafner2021mastering"><a class="footnote-ref" href="#fn:hafner2021mastering">7</a></sup> <sup id="fnref:hafner2023mastering"><a class="footnote-ref" href="#fn:hafner2023mastering">8</a></sup> <sup id="fnref:chen2025vlwm"><a class="footnote-ref" href="#fn:chen2025vlwm">9</a></sup> identify action-conditioned prediction as a core feature of world models, emphasizing the prediction of latent representations rather than raw observations. Despite these differing perspectives, a common consensus emerges: world models aim to construct internal representations that capture environmental dynamics and action consequences, thereby enabling the prediction of future states.</p>
+<h1 id="ii-preliminaries"><strong>II Preliminaries</strong><a class="headerlink" href="#ii-preliminaries" title="Permanent link">¶</a></h1>
+<h2 id="a-what-is-the-world-to-be-modeled"><strong>A. What Is the “World” to Be Modeled?</strong><a class="headerlink" href="#a-what-is-the-world-to-be-modeled" title="Permanent link">¶</a></h2>
+<p>  Despite the debate among philosophers about the ultimate nature of the world, the world can be roughly described as a set of entities, each with its own attributes or properties, along with the relationships and interactions that connect them. These attributes, such as shape, size, material, or state, and the connections, which can be spatial, causal, functional, or temporal, mean that objects, agents, and features are not only statically arranged but also evolve and influence one another over time. In order to interact effect-ively with such a world, an intelligent agent must capture critical information about entities, their properties, and their interactions. Collectively, these entities and interactions form a rich and dynamic environment in which an agent must actively explore, interact, and learn to achieve its goals. This naturally raises the question of what fundamental capabilities underpin an agent’s ability to capture and reason about such complex dynamics, as well as what forms of representation, learning, and interaction are required to model and act within an uncertain and evolving world.</p>
+<h3 id="table-i" style="text-align:center">Table Ⅰ<a class="headerlink" href="#table-i" title="Permanent link">¶</a></h3>
+<h4 id="a-summary-of-representative-world-models" style="text-align:center">A Summary of Representative World Models<a class="headerlink" href="#a-summary-of-representative-world-models" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Prediction tasks:</strong> <code>AP</code> — Action Prediction; <code>PL</code> — Policy Learning; <code>VP</code> — Visual Planning; <code>Static</code> — Static Visual Prediction; <code>Action-cond.</code> — Action-conditioned Visual Prediction.</li>
+<li><strong>Input &amp; Output:</strong> <code>L</code> — Language; <code>V</code> — Video; <code>A</code> — Action; <code>S</code> — State; <code>I</code> — Image; <code>P</code> — Point Cloud; <code>Tr</code> — Trajectory; <code>Ar</code> — Autoregressive.</li>
+<li><strong>Core components:</strong> <code>CLIP</code> — Contrastive Language-Image Pre-training; <code>DiT</code> — Diffusion Transformer; <code>IDM</code> — Inverse Dynamics Model; <code>GPT</code> — Generative Pre-trained Transformer; <code>LLM</code> — Large Language Model; <code>LSTM</code> — Long Short-Term Memory; <code>RSSM</code> — Recurrent State-Space Model; <code>U-Net</code> — U-shaped Convolutional Neural Network; <code>VAE</code> — Variational AutoEncoder; <code>VDM</code> — Video Diffusion Model; <code>ViT</code> — Vision Transformer; <code>VLM</code> — Vision-Language Model; <code>VQ</code> — Vector Quantization.</li>
+</ul>
 <figure>
-<p><img alt="Perspectives on world models" src="../assets/img/02-preliminary-1.png" width="80%" />
+<!-- ![Perspectives on world models](assets/img/table1title.png){ width="100%" } -->
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/img/table1.png" data-desc-position="bottom"><img alt="Perspectives on world models" src="../assets/img/table1.png" width="100%"></a></p>
+</figure>
+<h2 id="b-world-models-empowering-robot-intelligence"><strong>B. World Models Empowering Robot Intelligence</strong><a class="headerlink" href="#b-world-models-empowering-robot-intelligence" title="Permanent link">¶</a></h2>
+<p>  Embodied intelligence refers to a system’s ability to perceive, reason, and learn through direct interaction with its environment. Unlike traditional AI confined to abstract or symbolic domains, embodied intelligence integrates a physical body, sensors, actuators, and computational processes that together enable situated perception, reasoning, and action. Intelligent robotic agents serve as the primary physical instantiation of embodied intelligence. They inherently combine perception (via sensors), cognition (for learning and reasoning), and motor control (via actuators) to operate autonomously and acquire knowledge from real-world experience, much like biological organisms.  </p>
+<p>  However, because intelligent agents perceive only a partial and noisy projection of reality through their sensors, many underlying relationships and causal dependencies remain latent. This limitation makes structured internal representations essential for prediction, planning, and multi-step reasoning. To achieve robust and efficient embodied intelligence, recent research introduces the notion of world models, which serve as internal representations that capture environmental dynamics and common-sense regularities of how the world operates. By internally simulating potential outcomes, world models empower embodied agents to understand their context, anticipate the consequences of actions, and plan complex behaviors before execution, thereby reducing reliance on costly or unsafe real-world trial and error.</p>
+<h2 id="c-competing-perspectives-on-world-models"><strong>C. Competing Perspectives on World Models</strong><a class="headerlink" href="#c-competing-perspectives-on-world-models" title="Permanent link">¶</a></h2>
+<p>  Although the concept of a “world model” is prevalent in computer science, its definition remains unsettled, with ongoing debate in the research community regarding its fundamental nature and role in intelligence <sup id="fnref:xing2025critiques"><a class="footnote-ref" href="#fn:xing2025critiques">1</a></sup>. A central point of contention concerns its generative capability, as illustrated by NVIDIA <sup id="fnref:nvidia_wm2025"><a class="footnote-ref" href="#fn:nvidia_wm2025">2</a></sup>, who define world models as systems that learn environmental dynamics from multimodal data and generate videos capturing spatial and physical properties. Emphasizing action dependence, Sudhakar <em>et al.</em> <sup id="fnref:sudhakar2024controlling"><a class="footnote-ref" href="#fn:sudhakar2024controlling">3</a></sup> <sup id="fnref:cen2025worldvla"><a class="footnote-ref" href="#fn:cen2025worldvla">4</a></sup> characterize world models specifically as action-conditioned video generation models, distinguishing them from conventional video prediction. Similarly, Hafner <em>et al.</em> <sup id="fnref:wu2023daydreamer"><a class="footnote-ref" href="#fn:wu2023daydreamer">5</a></sup> <sup id="fnref:hafnerdream"><a class="footnote-ref" href="#fn:hafnerdream">6</a></sup> <sup id="fnref:hafner2021mastering"><a class="footnote-ref" href="#fn:hafner2021mastering">7</a></sup> <sup id="fnref:hafner2023mastering"><a class="footnote-ref" href="#fn:hafner2023mastering">8</a></sup> <sup id="fnref:chen2025vlwm"><a class="footnote-ref" href="#fn:chen2025vlwm">9</a></sup> identify action-conditioned prediction as a core feature of world models, emphasizing the prediction of latent representations rather than raw observations. Despite these differing perspectives, a common consensus emerges: world models aim to construct internal representations that capture environmental dynamics and action consequences, thereby enabling the prediction of future states.</p>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/img/02-preliminary-1.png" data-desc-position="bottom"><img alt="Perspectives on world models" src="../assets/img/02-preliminary-1.png" width="80%"></a>
   </p>
-<figcaption>Fig. 1. A visualization of an agent [11], where the world model predicts possible future world states as a function of imagined actions sequences proposed by the actor.</figcaption>
+<figcaption>Fig. 1. A visualization of an agent <sup id="fnref:lecun2022path"><a class="footnote-ref" href="#fn:lecun2022path">10</a></sup>, where the world model predicts possible future world states as a function of imagined actions sequences proposed by the actor.</figcaption>
 </figure>
-<h2 id="d-revisiting-modern-ai-models-through-the-lens-of-world-modeling">D. Revisiting Modern AI Models Through the Lens of World Modeling<a class="headerlink" href="#d-revisiting-modern-ai-models-through-the-lens-of-world-modeling" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;The rapid progress of large-scale artificial intelligence models has blurred the boundaries between traditional task-specific learning and general world modeling. Although many of these models are not explicitly designed as world models, they exhibit key characteristics of world modeling, such as learning structured representations of reality, reasoning about causality, and predicting or generating plausible future states. Revisiting these modern models through the lens of world modeling provides valuable insights into how intelligence emerges from data, embodiment, and multimodal integration. This perspective helps clarify which components of contemporary architectures, such as large language models (LLMs), vision-language models (VLMs), vision-language-action models (VLAs) and video generation models, implicitly capture aspects of the world and how they contribute to the broader goal of generalpurpose world understanding. </p>
-<p>&emsp;&emsp;1) LLMs, VLMs &amp; VLA<br />
-&emsp;&emsp; The strong reasoning capabilities and next-token prediction mechanism of Large Language Models (LLMs) make them natural foundations for constructing world models, as they capture sequential dependencies, causal relationships, and abstract dynamics. When equipped with auxiliary modules such as value functions <sup id="fnref:ahn2022can"><a class="footnote-ref" href="#fn:ahn2022can">10</a></sup> or modality-specific encoders <sup id="fnref:xiang2024pandora"><a class="footnote-ref" href="#fn:xiang2024pandora">11</a></sup> <sup id="fnref:driess2023palm"><a class="footnote-ref" href="#fn:driess2023palm">12</a></sup> <sup id="fnref:zhang2025dreamvla"><a class="footnote-ref" href="#fn:zhang2025dreamvla">13</a></sup>, LLMs can achieve a more comprehensive understanding of the environment. Moving beyond the language-centric paradigm, Vision–Language Models (VLMs) focus on the joint modeling of multiple modalities, providing a perceptually grounded understanding of the world <sup id="fnref:hu2023look"><a class="footnote-ref" href="#fn:hu2023look">14</a></sup> <sup id="fnref:zhao2024vlmpc"><a class="footnote-ref" href="#fn:zhao2024vlmpc">15</a></sup>. Furthermore, an increasing number of studies have explored augmenting VLMs with low-level action-generation capabilities, thereby transforming them into Vision–Language–Action (VLA) models <sup id="fnref:zitkovich2023rt"><a class="footnote-ref" href="#fn:zitkovich2023rt">16</a></sup> <sup id="fnref:hong20233d"><a class="footnote-ref" href="#fn:hong20233d">17</a></sup> <sup id="fnref:bjorck2025gr00t"><a class="footnote-ref" href="#fn:bjorck2025gr00t">18</a></sup> that bridge perception, reasoning, and control. In addition to action generation, there are also many works that enable additional visual prediction <sup id="fnref:zhang2025up"><a class="footnote-ref" href="#fn:zhang2025up">19</a></sup> <sup id="fnref:zhao2025cot"><a class="footnote-ref" href="#fn:zhao2025cot">20</a></sup>.</p>
-<p>&emsp;&emsp; From the above discussion, the designs and functions of LLMs, VLMs, and VLAs align with the spirit of world models, as they aim to represent and reason about world dynamics. Therefore, these models should not be excluded from the broader conceptual scope of world modeling. However, solely relying on LLMs, VLMs, or VLAs often constrains a system’s capacity for long-horizon prediction, reasoning, and imagination, all of which are essential for modeling dynamic and interactive environments. Recent studies have thus begun to integrate these models into architectures that explicitly function as world models, such as the JEPA framework <sup id="fnref:chen2025egoagent"><a class="footnote-ref" href="#fn:chen2025egoagent">21</a></sup>, Dreamer-style frameworks <sup id="fnref:wang2025founder"><a class="footnote-ref" href="#fn:wang2025founder">22</a></sup>, positioning them as core mechanisms for capturing temporal and causal dynamics.</p>
-<p>&emsp;&emsp;2) Video Generation Models.<br />
-&emsp;&emsp;Video generation models primarily aim to produce visually realistic and temporally coherent sequences, which implicitly rely on learning the underlying dynamics of the environment. They can operate on diverse modalities, including language, visual data, and action inputs, allowing them to access environmental context and imagine future scenes. These characteristics position video generation models as a form of world modeling. Indeed, many recent world models adopt video generation as their core mechanism [5], [6], [7], enabling the prediction of future states encompassing observations, actions, and environmental changes. However, most video generation models focus on observation-level prediction and may lack interpretable internal representations of the world.</p>
+<h2 id="d-revisiting-modern-ai-models-through-the-lens-of-world-modeling"><strong>D. Revisiting Modern AI Models Through the Lens of World Modeling</strong><a class="headerlink" href="#d-revisiting-modern-ai-models-through-the-lens-of-world-modeling" title="Permanent link">¶</a></h2>
+<p>  The rapid progress of large-scale artificial intelligence models has blurred the boundaries between traditional task-specific learning and general world modeling. Although many of these models are not explicitly designed as world models, they exhibit key characteristics of world modeling, such as learning structured representations of reality, reasoning about causality, and predicting or generating plausible future states. Revisiting these modern models through the lens of world modeling provides valuable insights into how intelligence emerges from data, embodiment, and multimodal integration. This perspective helps clarify which components of contemporary architectures, such as large language models (LLMs), vision-language models (VLMs), vision-language-action models (VLAs) and video generation models, implicitly capture aspects of the world and how they contribute to the broader goal of generalpurpose world understanding. </p>
+<p>  <strong>1) LLMs, VLMs &amp; VLA</strong>  </p>
+<p>   The strong reasoning capabilities and next-token prediction mechanism of Large Language Models (LLMs) make them natural foundations for constructing world models, as they capture sequential dependencies, causal relationships, and abstract dynamics. When equipped with auxiliary modules such as value functions <sup id="fnref:ahn2022can"><a class="footnote-ref" href="#fn:ahn2022can">11</a></sup> or modality-specific encoders <sup id="fnref:xiang2024pandora"><a class="footnote-ref" href="#fn:xiang2024pandora">12</a></sup> <sup id="fnref:driess2023palm"><a class="footnote-ref" href="#fn:driess2023palm">13</a></sup> <sup id="fnref:zhang2025dreamvla"><a class="footnote-ref" href="#fn:zhang2025dreamvla">14</a></sup>, LLMs can achieve a more comprehensive understanding of the environment. Moving beyond the language-centric paradigm, Vision–Language Models (VLMs) focus on the joint modeling of multiple modalities, providing a perceptually grounded understanding of the world <sup id="fnref:hu2023look"><a class="footnote-ref" href="#fn:hu2023look">15</a></sup> <sup id="fnref:zhao2024vlmpc"><a class="footnote-ref" href="#fn:zhao2024vlmpc">16</a></sup>. Furthermore, an increasing number of studies have explored augmenting VLMs with low-level action-generation capabilities, thereby transforming them into Vision–Language–Action (VLA) models <sup id="fnref:zitkovich2023rt"><a class="footnote-ref" href="#fn:zitkovich2023rt">17</a></sup> <sup id="fnref:hong20233d"><a class="footnote-ref" href="#fn:hong20233d">18</a></sup> <sup id="fnref:bjorck2025gr00t"><a class="footnote-ref" href="#fn:bjorck2025gr00t">19</a></sup> that bridge perception, reasoning, and control. In addition to action generation, there are also many works that enable additional visual prediction <sup id="fnref:zhang2025up"><a class="footnote-ref" href="#fn:zhang2025up">20</a></sup> <sup id="fnref:zhao2025cot"><a class="footnote-ref" href="#fn:zhao2025cot">21</a></sup>.</p>
+<p>   From the above discussion, the designs and functions of LLMs, VLMs, and VLAs align with the spirit of world models, as they aim to represent and reason about world dynamics. Therefore, these models should not be excluded from the broader conceptual scope of world modeling. However, solely relying on LLMs, VLMs, or VLAs often constrains a system’s capacity for long-horizon prediction, reasoning, and imagination, all of which are essential for modeling dynamic and interactive environments. Recent studies have thus begun to integrate these models into architectures that explicitly function as world models, such as the JEPA framework <sup id="fnref:chen2025egoagent"><a class="footnote-ref" href="#fn:chen2025egoagent">22</a></sup>, Dreamer-style frameworks <sup id="fnref:wang2025founder"><a class="footnote-ref" href="#fn:wang2025founder">23</a></sup>, positioning them as core mechanisms for capturing temporal and causal dynamics.</p>
+<p>  <strong>2) Video Generation Models.</strong>  </p>
+<p>  Video generation models primarily aim to produce visually realistic and temporally coherent sequences, which implicitly rely on learning the underlying dynamics of the environment. They can operate on diverse modalities, including language, visual data, and action inputs, allowing them to access environmental context and imagine future scenes. These characteristics position video generation models as a form of world modeling. Indeed, many recent world models adopt video generation as their core mechanism <sup id="fnref:du2023video"><a class="footnote-ref" href="#fn:du2023video">24</a></sup> <sup id="fnref:wu2024ivideogpt"><a class="footnote-ref" href="#fn:wu2024ivideogpt">25</a></sup> <sup id="fnref:zhang2025combo"><a class="footnote-ref" href="#fn:zhang2025combo">26</a></sup>, enabling the prediction of future states encompassing observations, actions, and environmental changes. However, most video generation models focus on observation-level prediction and may lack interpretable internal representations of the world.</p>
 <figure>
-<p><img alt="Implications for Modern AI Models" src="../assets/img/02-preliminary-2.png" width="60%" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/img/02-preliminary-2.png" data-desc-position="bottom"><img alt="Implications for Modern AI Models" src="../assets/img/02-preliminary-2.png" width="60%"></a></p>
 </figure>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h2 id="references"><strong>References</strong><a class="headerlink" href="#references" title="Permanent link">¶</a></h2>
 <div class="footnote">
-<hr />
+<hr>
 <ol>
 <li id="fn:xing2025critiques">
-<p>E. Xing, M. Deng, J. Hou, and Z. Hu, "Critiques of world models," <em>arXiv preprint arXiv:2507.05169</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:xing2025critiques" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>E. Xing, M. Deng, J. Hou, and Z. Hu, "Critiques of world models," <em>arXiv preprint arXiv:2507.05169</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:xing2025critiques" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 <li id="fn:nvidia_wm2025">
-<p>NVIDIA, "World models." [Online]. Available: <a href="https://www.nvidia.com/en-au/glossary/world-models">https://www.nvidia.com/en-au/glossary/world-models</a>&#160;<a class="footnote-backref" href="#fnref:nvidia_wm2025" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>NVIDIA, "World models." [Online]. Available: <a href="https://www.nvidia.com/en-au/glossary/world-models">https://www.nvidia.com/en-au/glossary/world-models</a>&nbsp;<a class="footnote-backref" href="#fnref:nvidia_wm2025" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 <li id="fn:sudhakar2024controlling">
-<p>S. Sudhakar, R. Liu, B. V. Hoorick, C. Vondrick, and R. Zemel, "Controlling the world by sleight of hand," in <em>European conference on computer vision</em>, Springer, 2024, pp. 414--430.&#160;<a class="footnote-backref" href="#fnref:sudhakar2024controlling" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>S. Sudhakar, R. Liu, B. V. Hoorick, C. Vondrick, and R. Zemel, "Controlling the world by sleight of hand," in <em>European conference on computer vision</em>, Springer, 2024, pp. 414--430.&nbsp;<a class="footnote-backref" href="#fnref:sudhakar2024controlling" title="Jump back to footnote 3 in the text">↩</a></p>
 </li>
 <li id="fn:cen2025worldvla">
-<p>J. Cen <em>et al.</em>, "WorldVLA: Towards autoregressive action world model," <em>arXiv preprint arXiv:2506.21539</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:cen2025worldvla" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p>J. Cen <em>et al.</em>, "WorldVLA: Towards autoregressive action world model," <em>arXiv preprint arXiv:2506.21539</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:cen2025worldvla" title="Jump back to footnote 4 in the text">↩</a></p>
 </li>
 <li id="fn:wu2023daydreamer">
-<p>P. Wu, A. Escontrela, D. Hafner, P. Abbeel, and K. Goldberg, "Daydreamer: World models for physical robot learning," in <em>Conference on robot learning</em>, PMLR, 2023, pp. 2226--2240.&#160;<a class="footnote-backref" href="#fnref:wu2023daydreamer" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+<p>P. Wu, A. Escontrela, D. Hafner, P. Abbeel, and K. Goldberg, "Daydreamer: World models for physical robot learning," in <em>Conference on robot learning</em>, PMLR, 2023, pp. 2226--2240.&nbsp;<a class="footnote-backref" href="#fnref:wu2023daydreamer" title="Jump back to footnote 5 in the text">↩</a></p>
 </li>
 <li id="fn:hafnerdream">
-<p>D. Hafner, T. Lillicrap, J. Ba, and M. Norouzi, "Dream to control: Learning behaviors by latent imagination," in <em>International conference on learning representations</em>, 2019.&#160;<a class="footnote-backref" href="#fnref:hafnerdream" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+<p>D. Hafner, T. Lillicrap, J. Ba, and M. Norouzi, "Dream to control: Learning behaviors by latent imagination," in <em>International conference on learning representations</em>, 2019.&nbsp;<a class="footnote-backref" href="#fnref:hafnerdream" title="Jump back to footnote 6 in the text">↩</a></p>
 </li>
 <li id="fn:hafner2021mastering">
-<p>D. Hafner, T. P. Lillicrap, M. Norouzi, and J. Ba, "Mastering atari with discrete world models," in <em>International conference on learning representations</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:hafner2021mastering" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<p>D. Hafner, T. P. Lillicrap, M. Norouzi, and J. Ba, "Mastering atari with discrete world models," in <em>International conference on learning representations</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:hafner2021mastering" title="Jump back to footnote 7 in the text">↩</a></p>
 </li>
 <li id="fn:hafner2023mastering">
-<p>D. Hafner, J. Pasukonis, J. Ba, and T. Lillicrap, "Mastering diverse domains through world models," <em>arXiv preprint arXiv:2301.04104</em>, 2023.&#160;<a class="footnote-backref" href="#fnref:hafner2023mastering" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+<p>D. Hafner, J. Pasukonis, J. Ba, and T. Lillicrap, "Mastering diverse domains through world models," <em>arXiv preprint arXiv:2301.04104</em>, 2023.&nbsp;<a class="footnote-backref" href="#fnref:hafner2023mastering" title="Jump back to footnote 8 in the text">↩</a></p>
 </li>
 <li id="fn:chen2025vlwm">
-<p>D. Chen <em>et al.</em>, "Planning with reasoning using vision language world model," <em>arXiv preprint arXiv:2509.02722</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:chen2025vlwm" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+<p>D. Chen <em>et al.</em>, "Planning with reasoning using vision language world model," <em>arXiv preprint arXiv:2509.02722</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:chen2025vlwm" title="Jump back to footnote 9 in the text">↩</a></p>
+</li>
+<li id="fn:lecun2022path">
+<p>Y. LeCun, "A path towards autonomous machine intelligence," <em>Open Review</em>, vol. 62, no. 1, pp. 1--62, 2022.&nbsp;<a class="footnote-backref" href="#fnref:lecun2022path" title="Jump back to footnote 10 in the text">↩</a></p>
 </li>
 <li id="fn:ahn2022can">
-<p>M. Ahn <em>et al.</em>, "Do as i can, not as i say: Grounding language in robotic affordances," <em>arXiv preprint arXiv:2204.01691</em>, 2022.&#160;<a class="footnote-backref" href="#fnref:ahn2022can" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+<p>M. Ahn <em>et al.</em>, "Do as i can, not as i say: Grounding language in robotic affordances," <em>arXiv preprint arXiv:2204.01691</em>, 2022.&nbsp;<a class="footnote-backref" href="#fnref:ahn2022can" title="Jump back to footnote 11 in the text">↩</a></p>
 </li>
 <li id="fn:xiang2024pandora">
-<p>J. Xiang <em>et al.</em>, "Pandora: Towards general world model with natural language actions and video states," <em>arXiv preprint arXiv:2406.09455</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:xiang2024pandora" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+<p>J. Xiang <em>et al.</em>, "Pandora: Towards general world model with natural language actions and video states," <em>arXiv preprint arXiv:2406.09455</em>, 2024.&nbsp;<a class="footnote-backref" href="#fnref:xiang2024pandora" title="Jump back to footnote 12 in the text">↩</a></p>
 </li>
 <li id="fn:driess2023palm">
-<p>D. Driess <em>et al.</em>, "PaLM-e: An embodied multimodal language model," in <em>Proceedings of the 40th international conference on machine learning</em>, 2023, pp. 8469--8488.&#160;<a class="footnote-backref" href="#fnref:driess2023palm" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+<p>D. Driess <em>et al.</em>, "PaLM-e: An embodied multimodal language model," in <em>Proceedings of the 40th international conference on machine learning</em>, 2023, pp. 8469--8488.&nbsp;<a class="footnote-backref" href="#fnref:driess2023palm" title="Jump back to footnote 13 in the text">↩</a></p>
 </li>
 <li id="fn:zhang2025dreamvla">
-<p>W. Zhang <em>et al.</em>, "DreamVLA: A vision-language-action model dreamed with comprehensive world knowledge," <em>arXiv preprint arXiv:2507.04447</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:zhang2025dreamvla" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+<p>W. Zhang <em>et al.</em>, "DreamVLA: A vision-language-action model dreamed with comprehensive world knowledge," <em>arXiv preprint arXiv:2507.04447</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:zhang2025dreamvla" title="Jump back to footnote 14 in the text">↩</a></p>
 </li>
 <li id="fn:hu2023look">
-<p>Y. Hu, F. Lin, T. Zhang, L. Yi, and Y. Gao, "Look before you leap: Unveiling the power of gpt-4v in robotic vision-language planning," <em>arXiv preprint arXiv:2311.17842</em>, 2023.&#160;<a class="footnote-backref" href="#fnref:hu2023look" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+<p>Y. Hu, F. Lin, T. Zhang, L. Yi, and Y. Gao, "Look before you leap: Unveiling the power of gpt-4v in robotic vision-language planning," <em>arXiv preprint arXiv:2311.17842</em>, 2023.&nbsp;<a class="footnote-backref" href="#fnref:hu2023look" title="Jump back to footnote 15 in the text">↩</a></p>
 </li>
 <li id="fn:zhao2024vlmpc">
-<p>W. Zhao, J. Chen, Z. Meng, D. Mao, R. Song, and W. Zhang, "Vlmpc: Vision-language model predictive control for robotic manipulation," <em>arXiv preprint arXiv:2407.09829</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:zhao2024vlmpc" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+<p>W. Zhao, J. Chen, Z. Meng, D. Mao, R. Song, and W. Zhang, "Vlmpc: Vision-language model predictive control for robotic manipulation," <em>arXiv preprint arXiv:2407.09829</em>, 2024.&nbsp;<a class="footnote-backref" href="#fnref:zhao2024vlmpc" title="Jump back to footnote 16 in the text">↩</a></p>
 </li>
 <li id="fn:zitkovich2023rt">
-<p>B. Zitkovich <em>et al.</em>, "Rt-2: Vision-language-action models transfer web knowledge to robotic control," in <em>Conference on robot learning</em>, PMLR, 2023, pp. 2165--2183.&#160;<a class="footnote-backref" href="#fnref:zitkovich2023rt" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+<p>B. Zitkovich <em>et al.</em>, "Rt-2: Vision-language-action models transfer web knowledge to robotic control," in <em>Conference on robot learning</em>, PMLR, 2023, pp. 2165--2183.&nbsp;<a class="footnote-backref" href="#fnref:zitkovich2023rt" title="Jump back to footnote 17 in the text">↩</a></p>
 </li>
 <li id="fn:hong20233d">
-<p>Y. Hong <em>et al.</em>, "3d-llm: Injecting the 3d world into large language models," <em>Advances in Neural Information Processing Systems</em>, vol. 36, pp. 20482--20494, 2023.&#160;<a class="footnote-backref" href="#fnref:hong20233d" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+<p>Y. Hong <em>et al.</em>, "3d-llm: Injecting the 3d world into large language models," <em>Advances in Neural Information Processing Systems</em>, vol. 36, pp. 20482--20494, 2023.&nbsp;<a class="footnote-backref" href="#fnref:hong20233d" title="Jump back to footnote 18 in the text">↩</a></p>
 </li>
 <li id="fn:bjorck2025gr00t">
-<p>J. Bjorck <em>et al.</em>, "Gr00t n1: An open foundation model for generalist humanoid robots," <em>arXiv preprint arXiv:2503.14734</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:bjorck2025gr00t" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+<p>J. Bjorck <em>et al.</em>, "Gr00t n1: An open foundation model for generalist humanoid robots," <em>arXiv preprint arXiv:2503.14734</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:bjorck2025gr00t" title="Jump back to footnote 19 in the text">↩</a></p>
 </li>
 <li id="fn:zhang2025up">
-<p>J. Zhang, Y. Guo, Y. Hu, X. Chen, X. Zhu, and J. Chen, "UP-VLA: A unified understanding and prediction model for embodied agent," <em>ICML</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:zhang2025up" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+<p>J. Zhang, Y. Guo, Y. Hu, X. Chen, X. Zhu, and J. Chen, "UP-VLA: A unified understanding and prediction model for embodied agent," <em>ICML</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:zhang2025up" title="Jump back to footnote 20 in the text">↩</a></p>
 </li>
 <li id="fn:zhao2025cot">
-<p>Q. Zhao <em>et al.</em>, "Cot-vla: Visual chain-of-thought reasoning for vision-language-action models," in <em>Proceedings of the computer vision and pattern recognition conference</em>, 2025, pp. 1702--1713.&#160;<a class="footnote-backref" href="#fnref:zhao2025cot" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+<p>Q. Zhao <em>et al.</em>, "Cot-vla: Visual chain-of-thought reasoning for vision-language-action models," in <em>Proceedings of the computer vision and pattern recognition conference</em>, 2025, pp. 1702--1713.&nbsp;<a class="footnote-backref" href="#fnref:zhao2025cot" title="Jump back to footnote 21 in the text">↩</a></p>
 </li>
 <li id="fn:chen2025egoagent">
-<p>L. Chen <em>et al.</em>, "EgoAgent: A joint predictive agent model in egocentric worlds," <em>arXiv preprint arXiv:2502.05857</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:chen2025egoagent" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+<p>L. Chen <em>et al.</em>, "EgoAgent: A joint predictive agent model in egocentric worlds," <em>arXiv preprint arXiv:2502.05857</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:chen2025egoagent" title="Jump back to footnote 22 in the text">↩</a></p>
 </li>
 <li id="fn:wang2025founder">
-<p>Y. Wang, R. Yu, S. Wan, L. Gan, and D.-C. Zhan, "Founder: Grounding foundation models in world models for open-ended embodied decision making," in <em>Forty-second international conference on machine learning</em>, 2025.&#160;<a class="footnote-backref" href="#fnref:wang2025founder" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+<p>Y. Wang, R. Yu, S. Wan, L. Gan, and D.-C. Zhan, "Founder: Grounding foundation models in world models for open-ended embodied decision making," in <em>Forty-second international conference on machine learning</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:wang2025founder" title="Jump back to footnote 23 in the text">↩</a></p>
+</li>
+<li id="fn:du2023video">
+<p>Y. Du <em>et al.</em>, "Video language planning," <em>arXiv preprint arXiv:2310.10625</em>, 2023.&nbsp;<a class="footnote-backref" href="#fnref:du2023video" title="Jump back to footnote 24 in the text">↩</a></p>
+</li>
+<li id="fn:wu2024ivideogpt">
+<p>J. Wu <em>et al.</em>, "Ivideogpt: Interactive videogpts are scalable world models," <em>Advances in Neural Information Processing Systems</em>, vol. 37, pp. 68082--68119, 2024.&nbsp;<a class="footnote-backref" href="#fnref:wu2024ivideogpt" title="Jump back to footnote 25 in the text">↩</a></p>
+</li>
+<li id="fn:zhang2025combo">
+<p>H. Zhang <em>et al.</em>, "COMBO: Compositional world models for embodied multi-agent cooperation," in <em>The thirteenth international conference on learning representations</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:zhang2025combo" title="Jump back to footnote 26 in the text">↩</a></p>
 </li>
 </ol>
 </div>
@@ -623,9 +865,55 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../01-introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: I Introduction">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                I Introduction
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-overview/" class="md-footer__link md-footer__link--next" aria-label="Next: III Overview of the World Model">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                III Overview of the World Model
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -651,13 +939,21 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.expand", "navigation.sections", "header.autohide"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "header.autohide", "navigation.footer"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../js/katex-init.js"></script>
+      
         <script src="../js/strip-nocase.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

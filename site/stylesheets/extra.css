@@ -44,9 +44,3 @@
 /* —— 页脚版权行（可选）—— */
 /* .md-footer-meta { opacity: .9; } */
 
-/* 自动插入破折号，处理超长单词 */
-.md-typeset {
-  word-wrap: break-word;  /* 允许换行 */
-  overflow-wrap: break-word;  /* 同样支持自动换行 */
-  hyphens: auto;  /* 自动添加破折号 */
-}

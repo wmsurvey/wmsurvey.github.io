@@ -181,7 +181,7 @@
 
 <figure markdown>
   ![Perspectives on world models](assets/img/fig7.png){ width="60%" }
-  <figcaption markdown="span">Fig. 7. Potential Core Components and Capabilities of World Models.</figcaption>
+  <figcaption markdown="span">Fig. 4. Potential Core Components and Capabilities of World Models.</figcaption>
 </figure>
 
 &emsp;&emsp;**7) Reasoning**  

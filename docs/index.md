@@ -13,7 +13,7 @@ hide:
   <div class="actions">
     <a class="md-button md-button--primary" href="abstract/">Read the Survey</a>
     <a class="md-button" href="99-references/">References</a>
-    <a class="md-button" href="contact/">Contact</a>
+    <!-- <a class="md-button" href="contact/">Contact</a> -->
   </div>
 </div>
 

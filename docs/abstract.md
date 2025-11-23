@@ -16,6 +16,6 @@ If you find this project useful, please consider citing our paper.
     @article{
         title={A Step Toward World Models: A Survey on Robotic Manipulation},
         author={Peng-Fei Zhang, Ying Cheng, Xiaofan Sun, Shijie Wang, Fengling Li, Lei Zhu, Heng Tao Shen},
-        journal={},
+        journal={arXiv preprint arXiv:2511.02097},
         year={2025}
     }

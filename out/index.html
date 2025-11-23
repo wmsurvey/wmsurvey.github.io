@@ -1,0 +1,875 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://your-domain.example/out/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/img/badge.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Out - A Step Toward World Models: A Survey on Robotic Manipulation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-generalization" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="A Step Toward World Models: A Survey on Robotic Manipulation" class="md-header__button md-logo" aria-label="A Step Toward World Models: A Survey on Robotic Manipulation" data-md-component="logo">
+      
+  <img src="../assets/img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            A Step Toward World Models: A Survey on Robotic Manipulation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Out
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../abstract/" class="md-tabs__link">
+          
+  
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../99-references/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  References
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="A Step Toward World Models: A Survey on Robotic Manipulation" class="md-nav__button md-logo" aria-label="A Step Toward World Models: A Survey on Robotic Manipulation" data-md-component="logo">
+      
+  <img src="../assets/img/logo.png" alt="logo">
+
+    </a>
+    A Step Toward World Models: A Survey on Robotic Manipulation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../abstract/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abstract
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-preliminaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    II Preliminaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    III Overview of the World Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IV Functions of the World Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-key-tech-challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    V Key Techniques and Notable Challenges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-core-components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VI Core Components &amp; Capabilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-dataset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VII Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VIII Conclusion &amp; Future directions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../99-references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Out</h1>
+
+<h2 id="a-generalization"><strong>A. Generalization</strong><a class="headerlink" href="#a-generalization" title="Permanent link">¶</a></h2>
+<p>  Robots are expected to operate robustly in complex and novel environments, interacting with unfamiliar objects and performing tasks beyond their training distribution.  </p>
+<p>    <strong>1) Data Scaling</strong>  </p>
+<p>  An intuitive and effective strategy to enhance generalization is to scale the diversity and volume of training data. For example, Cheang <em>et al.</em> <sup id="fnref:cheang2024gr"><a class="footnote-ref" href="#fn:cheang2024gr">1</a></sup> increase the number of pre-training videos from 0.8 million in <sup id="fnref:wu2024unleashing"><a class="footnote-ref" href="#fn:wu2024unleashing">2</a></sup> to 38 million. Assran <em>et al.</em> <sup id="fnref:assran2025v"><a class="footnote-ref" href="#fn:assran2025v">3</a></sup> expand the dataset from 2 million used by <sup id="fnref:bardes2024revisiting"><a class="footnote-ref" href="#fn:bardes2024revisiting">4</a></sup> to 22 million videos. Wang <em>et al.</em> <sup id="fnref:wang2025learning"><a class="footnote-ref" href="#fn:wang2025learning">5</a></sup> expand each of the 40 datasets by increasing trajectories from 10 up to <span class="arithmatex">\(10^{6}\)</span>. Cheang <em>et al.</em> <sup id="fnref:cheang2025gr"><a class="footnote-ref" href="#fn:cheang2025gr">6</a></sup> train the model with web-scale vision-language data,  human trajectory data and robot trajectory data. Kevin <em>et al.</em> <sup id="fnref:intelligence2025pi_"><a class="footnote-ref" href="#fn:intelligence2025pi_">7</a></sup> leverage diverse mobile manipulator data, diverse multi-environment non-mobile robot data, cross-embodiment laboratory data, high-level subtask prediction, and multi-modal web data. Cheang <em>et al.</em> <sup id="fnref:barcellona2025dream"><a class="footnote-ref" href="#fn:barcellona2025dream">8</a></sup> <sup id="fnref2:cheang2024gr"><a class="footnote-ref" href="#fn:cheang2024gr">1</a></sup> investigate <strong>data augmentation</strong> strategies to enhance generalization. In <sup id="fnref2:barcellona2025dream"><a class="footnote-ref" href="#fn:barcellona2025dream">8</a></sup>, object rotation and roto-translation are applied. Cheang <em>et al.</em> <sup id="fnref3:cheang2024gr"><a class="footnote-ref" href="#fn:cheang2024gr">1</a></sup> generate novel scenes by injecting objects using a diffusion model <sup id="fnref:ho2020denoising"><a class="footnote-ref" href="#fn:ho2020denoising">9</a></sup> and/or altering backgrounds with the Segment Anything Model (SAM)  <sup id="fnref:kirillov2023segment"><a class="footnote-ref" href="#fn:kirillov2023segment">10</a></sup>. A video generation model <sup id="fnref2:kirillov2023segment"><a class="footnote-ref" href="#fn:kirillov2023segment">10</a></sup> is subsequently employed to synthesize videos that preserve the original robot motions from the inpainted frames. Liao <em>et al.</em>   <sup id="fnref:liao2025genie"><a class="footnote-ref" href="#fn:liao2025genie">11</a></sup> augment the dataset with a diverse set of failure cases, including erroneous executions, incomplete behaviors, and suboptimal control trajectories—collected from both human teleoperation and real-world robotic deployments. One problem of data scaling is that it is unlikely to collect all data for each tasks. At the same time, how to balance different data tasks is also challenging. Moreover, performance gains by scaling data is also limited for consistent performance improvements. </p>
+<p>    <strong>2) Use of Pretrained Models</strong>  </p>
+<p>  Many methods aim to enhance generalization by leveraging the generative capabilities of video models. For example, Zhu <em>et al.</em> <sup id="fnref:team2025aether"><a class="footnote-ref" href="#fn:team2025aether">12</a></sup> combine video generation with geometric-aware learning to improve synthetic-to-real generalization across unseen viewpoints and support multiple downstream tasks. Zhen <em>et al.</em> <sup id="fnref:zhen2025tesseract"><a class="footnote-ref" href="#fn:zhen2025tesseract">13</a></sup> fine-tune a video generation model on RGB, depth, and normal videos to encode detailed shape, configuration, and temporal dynamics, enabling generalization to unseen scenes, objects, and cross-domain scenarios. The generalization capabilities of large language models, such as video-language models <sup id="fnref:wang2025founder"><a class="footnote-ref" href="#fn:wang2025founder">14</a></sup> and vision-language models <sup id="fnref:mazzaglia2024genrl"><a class="footnote-ref" href="#fn:mazzaglia2024genrl">15</a></sup>, can be leveraged to enhance world models. By extracting high-level knowledge about the environment, these models facilitate more effective low-level dynamics modeling.</p>
+<p>    <strong>3) Instructions Decomposing</strong>  </p>
+<p>  Another generation issue comes from unseen instructions. To handle this, Zhou <em>et al.</em> <sup id="fnref:zhou2024robodreamer"><a class="footnote-ref" href="#fn:zhou2024robodreamer">16</a></sup> enhance the ability to unseen instructions by decomposing each spatial relation phrase into a set of compositional components with the pre-trained parser <sup id="fnref:kitaev2019multilingual"><a class="footnote-ref" href="#fn:kitaev2019multilingual">17</a></sup> and the rule-based approach. Detailed information can refer to Section \ref{IUF}.</p>
+<p>    <strong>4) Invariant Representations</strong>  </p>
+<p>  Generalization can be significantly improved by learning invariant representations to superficial or task-irrelevant changes in the environment. For example, Pang <em>et al.</em> <sup id="fnref:pang2025reviwo"><a class="footnote-ref" href="#fn:pang2025reviwo">18</a></sup> model learns to explicitly decompose visual observations into a view-invariant representation, which is used for the control policy, and a view-dependent representation. This decoupling makes the resulting policy robust to changes in camera viewpoint, a common source of failure in visuomotor control. Similarly, the Martinez <em>et al.</em> <sup id="fnref:martinez2025coral"><a class="footnote-ref" href="#fn:martinez2025coral">19</a></sup> framework learns a transferable communicative context between two agents, which enables zero-shot adaptation to entirely unseen sparse-reward environments by decoupling the representation learning from the control problem. Wu <em>et al.</em> <sup id="fnref:wu2023pre"><a class="footnote-ref" href="#fn:wu2023pre">20</a></sup> disentangle the modeling of context and dynamics by introducing a context encoder, enabling the model to capture shared knowledge for predictions.</p>
+<p>    <strong>5) Task-relevant Information Focused</strong>  </p>
+<p>  Video data often contain irrelevant data to the actions such as background and robot arm, which would limited the generalization ability of the learned world models. To handle this, <sup id="fnref:zhi20253dflowaction"><a class="footnote-ref" href="#fn:zhi20253dflowaction">21</a></sup> propose to object-centric world models, which concentrated on object movements via the optical flow predictions that is independent of embodiment. Finn <em>et al.</em> <sup id="fnref:finn2016unsupervised"><a class="footnote-ref" href="#fn:finn2016unsupervised">22</a></sup> propose to explicitly model and predict motion that are relatively invariant to the object appearance, enabling long-range predictions and generalize to unseen objects.</p>
+<p>    <strong>6) Other Strategies</strong>  </p>
+<p>  Black <em>et al.</em> <sup id="fnref:black2024zero"><a class="footnote-ref" href="#fn:black2024zero">23</a></sup> use a pretrained image-editing model to generate subgoals from language commands and current observations, enabling low-level controllers to act and generalize to novel objects and scenarios. Self-supervised learning without task-specific rewards that can enhancing generalization abilities into different tasks <sup id="fnref:sekar2020planning"><a class="footnote-ref" href="#fn:sekar2020planning">24</a></sup>. </p>
+<h2 id="b-physics-informed-learning"><strong>B. Physics-informed Learning</strong><a class="headerlink" href="#b-physics-informed-learning" title="Permanent link">¶</a></h2>
+<p>  Existing world models struggle to generate physically consistent videos because they lack an inherent understanding of physics, often producing unrealistic dynamics and implausible event sequences. Simply scaling up training data or model size is insufficient to capture the underlying physical laws <sup id="fnref:kang2025far"><a class="footnote-ref" href="#fn:kang2025far">25</a></sup>. To address this challenge, several approaches have been proposed.
+  For example, Yang <em>et al.</em> <sup id="fnref:yang2025vlipp"><a class="footnote-ref" href="#fn:yang2025vlipp">26</a></sup> introduce a two-stage image-to-video generation framework that explicitly incorporates physics through vision- and language-informed physical priors. Team <em>et al.</em> <sup id="fnref2:team2025aether"><a class="footnote-ref" href="#fn:team2025aether">12</a></sup> estimate depth and camera pose directly from videos, facilitating physics-informed learning and enabling world models to infer and predict physically consistent dynamics. Peper <em>et al.</em> <sup id="fnref:peper2025four"><a class="footnote-ref" href="#fn:peper2025four">27</a></sup> argue that advancing from physics-informed to physics-interpretable world models requires rethinking model design, and propose four guiding principles: organizing latent spaces by physical intent, encoding invariant and equivariant environmental representations, integrating multiple supervision signals, and partitioning generative outputs to improve both scalability and verifiability.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:cheang2024gr">
+<p>C.-L. Cheang <em>et al.</em>, "Gr-2: A generative video-language-action model with web-scale knowledge for robot manipulation," <em>arXiv preprint arXiv:2410.06158</em>, 2024.&nbsp;<a class="footnote-backref" href="#fnref:cheang2024gr" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref2:cheang2024gr" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref3:cheang2024gr" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:wu2024unleashing">
+<p>H. Wu <em>et al.</em>, "Unleashing large-scale video generative pre-training for visual robot manipulation," in <em>The twelfth international conference on learning representations</em>, 2024.&nbsp;<a class="footnote-backref" href="#fnref:wu2024unleashing" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:assran2025v">
+<p>M. Assran <em>et al.</em>, "V-jepa 2: Self-supervised video models enable understanding, prediction and planning," <em>arXiv preprint arXiv:2506.09985</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:assran2025v" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:bardes2024revisiting">
+<p>A. Bardes <em>et al.</em>, "Revisiting feature prediction for learning visual representations from video," <em>arXiv preprint arXiv:2404.08471</em>, 2024.&nbsp;<a class="footnote-backref" href="#fnref:bardes2024revisiting" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:wang2025learning">
+<p>L. Wang, K. Zhao, C. Liu, and X. Chen, "Learning real-world action-video dynamics with heterogeneous masked autoregression," <em>arXiv preprint arXiv:2502.04296</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:wang2025learning" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+<li id="fn:cheang2025gr">
+<p>C. Cheang <em>et al.</em>, "Gr-3 technical report," <em>arXiv preprint arXiv:2507.15493</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:cheang2025gr" title="Jump back to footnote 6 in the text">↩</a></p>
+</li>
+<li id="fn:intelligence2025pi_">
+<p>K. Black <em>et al.</em>, "<span class="arithmatex">\(\pi\_{0.5}\)</span>: A vision-language-action model with open-world generalization," <em>arXiv preprint arXiv:2504.16054</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:intelligence2025pi_" title="Jump back to footnote 7 in the text">↩</a></p>
+</li>
+<li id="fn:barcellona2025dream">
+<p>L. Barcellona, A. Zadaianchuk, D. Allegro, S. Papa, S. Ghidoni, and E. Gavves, "Dream to manipulate: Compositional world models empowering robot imitation learning with imagination," in <em>The thirteenth international conference on learning representations</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:barcellona2025dream" title="Jump back to footnote 8 in the text">↩</a><a class="footnote-backref" href="#fnref2:barcellona2025dream" title="Jump back to footnote 8 in the text">↩</a></p>
+</li>
+<li id="fn:ho2020denoising">
+<p>J. Ho, A. Jain, and P. Abbeel, "Denoising diffusion probabilistic models," <em>Advances in neural information processing systems</em>, vol. 33, pp. 6840--6851, 2020.&nbsp;<a class="footnote-backref" href="#fnref:ho2020denoising" title="Jump back to footnote 9 in the text">↩</a></p>
+</li>
+<li id="fn:kirillov2023segment">
+<p>A. Kirillov <em>et al.</em>, "Segment anything," in <em>Proceedings of the IEEE/CVF international conference on computer vision</em>, 2023, pp. 4015--4026.&nbsp;<a class="footnote-backref" href="#fnref:kirillov2023segment" title="Jump back to footnote 10 in the text">↩</a><a class="footnote-backref" href="#fnref2:kirillov2023segment" title="Jump back to footnote 10 in the text">↩</a></p>
+</li>
+<li id="fn:liao2025genie">
+<p>Y. Liao <em>et al.</em>, "Genie envisioner: A unified world foundation platform for robotic manipulation," <em>arXiv preprint arXiv:2508.05635</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:liao2025genie" title="Jump back to footnote 11 in the text">↩</a></p>
+</li>
+<li id="fn:team2025aether">
+<p>H. Zhu <em>et al.</em>, "Aether: Geometric-aware unified world modeling," in <em>ICCV</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:team2025aether" title="Jump back to footnote 12 in the text">↩</a><a class="footnote-backref" href="#fnref2:team2025aether" title="Jump back to footnote 12 in the text">↩</a></p>
+</li>
+<li id="fn:zhen2025tesseract">
+<p>H. Zhen <em>et al.</em>, "TesserAct: Learning 4D embodied world models," <em>arXiv preprint arXiv:2504.20995</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:zhen2025tesseract" title="Jump back to footnote 13 in the text">↩</a></p>
+</li>
+<li id="fn:wang2025founder">
+<p>Y. Wang, R. Yu, S. Wan, L. Gan, and D.-C. Zhan, "Founder: Grounding foundation models in world models for open-ended embodied decision making," in <em>Forty-second international conference on machine learning</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:wang2025founder" title="Jump back to footnote 14 in the text">↩</a></p>
+</li>
+<li id="fn:mazzaglia2024genrl">
+<p>P. Mazzaglia, T. Verbelen, B. Dhoedt, A. Courville, and S. Rajeswar, "GenRL: Multimodal-foundation world models for generalization in embodied agents," <em>Advances in neural information processing systems</em>, vol. 37, pp. 27529--27555, 2024.&nbsp;<a class="footnote-backref" href="#fnref:mazzaglia2024genrl" title="Jump back to footnote 15 in the text">↩</a></p>
+</li>
+<li id="fn:zhou2024robodreamer">
+<p>S. Zhou, Y. Du, J. Chen, Y. Li, D.-Y. Yeung, and C. Gan, "RoboDreamer: Learning compositional world models for robot imagination," in <em>International conference on machine learning</em>, PMLR, 2024, pp. 61885--61896.&nbsp;<a class="footnote-backref" href="#fnref:zhou2024robodreamer" title="Jump back to footnote 16 in the text">↩</a></p>
+</li>
+<li id="fn:kitaev2019multilingual">
+<p>N. Kitaev, S. Cao, and D. Klein, "Multilingual constituency parsing with self-attention and pre-training," in <em>Proceedings of the 57th annual meeting of the association for computational linguistics</em>, 2019, pp. 3499--3505.&nbsp;<a class="footnote-backref" href="#fnref:kitaev2019multilingual" title="Jump back to footnote 17 in the text">↩</a></p>
+</li>
+<li id="fn:pang2025reviwo">
+<p>J.-C. Pang <em>et al.</em>, "Learning view-invariant world models for visual robotic manipulation," in <em>The thirteenth international conference on learning representations</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:pang2025reviwo" title="Jump back to footnote 18 in the text">↩</a></p>
+</li>
+<li id="fn:martinez2025coral">
+<p>F. Martinez-Lopez, T. Li, Y. Lu, and J. Chen, "In-context reinforcement learning via communicative world models," <em>arXiv preprint arXiv:2508.06659</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:martinez2025coral" title="Jump back to footnote 19 in the text">↩</a></p>
+</li>
+<li id="fn:wu2023pre">
+<p>J. Wu, H. Ma, C. Deng, and M. Long, "Pre-training contextualized world models with in-the-wild videos for reinforcement learning," <em>Advances in Neural Information Processing Systems</em>, vol. 36, pp. 39719--39743, 2023.&nbsp;<a class="footnote-backref" href="#fnref:wu2023pre" title="Jump back to footnote 20 in the text">↩</a></p>
+</li>
+<li id="fn:zhi20253dflowaction">
+<p>H. Zhi <em>et al.</em>, "3DFlowAction: Learning cross-embodiment manipulation from 3D flow world model," <em>arXiv preprint arXiv:2506.06199</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:zhi20253dflowaction" title="Jump back to footnote 21 in the text">↩</a></p>
+</li>
+<li id="fn:finn2016unsupervised">
+<p>C. Finn, I. Goodfellow, and S. Levine, "Unsupervised learning for physical interaction through video prediction," in <em>Proceedings of the 30th international conference on neural information processing systems</em>, 2016, pp. 64--72.&nbsp;<a class="footnote-backref" href="#fnref:finn2016unsupervised" title="Jump back to footnote 22 in the text">↩</a></p>
+</li>
+<li id="fn:black2024zero">
+<p>K. Black <em>et al.</em>, "Zero-shot robotic manipulation with pre-trained image-editing diffusion models," in <em>The twelfth international conference on learning representations</em>, 2024.&nbsp;<a class="footnote-backref" href="#fnref:black2024zero" title="Jump back to footnote 23 in the text">↩</a></p>
+</li>
+<li id="fn:sekar2020planning">
+<p>R. Sekar, O. Rybkin, K. Daniilidis, P. Abbeel, D. Hafner, and D. Pathak, "Planning to explore via self-supervised world models," in <em>International conference on machine learning</em>, 2020, pp. 8583--8592.&nbsp;<a class="footnote-backref" href="#fnref:sekar2020planning" title="Jump back to footnote 24 in the text">↩</a></p>
+</li>
+<li id="fn:kang2025far">
+<p>B. Kang <em>et al.</em>, "How far is video generation from world model: A physical law perspective," in <em>Forty-second international conference on machine learning</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:kang2025far" title="Jump back to footnote 25 in the text">↩</a></p>
+</li>
+<li id="fn:yang2025vlipp">
+<p>X. Yang <em>et al.</em>, "VLIPP: Towards physically plausible video generation with vision and language informed physical prior," <em>arXiv preprint arXiv:2503.23368</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:yang2025vlipp" title="Jump back to footnote 26 in the text">↩</a></p>
+</li>
+<li id="fn:peper2025four">
+<p>J. Peper, Z. Mao, Y. Geng, S. Pan, and I. Ruchkin, "Four principles for physically interpretable world models," <em>arXiv preprint arXiv:2503.02143</em>, 2025.&nbsp;<a class="footnote-backref" href="#fnref:peper2025four" title="Jump back to footnote 27 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "header.autohide", "navigation.footer"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../js/katex-init.js"></script>
+      
+        <script src="../js/strip-nocase.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
